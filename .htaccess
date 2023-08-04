@@ -1,0 +1,14 @@
+<FilesMatch "\.(ico|webp|jpg|jpeg|png|gif|js|css)$">
+Header set Cache-Control "max-age=2419200, public"
+</FilesMatch>
+
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteCond %{HTTP_HOST} ^(www\.)?iamtommetcalfe\.com
+RewriteRule ^(.*)$ https://www.iamtommetcalfe.com/ [R,L]
+
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
