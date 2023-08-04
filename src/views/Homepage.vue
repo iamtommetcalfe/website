@@ -25,7 +25,7 @@
       <picture class="tom-metcalfe-image">
         <source :srcset="imageUrlWEBP" type="image/webp">
         <source :srcset="imageUrlJPEG" type="image/jpg">
-        <img :src="imageUrlJPEG" width="248" class="tom-metcalfe-image" height="248" alt="Tom Metcalfe | Software Engineering Manager | London, United Kingdom">
+        <img :src="imageUrlJPEG" width="248" class="tom-metcalfe-image" height="248" alt="Tom Metcalfe | Software Engineering Manager | Birmingham, United Kingdom">
       </picture>
     </div>
   </div>
@@ -36,8 +36,8 @@ export default {
   name: 'MainContent',
   data() {
     return {
-      imageUrlJPEG: new URL('../assets/tom-metcalfe-london.jpeg', import.meta.url).href,
-      imageUrlWEBP: new URL('../assets/tom-metcalfe-london.webp', import.meta.url).href
+      imageUrlJPEG: new URL('../assets/tom-metcalfe-birmingham.jpeg', import.meta.url).href,
+      imageUrlWEBP: new URL('../assets/tom-metcalfe-birmingham.webp', import.meta.url).href
     };
   }
 }

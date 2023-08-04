@@ -1,7 +1,7 @@
 <template>
   <nav>
     <div id="logoContainer">
-      <a href="/" id="homepageTitle" title="Tom Metcalfe | Software Engineering Manager | London | Homepage">
+      <a href="/" id="homepageTitle" title="Tom Metcalfe | Software Engineering Manager | Birmingham | Homepage">
         Tom Metcalfe <span>.</span>
       </a>
       <div id="navBar">
