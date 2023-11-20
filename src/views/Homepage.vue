@@ -53,6 +53,10 @@ export default {
   padding-right:1rem;
   text-align: justify;
 }
+
+#imageContainer {
+  padding-top:95px;
+}
 @media screen and (max-width:1048px){
   #titleContainer {
     width:100%;
@@ -60,6 +64,7 @@ export default {
   #imageContainer {
     width:100%;
     text-align: center;
+    padding-top:5px;
   }
 }
 </style>
