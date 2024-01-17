@@ -4,7 +4,7 @@
       <h1 class="pageTitle">Hello</h1>
 
       <p>
-        My name is Tom Metcalfe, a passionate and committed software engineer and engineering manager. With over 13 years of experience in PHP programming, I am always ready to take on challenging and exciting projects.
+        My name is Tom Metcalfe, a passionate and committed software engineer and engineering manager. With over 13 years of experience in PHP programming and 5+ years leading teams, I am always ready to take on challenging and exciting projects.
       </p>
 
       <p>
