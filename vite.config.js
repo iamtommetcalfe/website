@@ -10,7 +10,7 @@ const basePath = process.env.NODE_ENV === 'production'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  publicPath: basePath,
+  base: basePath,
   plugins: [
       vue(),
       VitePWA()
