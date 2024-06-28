@@ -1,13 +1,13 @@
 <template>
   <nav>
     <div id="logoContainer">
-      <a href="/" id="homepageTitle" title="Tom Metcalfe | Software Engineering Manager | Birmingham | Homepage">
+      <router-link to="/" id="homepageTitle" title="Tom Metcalfe | Software Engineering Manager | Birmingham | Homepage">
         Tom Metcalfe <span>.</span>
-      </a>
+      </router-link>
       <div id="navBar">
         <ul>
           <li>
-            <a href="/#/about" title="About Tom Metcalfe">About</a>
+            <router-link to="/about" title="About Tom Metcalfe">About</router-link>
           </li>
         </ul>
       </div>
