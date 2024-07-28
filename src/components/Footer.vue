@@ -25,10 +25,10 @@
 </template>
 
 <script setup>
-import linkedInIconWEBP from '/src/assets/images/linked-in-icon.webp';
-import linkedInIconPNG from '/src/assets/images/linked-in-icon.png';
-import githubIconWEBP from '/src/assets/images/github-icon.webp';
-import githubIconPNG from '/src/assets/images/github-icon.png';
+import linkedInIconWEBP from '/public/img/linked-in-icon.webp';
+import linkedInIconPNG from '/public/img/linked-in-icon.png';
+import githubIconWEBP from '/public/img/github-icon.webp';
+import githubIconPNG from '/public/img/github-icon.png';
 </script>
 
 <style scoped>

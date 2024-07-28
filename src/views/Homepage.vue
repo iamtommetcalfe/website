@@ -27,8 +27,8 @@
 </template>
 
 <script setup>
-import imageUrlJPEG from '/src/assets/images/tom-metcalfe-birmingham.jpeg';
-import imageUrlWEBP from '/src/assets/images/tom-metcalfe-birmingham.webp';
+import imageUrlJPEG from '/public/img/tom-metcalfe-birmingham.jpeg';
+import imageUrlWEBP from '/public/img/tom-metcalfe-birmingham.webp';
 </script>
 
 <style scoped>
