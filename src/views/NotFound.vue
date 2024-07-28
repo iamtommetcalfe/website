@@ -11,8 +11,8 @@
 </template>
 
 <script setup>
-import deadLinkWEBP from '/public/img/dead-link.webp';
-import deadLinkJPEG from '/public/img/dead-link.jpeg';
+import deadLinkWEBP from '/img/dead-link.webp';
+import deadLinkJPEG from '/img/dead-link.jpeg';
 </script>
 
 <style scoped>
