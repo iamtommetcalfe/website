@@ -10,18 +10,9 @@
   </div>
 </template>
 
-<script>
-
-export default {
-  name: 'NotFound',
-  data() {
-    return {
-      deadLinkWEBP: new URL('../assets/dead-link.webp', import.meta.url).href,
-      deadLinkJPEG: new URL('../assets/dead-link.jpeg', import.meta.url).href
-    };
-  }
-}
-
+<script setup>
+import deadLinkWEBP from '/src/assets/images/dead-link.webp';
+import deadLinkJPEG from '/src/assets/images/dead-link.jpeg';
 </script>
 
 <style scoped>

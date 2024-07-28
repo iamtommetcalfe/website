@@ -27,10 +27,8 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-
-const imageUrlJPEG = ref(new URL('/src/assets/tom-metcalfe-birmingham.jpeg', import.meta.url).href);
-const imageUrlWEBP = ref(new URL('/src/assets/tom-metcalfe-birmingham.webp', import.meta.url).href);
+import imageUrlJPEG from '/src/assets/images/tom-metcalfe-birmingham.jpeg';
+import imageUrlWEBP from '/src/assets/images/tom-metcalfe-birmingham.webp';
 </script>
 
 <style scoped>

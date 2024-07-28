@@ -24,18 +24,11 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Footer',
-  data() {
-    return {
-      linkedInIconWEBP: new URL('../assets/linked-in-icon.webp', import.meta.url).href,
-      linkedInIconPNG: new URL('../assets/linked-in-icon.png', import.meta.url).href,
-      githubIconWEBP: new URL('../assets/github-icon.webp', import.meta.url).href,
-      githubIconPNG: new URL('../assets/github-icon.png', import.meta.url).href
-    };
-  }
-}
+<script setup>
+import linkedInIconWEBP from '/src/assets/images/linked-in-icon.webp';
+import linkedInIconPNG from '/src/assets/images/linked-in-icon.png';
+import githubIconWEBP from '/src/assets/images/github-icon.webp';
+import githubIconPNG from '/src/assets/images/github-icon.png';
 </script>
 
 <style scoped>
