@@ -1,7 +1,7 @@
 <template>
   <div id="footerContainer">
     <div id="location">
-      <b>Location</b> - <small>Software Engineering Manager @ Amiqus - Birmingham</small>
+      <b>Location</b> - <small>Engineering Function Manager @ Amiqus - Birmingham</small>
     </div>
     <div id="social">
       <a href="https://github.com/iamtommetcalfe" title="Tom Metcalfe - Github Profile">
