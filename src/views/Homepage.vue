@@ -3,7 +3,7 @@
     <div id="titleContainer">
       <h1 class="pageTitle">Hello</h1>
       <p>
-        My name is Tom Metcalfe, a passionate and committed software engineer and engineering manager. With over 13 years of experience in PHP programming and 10+ years leading teams, I am always ready to take on challenging and exciting projects.
+        My name is Tom Stirrop-Metcalfe, a passionate and committed engineering leader. With over 15 years of experience in PHP programming and 10+ years leading teams, I am always ready to take on challenging and exciting projects.
       </p>
       <p>
         Throughout my career, I've consistently achieved significant impacts on process improvement, project success, and team motivation. I adhere to a philosophy of servant leadership, where I put my team's needs at the forefront, facilitating their professional development, encouraging innovative thinking, and nurturing a positive and productive work environment.
@@ -20,7 +20,7 @@
       <picture class="tom-metcalfe-image">
         <source :srcset="imageUrlWEBP" type="image/webp">
         <source :srcset="imageUrlJPEG" type="image/jpeg">
-        <img :src="imageUrlJPEG" width="248" class="tom-metcalfe-image" height="248" alt="Tom Metcalfe | Software Engineering Manager | Birmingham, United Kingdom">
+        <img :src="imageUrlJPEG" width="248" class="tom-metcalfe-image" height="248" alt="Tom Stirrop-Metcalfe | Software Engineering Manager | Birmingham, United Kingdom">
       </picture>
     </div>
   </div>
