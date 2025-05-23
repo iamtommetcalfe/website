@@ -6,7 +6,7 @@
     <ul>
       <li>🏝 I am fully remote. That being said, I am very keen for on-site visits where possible.</li>
       <li>🎸 Music - When not in meetings I will always have my headphones on listening to anything that does not have words in it - primarily game or movie soundtracks.
-        <a href="https://open.spotify.com/playlist/6d62q5Hf7cnR3qmgeF0LKh?si=3b2f59baa234463c" target="_blank" title="Tom Metcalfe | Soundtracks playlist on Spotify">This is my go to playlist</a>.</li>
+        <a href="https://open.spotify.com/playlist/6d62q5Hf7cnR3qmgeF0LKh?si=3b2f59baa234463c" target="_blank" title="Tom Stirrop-Metcalfe | Soundtracks playlist on Spotify">This is my go to playlist</a>.</li>
       <li>🗓 Organisation! Agendas and planned meetings are what I prefer</li>
     </ul>
 
