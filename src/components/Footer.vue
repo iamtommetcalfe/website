@@ -11,7 +11,7 @@
           <img :src="githubIconPNG" alt="Tom Metcalfe - Github Profile" width="15" height="14">
         </picture>
       </a>
-      <a href="https://www.linkedin.com/in/iamtommetcalfe/" title="Tom Metcalfe - LinkedIn Profile">
+      <a href="https://www.linkedin.com/in/iamtomstirropmetcalfe/" title="Tom Metcalfe - LinkedIn Profile">
         <picture class="tom-metcalfe-image">
           <source :srcset="linkedInIconWEBP" type="image/webp">
           <source :srcset="linkedInIconPNG" type="image/png">
