@@ -17,13 +17,14 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue';
 import { mapGetters } from 'vuex';
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 import MrRobot from './components/MrRobot.vue';
 
-export default {
+export default defineComponent({
   name: 'App',
   components: {
     Header,
@@ -34,14 +35,14 @@ export default {
     ...mapGetters({
       currentTheme: 'currentTheme'
     }),
-    isDarkTheme() {
+    isDarkTheme(): boolean {
       return this.currentTheme === 'dark';
     }
   },
   watch: {
     isDarkTheme: {
       immediate: true,
-      handler(newValue) {
+      handler(newValue: boolean): void {
         if (newValue) {
           document.documentElement.classList.add('dark-mode');
         } else {
@@ -50,7 +51,7 @@ export default {
       }
     }
   }
-};
+});
 </script>
 
 <style>

@@ -26,7 +26,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import imageUrlJPEG from '@/assets/images/tom-metcalfe-birmingham.jpeg';
 import imageUrlWEBP from '@/assets/images/tom-metcalfe-birmingham.webp';
 </script>

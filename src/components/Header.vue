@@ -15,20 +15,21 @@
   </nav>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue';
 import { mapGetters } from 'vuex';
 
-export default {
+export default defineComponent({
   name: 'Header',
   computed: {
     ...mapGetters({
       currentTheme: 'currentTheme'
     }),
-    isDarkTheme() {
+    isDarkTheme(): boolean {
       return this.currentTheme === 'dark';
     }
   }
-}
+});
 </script>
 
 <style scoped>

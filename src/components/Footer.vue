@@ -33,16 +33,25 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue';
 import { mapGetters, mapActions } from 'vuex';
 import linkedInIconWEBP from '@/assets/images/linked-in-icon.webp';
 import linkedInIconPNG from '@/assets/images/linked-in-icon.png';
 import githubIconWEBP from '@/assets/images/github-icon.webp';
 import githubIconPNG from '@/assets/images/github-icon.png';
 
-export default {
+interface FooterData {
+  linkedInIconWEBP: string;
+  linkedInIconPNG: string;
+  githubIconWEBP: string;
+  githubIconPNG: string;
+  showBuildInfo: boolean;
+}
+
+export default defineComponent({
   name: 'Footer',
-  data() {
+  data(): FooterData {
     return {
       linkedInIconWEBP,
       linkedInIconPNG,
@@ -55,30 +64,30 @@ export default {
     ...mapGetters({
       currentTheme: 'currentTheme'
     }),
-    isDarkTheme() {
+    isDarkTheme(): boolean {
       return this.currentTheme === 'dark';
     },
-    themeButtonText() {
+    themeButtonText(): string {
       return this.isDarkTheme ? '☀️' : '🌙';
     },
-    themeButtonTitle() {
+    themeButtonTitle(): string {
       return this.isDarkTheme ? 'Switch to Light Mode' : 'Switch to Dark Mode';
     },
-    buildTimestamp() {
+    buildTimestamp(): string | null {
       return this.$buildTimestamp !== 'development' ? this.$buildTimestamp : null;
     }
   },
   methods: {
     ...mapActions(['toggleTheme']),
-    toggleBuildInfo() {
+    toggleBuildInfo(): void {
       this.showBuildInfo = !this.showBuildInfo;
     },
     // Method to force refresh the page, bypassing cache
-    forceRefresh() {
+    forceRefresh(): void {
       window.location.reload(true);
     }
   }
-}
+});
 </script>
 
 <style scoped>
