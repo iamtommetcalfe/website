@@ -12,6 +12,11 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/About.vue'),
   },
   {
+    path: '/sitemap.xml',
+    name: 'sitemap',
+    component: () => import('../views/Sitemap.vue'),
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'not-found',
     component: () => import('../views/NotFound.vue'),
