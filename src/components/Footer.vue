@@ -24,6 +24,12 @@
     </div>
 
     <div class="clearAfter"></div>
+
+    <!-- Hidden build info for cache verification -->
+    <div v-if="buildTimestamp" class="build-info" @click="toggleBuildInfo">
+      <span v-if="showBuildInfo">Build: {{ buildTimestamp }}</span>
+      <span v-else class="build-dot" title="Click to show build information"></span>
+    </div>
   </div>
 </template>
 
@@ -41,7 +47,8 @@ export default {
       linkedInIconWEBP,
       linkedInIconPNG,
       githubIconWEBP,
-      githubIconPNG
+      githubIconPNG,
+      showBuildInfo: false
     };
   },
   computed: {
@@ -56,10 +63,20 @@ export default {
     },
     themeButtonTitle() {
       return this.isDarkTheme ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+    },
+    buildTimestamp() {
+      return this.$buildTimestamp !== 'development' ? this.$buildTimestamp : null;
     }
   },
   methods: {
-    ...mapActions(['toggleTheme'])
+    ...mapActions(['toggleTheme']),
+    toggleBuildInfo() {
+      this.showBuildInfo = !this.showBuildInfo;
+    },
+    // Method to force refresh the page, bypassing cache
+    forceRefresh() {
+      window.location.reload(true);
+    }
   }
 }
 </script>
@@ -113,5 +130,33 @@ export default {
 #themeToggle:focus {
   outline: none;
   box-shadow: 0 0 0 2px #00b3fe;
+}
+
+.build-info {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  font-size: 10px;
+  color: #999;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.build-info:hover {
+  opacity: 1;
+}
+
+.build-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #999;
+  border-radius: 50%;
+}
+
+.dark-theme .build-dot {
+  background-color: #666;
 }
 </style>
