@@ -35,10 +35,10 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex';
-import linkedInIconWEBP from '/img/linked-in-icon.webp';
-import linkedInIconPNG from '/img/linked-in-icon.png';
-import githubIconWEBP from '/img/github-icon.webp';
-import githubIconPNG from '/img/github-icon.png';
+import linkedInIconWEBP from '@/assets/images/linked-in-icon.webp';
+import linkedInIconPNG from '@/assets/images/linked-in-icon.png';
+import githubIconWEBP from '@/assets/images/github-icon.webp';
+import githubIconPNG from '@/assets/images/github-icon.png';
 
 export default {
   name: 'Footer',
