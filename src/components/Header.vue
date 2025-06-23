@@ -1,13 +1,13 @@
 <template>
   <nav :class="{ 'dark-theme': isDarkTheme }">
     <div id="logoContainer">
-      <router-link to="/" id="homepageTitle" title="Tom Metcalfe | Software Engineering Manager | Birmingham | Homepage">
-        Tom Metcalfe <span>.</span>
+      <router-link to="/" id="homepageTitle" title="Tom Stirrop-Metcalfe | Software Engineering Manager | Birmingham | Homepage">
+        Tom Stirrop-Metcalfe <span>.</span>
       </router-link>
       <div id="navBar">
         <ul>
           <li>
-            <router-link to="/about" title="About Tom Metcalfe">About</router-link>
+            <router-link to="/about" title="About Tom Stirrop-Metcalfe">About</router-link>
           </li>
         </ul>
       </div>
