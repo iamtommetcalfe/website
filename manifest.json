@@ -10,13 +10,13 @@
   "splash_pages": null,
   "icons": [
       {
-          "src": "src/assets/images/low-res-icon.webp",
+          "src": "/images/low-res-icon.webp",
           "sizes": "144x144",
           "type": "image/webp",
           "purpose": "maskable any"
       },
       {
-          "src": "src/assets/images/large-icon.png",
+          "src": "/images/large-icon.png",
           "sizes": "512x512",
           "type": "image/png",
           "purpose": "maskable any"
