@@ -7,18 +7,18 @@
       <button @click="toggleTheme" id="themeToggle" :title="themeButtonTitle">
         {{ themeButtonText }}
       </button>
-      <a href="https://github.com/iamtommetcalfe" title="Tom Metcalfe - Github Profile">
+      <a href="https://github.com/iamtommetcalfe" title="Tom Stirrop-Metcalfe - Github Profile">
         <picture class="tom-metcalfe-image">
           <source :srcset="githubIconWEBP" type="image/webp">
           <source :srcset="githubIconPNG" type="image/png">
-          <img :src="githubIconPNG" alt="Tom Metcalfe - Github Profile" width="15" height="14">
+          <img :src="githubIconPNG" alt="Tom Stirrop-Metcalfe - Github Profile" width="15" height="14">
         </picture>
       </a>
-      <a href="https://www.linkedin.com/in/iamtomstirropmetcalfe/" title="Tom Metcalfe - LinkedIn Profile">
+      <a href="https://www.linkedin.com/in/iamtomstirropmetcalfe/" title="Tom Stirrop-Metcalfe - LinkedIn Profile">
         <picture class="tom-metcalfe-image">
           <source :srcset="linkedInIconWEBP" type="image/webp">
           <source :srcset="linkedInIconPNG" type="image/png">
-          <img :src="linkedInIconPNG" alt="Tom Metcalfe - LinkedIn Profile" width="15" height="14">
+          <img :src="linkedInIconPNG" alt="Tom Stirrop-Metcalfe - LinkedIn Profile" width="15" height="14">
         </picture>
       </a>
     </div>
