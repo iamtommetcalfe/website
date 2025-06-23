@@ -30,10 +30,12 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, defineAsyncComponent } from 'vue';
 import imageUrlJPEG from '@/assets/images/tom-metcalfe-birmingham.jpeg';
 import imageUrlWEBP from '@/assets/images/tom-metcalfe-birmingham.webp';
-import MrRobotPopUp from '@/components/MrRobotPopUp.vue';
+
+// Dynamically import the MrRobotPopUp component
+const MrRobotPopUp = defineAsyncComponent(() => import('@/components/MrRobotPopUp.vue'));
 
 // State for popup visibility
 const isPopupVisible = ref(false);

@@ -1,5 +1,4 @@
 import { Router } from 'vue-router';
-import { sendPageView } from '@/utils/analytics';
 
 /**
  * Analytics plugin for Vue
@@ -27,8 +26,10 @@ export default {
       }
 
       // Small delay to ensure the page title is updated
-      setTimeout(() => {
+      setTimeout(async () => {
         const title = document.title || to.meta.title as string || to.name as string || 'Unknown';
+        // Dynamically import the sendPageView function
+        const { sendPageView } = await import('@/utils/analytics');
         sendPageView(to.fullPath, title);
       }, 100);
     });
@@ -42,7 +43,7 @@ export default {
           console.log('Analytics event (dev mode):', eventName, params);
           return;
         }
-        
+
         const { sendEvent } = await import('@/utils/analytics');
         sendEvent(eventName, params);
       }
