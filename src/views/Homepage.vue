@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="titleContainer">
-      <h1 class="pageTitle">Hello</h1>
+      <h1 class="pageTitle" @click="showMrRobotPopup" title="Click to see a surprise">Hello</h1>
       <p>
         My name is Tom Stirrop-Metcalfe, a passionate and committed engineering leader. With over 15 years of experience in PHP programming and 10+ years leading teams, I am always ready to take on challenging and exciting projects.
       </p>
@@ -23,12 +23,29 @@
         <img :src="imageUrlJPEG" width="248" class="tom-metcalfe-image" height="248" alt="Tom Stirrop-Metcalfe | Software Engineering Manager | Birmingham, United Kingdom">
       </picture>
     </div>
+
+    <!-- Mr. Robot Popup -->
+    <MrRobotPopUp :is-visible="isPopupVisible" @close="closePopup" />
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import imageUrlJPEG from '@/assets/images/tom-metcalfe-birmingham.jpeg';
 import imageUrlWEBP from '@/assets/images/tom-metcalfe-birmingham.webp';
+import MrRobotPopUp from '@/components/MrRobotPopUp.vue';
+
+// State for popup visibility
+const isPopupVisible = ref(false);
+
+// Methods for popup control
+const showMrRobotPopup = () => {
+  isPopupVisible.value = true;
+};
+
+const closePopup = () => {
+  isPopupVisible.value = false;
+};
 </script>
 
 <style scoped>
@@ -41,6 +58,13 @@ import imageUrlWEBP from '@/assets/images/tom-metcalfe-birmingham.webp';
 #titleContainer p {
   padding-right: 1rem;
   text-align: justify;
+}
+
+.pageTitle {
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  display: block;
 }
 
 #imageContainer {
