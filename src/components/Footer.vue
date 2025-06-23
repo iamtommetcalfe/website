@@ -33,61 +33,24 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-import { mapGetters, mapActions } from 'vuex';
+<script setup lang="ts">
+import { computed } from 'vue';
 import linkedInIconWEBP from '@/assets/images/linked-in-icon.webp';
 import linkedInIconPNG from '@/assets/images/linked-in-icon.png';
 import githubIconWEBP from '@/assets/images/github-icon.webp';
 import githubIconPNG from '@/assets/images/github-icon.png';
+import { useTheme } from '@/composables/useTheme';
+import { useBuildInfo } from '@/composables/useBuildInfo';
 
-interface FooterData {
-  linkedInIconWEBP: string;
-  linkedInIconPNG: string;
-  githubIconWEBP: string;
-  githubIconPNG: string;
-  showBuildInfo: boolean;
-}
+// Use the theme composable
+const { isDarkTheme, toggleTheme } = useTheme();
 
-export default defineComponent({
-  name: 'Footer',
-  data(): FooterData {
-    return {
-      linkedInIconWEBP,
-      linkedInIconPNG,
-      githubIconWEBP,
-      githubIconPNG,
-      showBuildInfo: false
-    };
-  },
-  computed: {
-    ...mapGetters({
-      currentTheme: 'currentTheme'
-    }),
-    isDarkTheme(): boolean {
-      return this.currentTheme === 'dark';
-    },
-    themeButtonText(): string {
-      return this.isDarkTheme ? '☀️' : '🌙';
-    },
-    themeButtonTitle(): string {
-      return this.isDarkTheme ? 'Switch to Light Mode' : 'Switch to Dark Mode';
-    },
-    buildTimestamp(): string | null {
-      return this.$buildTimestamp !== 'development' ? this.$buildTimestamp : null;
-    }
-  },
-  methods: {
-    ...mapActions(['toggleTheme']),
-    toggleBuildInfo(): void {
-      this.showBuildInfo = !this.showBuildInfo;
-    },
-    // Method to force refresh the page, bypassing cache
-    forceRefresh(): void {
-      window.location.reload(true);
-    }
-  }
-});
+// Computed properties for theme button
+const themeButtonText = computed(() => isDarkTheme.value ? '☀️' : '🌙');
+const themeButtonTitle = computed(() => isDarkTheme.value ? 'Switch to Light Mode' : 'Switch to Dark Mode');
+
+// Use the build info composable
+const { showBuildInfo, timestamp: buildTimestamp, toggleBuildInfo, forceRefresh } = useBuildInfo(import.meta.env.VITE_BUILD_TIMESTAMP);
 </script>
 
 <style scoped>

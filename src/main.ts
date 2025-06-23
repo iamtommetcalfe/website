@@ -2,13 +2,16 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
-import analyticsPlugin from './plugins/analytics';
 import './assets/styles/main.css';
+import { useAnalytics } from './composables/useAnalytics';
 
 // Log build timestamp for debugging cache issues
 if (import.meta.env.VITE_BUILD_TIMESTAMP) {
   console.log(`Build timestamp: ${import.meta.env.VITE_BUILD_TIMESTAMP}`);
 }
+
+// Initialize analytics with router for automatic page tracking
+useAnalytics(router);
 
 const app = createApp(App);
 
@@ -18,6 +21,5 @@ app.config.globalProperties.$buildTimestamp = import.meta.env.VITE_BUILD_TIMESTA
 // Use plugins
 app.use(router);
 app.use(store);
-app.use(analyticsPlugin, { router });
 
 app.mount('#app');

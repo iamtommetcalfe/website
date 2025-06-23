@@ -17,41 +17,14 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-import { mapGetters } from 'vuex';
+<script setup lang="ts">
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 import MrRobot from './components/MrRobot.vue';
+import { useTheme } from './composables/useTheme';
 
-export default defineComponent({
-  name: 'App',
-  components: {
-    Header,
-    Footer,
-    MrRobot,
-  },
-  computed: {
-    ...mapGetters({
-      currentTheme: 'currentTheme'
-    }),
-    isDarkTheme(): boolean {
-      return this.currentTheme === 'dark';
-    }
-  },
-  watch: {
-    isDarkTheme: {
-      immediate: true,
-      handler(newValue: boolean): void {
-        if (newValue) {
-          document.documentElement.classList.add('dark-mode');
-        } else {
-          document.documentElement.classList.remove('dark-mode');
-        }
-      }
-    }
-  }
-});
+// Use the theme composable
+const { isDarkTheme } = useTheme();
 </script>
 
 <style>

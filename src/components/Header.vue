@@ -15,21 +15,11 @@
   </nav>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-import { mapGetters } from 'vuex';
+<script setup lang="ts">
+import { useTheme } from '@/composables/useTheme';
 
-export default defineComponent({
-  name: 'Header',
-  computed: {
-    ...mapGetters({
-      currentTheme: 'currentTheme'
-    }),
-    isDarkTheme(): boolean {
-      return this.currentTheme === 'dark';
-    }
-  }
-});
+// Use the theme composable
+const { isDarkTheme } = useTheme();
 </script>
 
 <style scoped>
