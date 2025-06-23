@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav :class="{ 'dark-theme': isDarkTheme }">
     <div id="logoContainer">
       <router-link to="/" id="homepageTitle" title="Tom Metcalfe | Software Engineering Manager | Birmingham | Homepage">
         Tom Metcalfe <span>.</span>
@@ -16,8 +16,18 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
-  name: 'Header'
+  name: 'Header',
+  computed: {
+    ...mapGetters({
+      currentTheme: 'currentTheme'
+    }),
+    isDarkTheme() {
+      return this.currentTheme === 'dark';
+    }
+  }
 }
 </script>
 
@@ -27,6 +37,11 @@ export default {
     width:100%;
     height:64px;
     font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+    transition: background-color 0.3s ease;
+  }
+
+  nav.dark-theme {
+    background-color: #121212;
   }
 
   #homepageTitle {
@@ -78,4 +93,5 @@ export default {
     font-size: 18px;
     text-decoration: none;
   }
+
 </style>
