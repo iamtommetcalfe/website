@@ -1,7 +1,19 @@
 import { createStore } from 'vuex';
 
+// Define types for state
+interface User {
+  isAuthenticated: boolean;
+  name: string;
+}
+
+interface State {
+  count: number;
+  user: User;
+  theme: string;
+}
+
 // Create a new store instance
-export default createStore({
+export default createStore<State>({
   state() {
     return {
       // Define your state properties here
@@ -18,10 +30,10 @@ export default createStore({
     increment(state) {
       state.count++;
     },
-    setUser(state, user) {
+    setUser(state, user: User) {
       state.user = user;
     },
-    setTheme(state, theme) {
+    setTheme(state, theme: string) {
       state.theme = theme;
       localStorage.setItem('theme', theme);
     },
@@ -33,9 +45,9 @@ export default createStore({
         commit('increment');
       }, 1000);
     },
-    login({ commit }, user) {
+    login({ commit }, user: { name: string }) {
       // Simulate API call
-      return new Promise((resolve) => {
+      return new Promise<void>((resolve) => {
         setTimeout(() => {
           commit('setUser', {
             isAuthenticated: true,

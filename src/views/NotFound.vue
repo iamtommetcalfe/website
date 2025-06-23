@@ -10,7 +10,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import deadLinkWEBP from '@/assets/images/dead-link.webp';
 import deadLinkJPEG from '@/assets/images/dead-link.jpeg';
 </script>
