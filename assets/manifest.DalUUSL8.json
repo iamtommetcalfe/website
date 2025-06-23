@@ -1,7 +1,7 @@
 {
-  "short_name": "iamtommetcalfe,com",
+  "short_name": "iamtommetcalfe.com",
   "name": "Tom Metcalfe | Engineering Manager",
-  "description": "My name is Tom Metcalfe. I am a Birmingham based all round and standards compliant PHP developer who is always looking to work on exciting projects. Full of energy, hard work and passion.",
+  "description": "My name is Tom Metcalfe. I am a Birmingham based Software Engineering Manager who is passionate about enabling others to realize their full potential.",
   "start_url": "/",
   "background_color": "#f2f2f2",
   "display": "standalone",
@@ -10,13 +10,13 @@
   "splash_pages": null,
   "icons": [
       {
-          "src": "images/low-res-icon.webp",
+          "src": "src/assets/images/low-res-icon.webp",
           "sizes": "144x144",
           "type": "image/webp",
           "purpose": "maskable any"
       },
       {
-          "src": "images/large-icon.png",
+          "src": "src/assets/images/large-icon.png",
           "sizes": "512x512",
           "type": "image/png",
           "purpose": "maskable any"
