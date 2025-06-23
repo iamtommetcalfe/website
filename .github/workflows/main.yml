@@ -23,6 +23,21 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          # Add a timestamp to force cache busting
+          VITE_BUILD_TIMESTAMP: ${{ github.run_id }}-${{ github.run_number }}-${{ github.run_attempt }}
+
+      # Add a step to create a version.json file with build info
+      - name: Create version.json
+        run: |
+          echo "{\"buildId\":\"${{ github.run_id }}\",\"buildNumber\":\"${{ github.run_number }}\",\"timestamp\":\"$(date -u +"%Y-%m-%dT%H:%M:%SZ")\",\"commit\":\"${{ github.sha }}\"}" > ./dist/version.json
+
+      # Add a step to clear GitHub Pages cache
+      - name: Purge GitHub Pages cache
+        run: |
+          curl -X PURGE https://iamtommetcalfe.com || true
+          # Add more URLs if needed
+          # curl -X PURGE https://iamtommetcalfe.com/about || true
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
