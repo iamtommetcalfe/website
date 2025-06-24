@@ -1,4 +1,5 @@
-import { ref, computed, watch } from 'vue';
+import { computed, watch } from 'vue';
+import { useStore } from 'vuex';
 
 /**
  * Composable for managing theme (dark/light mode)
@@ -6,23 +7,23 @@ import { ref, computed, watch } from 'vue';
  * @returns {Object} Theme management functions and state
  */
 export function useTheme() {
-  // Initialize theme from localStorage or default to 'light'
-  const theme = ref(localStorage.getItem('theme') || 'light');
+  const store = useStore();
+
+  // Computed property to get the current theme from Vuex store
+  const theme = computed(() => store.getters.currentTheme);
 
   // Computed property to check if dark theme is active
   const isDarkTheme = computed(() => theme.value === 'dark');
 
   // Toggle between light and dark themes
   const toggleTheme = () => {
-    theme.value = theme.value === 'light' ? 'dark' : 'light';
-    localStorage.setItem('theme', theme.value);
+    store.dispatch('toggleTheme');
   };
 
   // Set a specific theme
   const setTheme = (newTheme: string) => {
     if (newTheme === 'light' || newTheme === 'dark') {
-      theme.value = newTheme;
-      localStorage.setItem('theme', theme.value);
+      store.commit('setTheme', newTheme);
     }
   };
 
