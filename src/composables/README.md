@@ -23,6 +23,7 @@ const { theme, isDarkTheme, toggleTheme, setTheme } = useTheme();
 ```
 
 **Returns:**
+
 - `theme`: Reactive reference to the current theme ('light' or 'dark')
 - `isDarkTheme`: Computed boolean indicating if dark theme is active
 - `toggleTheme()`: Function to toggle between light and dark themes
@@ -44,9 +45,11 @@ const { trackPageView, trackEvent: trackEventManual } = useAnalytics();
 ```
 
 **Parameters:**
+
 - `router` (optional): Vue Router instance for automatic page tracking
 
 **Returns:**
+
 - `isLoaded`: Reactive boolean indicating if analytics is loaded
 - `trackPageView(path, title)`: Function to track page views
 - `trackEvent(eventName, params)`: Function to track custom events
@@ -59,13 +62,17 @@ Manages build information display.
 import { useBuildInfo } from '@/composables/useBuildInfo';
 
 // In a component setup function
-const { showBuildInfo, timestamp, toggleBuildInfo, forceRefresh } = useBuildInfo(import.meta.env.VITE_BUILD_TIMESTAMP);
+const { showBuildInfo, timestamp, toggleBuildInfo, forceRefresh } = useBuildInfo(
+  import.meta.env.VITE_BUILD_TIMESTAMP
+);
 ```
 
 **Parameters:**
+
 - `buildTimestamp`: The build timestamp from environment variables
 
 **Returns:**
+
 - `showBuildInfo`: Reactive boolean controlling visibility of build info
 - `timestamp`: Computed value of the build timestamp (null if in development)
 - `toggleBuildInfo()`: Function to toggle build info visibility

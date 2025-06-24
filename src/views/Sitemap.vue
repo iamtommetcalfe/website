@@ -25,7 +25,7 @@ export default defineComponent({
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-</urlset>`
+</urlset>`,
     };
   },
   mounted() {
@@ -45,7 +45,6 @@ export default defineComponent({
   },
   beforeUnmount() {
     // This won't actually be called since we've replaced the entire document
-  }
+  },
 });
 </script>
-

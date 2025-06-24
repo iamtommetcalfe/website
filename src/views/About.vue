@@ -4,9 +4,19 @@
 
     <h2>Conditions I like to work in</h2>
     <ul>
-      <li>🏝 I am fully remote. That being said, I am very keen for on-site visits where possible.</li>
-      <li>🎸 Music - When not in meetings I will always have my headphones on listening to anything that does not have words in it - primarily game or movie soundtracks.
-        <a href="https://open.spotify.com/playlist/6d62q5Hf7cnR3qmgeF0LKh?si=3b2f59baa234463c" target="_blank" title="Tom Stirrop-Metcalfe | Soundtracks playlist on Spotify">This is my go to playlist</a>.</li>
+      <li>
+        🏝 I am fully remote. That being said, I am very keen for on-site visits where possible.
+      </li>
+      <li>
+        🎸 Music - When not in meetings I will always have my headphones on listening to anything
+        that does not have words in it - primarily game or movie soundtracks.
+        <a
+          href="https://open.spotify.com/playlist/6d62q5Hf7cnR3qmgeF0LKh?si=3b2f59baa234463c"
+          target="_blank"
+          title="Tom Stirrop-Metcalfe | Soundtracks playlist on Spotify"
+          >This is my go to playlist</a
+        >.
+      </li>
       <li>🗓 Organisation! Agendas and planned meetings are what I prefer</li>
     </ul>
 
@@ -69,19 +79,19 @@
 
 <script>
 export default {
-  name: 'About'
-}
+  name: 'About',
+};
 </script>
 
 <style scoped>
-  .sectionContainer {
-    width:50%;
-    float:left;
-  }
+.sectionContainer {
+  width: 50%;
+  float: left;
+}
 
-  @media screen and (max-width:1048px){
-    .sectionContainer {
-      width:100%;
-    }
+@media screen and (max-width: 1048px) {
+  .sectionContainer {
+    width: 100%;
   }
+}
 </style>

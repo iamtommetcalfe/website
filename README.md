@@ -5,18 +5,48 @@
     </a>
 </p>
 
+# Personal Website
+
+This is the repository for Tom Stirrop-Metcalfe's personal website, built with Vue.js, TypeScript, and Vite.
+
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# serve with hot reload at localhost:5173
 npm run dev
 
-# build for production with minification
+# build for production
 npm run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
+# preview the production build locally
+npm run preview
+
+# run type checking
+npm run type-check
 ```
+
+## Code Quality
+
+The project uses ESLint and Prettier to maintain code quality and consistent formatting. The following commands are available:
+
+```bash
+# run ESLint with automatic fixing
+npm run lint
+
+# run Prettier with automatic formatting
+npm run format
+
+# run both lint and format in sequence
+npm run fix
+```
+
+For more information about linting and formatting, see the [Linting Guide](docs/linting-guide.md).
+
+## Documentation
+
+- [Linting Guide](docs/linting-guide.md) - How to automatically fix linting and formatting errors
+- [Tasks](docs/tasks.md) - List of improvement tasks for the project
+- [Website Improvements Summary](docs/website-improvements-summary.md) - Summary of all improvements made to the website

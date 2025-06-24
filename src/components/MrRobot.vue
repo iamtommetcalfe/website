@@ -1,5 +1,6 @@
 <template>
-  <!--
+  <div class="mr-robot-ascii">
+    <!--
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 XX                                                                          XX
@@ -64,10 +65,11 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
                                                                 .o...P'
                                                                 `XER0'
 -->
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'MrRobot'
-}
+  name: 'MrRobot',
+};
 </script>

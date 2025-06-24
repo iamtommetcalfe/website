@@ -22,31 +22,30 @@ export const loadAnalytics = (): Promise<void> => {
     const script = document.createElement('script');
     script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
     script.defer = true;
-    
+
     // Set up the gtag function
     window.dataLayer = window.dataLayer || [];
-    window.gtag = function() {
-      window.dataLayer.push(arguments);
+    window.gtag = function (...args: unknown[]) {
+      dataLayer.push(args);
     };
-    
+
     // Initialize gtag
     window.gtag('js', new Date());
     window.gtag('config', GA_MEASUREMENT_ID, {
       send_page_view: false, // We'll send page views manually for better control
     });
-    
+
     // Append the script to the body
     document.body.appendChild(script);
-    
+
     // Mark as loaded and resolve the promise when the script loads
     script.onload = () => {
       analyticsLoaded = true;
       resolve();
     };
-    
+
     // Also resolve if there's an error, to prevent blocking the app
     script.onerror = () => {
-      console.warn('Failed to load Google Analytics');
       resolve();
     };
   });
@@ -60,7 +59,7 @@ export const loadAnalytics = (): Promise<void> => {
 export const sendPageView = async (path: string, title: string): Promise<void> => {
   // Load analytics if not already loaded
   await loadAnalytics();
-  
+
   // Send the page view
   window.gtag('event', 'page_view', {
     page_path: path,
@@ -74,10 +73,13 @@ export const sendPageView = async (path: string, title: string): Promise<void> =
  * @param {string} eventName - The name of the event
  * @param {Object} params - The event parameters
  */
-export const sendEvent = async (eventName: string, params: Record<string, any> = {}): Promise<void> => {
+export const sendEvent = async (
+  eventName: string,
+  params: Record<string, unknown> = {}
+): Promise<void> => {
   // Load analytics if not already loaded
   await loadAnalytics();
-  
+
   // Send the event
   window.gtag('event', eventName, params);
 };
@@ -85,7 +87,7 @@ export const sendEvent = async (eventName: string, params: Record<string, any> =
 // Add type definitions for the global window object
 declare global {
   interface Window {
-    dataLayer: any[];
-    gtag: (...args: any[]) => void;
+    dataLayer: unknown[];
+    gtag: (...args: unknown[]) => void;
   }
 }

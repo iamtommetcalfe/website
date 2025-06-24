@@ -38,11 +38,11 @@ export default {
     trackButtonClick() {
       this.$analytics.sendEvent('button_click', {
         button_name: 'example_button',
-        page: this.$route.path
+        page: this.$route.path,
       });
-    }
-  }
-}
+    },
+  },
+};
 </script>
 ```
 

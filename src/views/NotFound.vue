@@ -1,12 +1,10 @@
 <template>
   <div id="notFoundContainer">
-      <picture>
-        <source :srcset="deadLinkWEBP" type="image/webp">
-        <source :srcset="deadLinkJPEG" type="image/jpg">
-        <img :src="deadLinkJPEG"
-             id="notFoundImage"
-             alt="Oops! You found a dead link.">
-      </picture>
+    <picture>
+      <source :srcset="deadLinkWEBP" type="image/webp" />
+      <source :srcset="deadLinkJPEG" type="image/jpg" />
+      <img id="notFoundImage" :src="deadLinkJPEG" alt="Oops! You found a dead link." />
+    </picture>
   </div>
 </template>
 
@@ -17,12 +15,12 @@ import deadLinkJPEG from '@/assets/images/dead-link.jpeg';
 
 <style scoped>
 #notFoundContainer {
-  width:100%;
+  width: 100%;
   text-align: center;
 }
 
 #notFoundImage {
-  max-width:600px;
-  width:100%;
+  max-width: 600px;
+  width: 100%;
 }
 </style>

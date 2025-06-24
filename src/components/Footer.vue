@@ -4,21 +4,34 @@
       <b>Location</b> - <small>Engineering Function Manager @ Amiqus - Birmingham</small>
     </div>
     <div id="social">
-      <button @click="toggleTheme" id="themeToggle" :title="themeButtonTitle">
+      <button id="themeToggle" :title="themeButtonTitle" @click="toggleTheme">
         {{ themeButtonText }}
       </button>
       <a href="https://github.com/iamtommetcalfe" title="Tom Stirrop-Metcalfe - Github Profile">
         <picture class="tom-metcalfe-image">
-          <source :srcset="githubIconWEBP" type="image/webp">
-          <source :srcset="githubIconPNG" type="image/png">
-          <img :src="githubIconPNG" alt="Tom Stirrop-Metcalfe - Github Profile" width="15" height="14">
+          <source :srcset="githubIconWEBP" type="image/webp" />
+          <source :srcset="githubIconPNG" type="image/png" />
+          <img
+            :src="githubIconPNG"
+            alt="Tom Stirrop-Metcalfe - Github Profile"
+            width="15"
+            height="14"
+          />
         </picture>
       </a>
-      <a href="https://www.linkedin.com/in/iamtomstirropmetcalfe/" title="Tom Stirrop-Metcalfe - LinkedIn Profile">
+      <a
+        href="https://www.linkedin.com/in/iamtomstirropmetcalfe/"
+        title="Tom Stirrop-Metcalfe - LinkedIn Profile"
+      >
         <picture class="tom-metcalfe-image">
-          <source :srcset="linkedInIconWEBP" type="image/webp">
-          <source :srcset="linkedInIconPNG" type="image/png">
-          <img :src="linkedInIconPNG" alt="Tom Stirrop-Metcalfe - LinkedIn Profile" width="15" height="14">
+          <source :srcset="linkedInIconWEBP" type="image/webp" />
+          <source :srcset="linkedInIconPNG" type="image/png" />
+          <img
+            :src="linkedInIconPNG"
+            alt="Tom Stirrop-Metcalfe - LinkedIn Profile"
+            width="15"
+            height="14"
+          />
         </picture>
       </a>
     </div>
@@ -46,11 +59,17 @@ import { useBuildInfo } from '@/composables/useBuildInfo';
 const { isDarkTheme, toggleTheme } = useTheme();
 
 // Computed properties for theme button
-const themeButtonText = computed(() => isDarkTheme.value ? '☀️' : '🌙');
-const themeButtonTitle = computed(() => isDarkTheme.value ? 'Switch to Light Mode' : 'Switch to Dark Mode');
+const themeButtonText = computed(() => (isDarkTheme.value ? '☀️' : '🌙'));
+const themeButtonTitle = computed(() =>
+  isDarkTheme.value ? 'Switch to Light Mode' : 'Switch to Dark Mode'
+);
 
 // Use the build info composable
-const { showBuildInfo, timestamp: buildTimestamp, toggleBuildInfo, forceRefresh } = useBuildInfo(import.meta.env.VITE_BUILD_TIMESTAMP);
+const {
+  showBuildInfo,
+  timestamp: buildTimestamp,
+  toggleBuildInfo,
+} = useBuildInfo(import.meta.env.VITE_BUILD_TIMESTAMP);
 </script>
 
 <style scoped>
@@ -66,13 +85,13 @@ const { showBuildInfo, timestamp: buildTimestamp, toggleBuildInfo, forceRefresh 
 }
 
 #social {
-  float:right;
+  float: right;
   display: flex;
   align-items: center;
 }
 
 #social a {
-  padding-left:10px;
+  padding-left: 10px;
 }
 
 #themeToggle {

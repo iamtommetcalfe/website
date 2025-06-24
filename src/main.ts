@@ -5,11 +5,6 @@ import store from './store';
 import './assets/styles/main.css';
 import { useAnalytics } from './composables/useAnalytics';
 
-// Log build timestamp for debugging cache issues
-if (import.meta.env.VITE_BUILD_TIMESTAMP) {
-  console.log(`Build timestamp: ${import.meta.env.VITE_BUILD_TIMESTAMP}`);
-}
-
 // Initialize analytics with router for automatic page tracking
 useAnalytics(router);
 

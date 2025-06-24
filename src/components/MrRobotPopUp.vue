@@ -1,7 +1,7 @@
 <template>
   <div v-if="isVisible" class="popup-overlay" @click="closePopup">
     <div class="popup-content" @click.stop>
-      <img :src="helloFriendGif" alt="Hello Friend - Mr. Robot" class="popup-image">
+      <img :src="helloFriendGif" alt="Hello Friend - Mr. Robot" class="popup-image" />
     </div>
   </div>
 </template>
@@ -16,19 +16,20 @@ export default defineComponent({
     isVisible: {
       type: Boolean,
       required: true,
-      default: false
-    }
+      default: false,
+    },
   },
+  emits: ['close'],
   setup() {
     return {
-      helloFriendGif
+      helloFriendGif,
     };
   },
   methods: {
     closePopup() {
       this.$emit('close');
-    }
-  }
+    },
+  },
 });
 </script>
 
@@ -65,13 +66,21 @@ export default defineComponent({
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes scaleIn {
-  from { transform: scale(0.9); }
-  to { transform: scale(1); }
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 /* Dark theme support */

@@ -1,10 +1,10 @@
 body {
   background-color: #f2f2f2;
-  font-family: Tahoma,Geneva,sans-serif;
+  font-family: Tahoma, Geneva, sans-serif;
   font-weight: 300;
   color: #555;
   background-size: cover;
-  margin:0;
+  margin: 0;
 }
 #mainContent {
   background-color: #fff;
@@ -26,7 +26,7 @@ footer {
   margin-right: auto;
   margin-left: auto;
   margin-top: 1rem;
-  background-color: rgba(0,0,0,.8);
+  background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
   width: 100%;
   max-width: 64rem;
@@ -34,18 +34,18 @@ footer {
 }
 
 .clearAfter {
-  content: ".";
+  content: '.';
   display: block;
   height: 0;
   clear: both;
   visibility: hidden;
 }
 .pageTitle {
-  margin-left:auto;
-  margin-right:auto;
-  width:100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
   font-size: 2em;
 }
 h2 {
-  font-size:1em;
+  font-size: 1em;
 }
