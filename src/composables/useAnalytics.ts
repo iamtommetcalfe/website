@@ -85,7 +85,10 @@ export function useAnalytics(router?: Router) {
    * @param {string} eventName - The name of the event
    * @param {Object} params - The event parameters
    */
-  const trackEvent = async (eventName: string, params: Record<string, unknown> = {}): Promise<void> => {
+  const trackEvent = async (
+    eventName: string,
+    params: Record<string, unknown> = {}
+  ): Promise<void> => {
     await loadAnalytics();
 
     if (import.meta.env.DEV) {
