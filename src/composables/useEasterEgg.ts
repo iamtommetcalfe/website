@@ -76,13 +76,17 @@ export function useEasterEgg(
     showEasterEgg.value = false;
   };
 
-  // Add and remove event listeners
+  // Add and remove event listeners only in browser environment
   onMounted(() => {
-    window.addEventListener('keydown', handleKeyDown);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('keydown', handleKeyDown);
+    }
   });
 
   onUnmounted(() => {
-    window.removeEventListener('keydown', handleKeyDown);
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('keydown', handleKeyDown);
+    }
   });
 
   return {

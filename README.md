@@ -77,3 +77,4 @@ In development mode, the site runs as a standard single-page application (SPA). 
 - [Website Improvements Summary](docs/website-improvements-summary.md) - Summary of all improvements made to the website
 - [Static Site Generation](docs/static-site-generation.md) - Details about the static site generation implementation
 - [Dependency Version Fix](docs/dependency-version-fix.md) - Explanation of dependency version constraints and compatibility
+- [SSG Window Reference Fix](docs/ssg-window-fix.md) - How browser-specific code is handled during static site generation

@@ -22,7 +22,10 @@ export function useBuildInfo(buildTimestamp?: string) {
 
   // Force refresh the page, bypassing cache
   const forceRefresh = () => {
-    window.location.reload(true);
+    // Only run in browser environment
+    if (typeof window !== 'undefined') {
+      window.location.reload(true);
+    }
   };
 
   return {

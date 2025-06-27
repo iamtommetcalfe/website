@@ -8,7 +8,7 @@ import { useAnalytics } from './composables/useAnalytics';
 // https://github.com/antfu/vite-ssg
 export const createApp = ViteSSG(
   App,
-  { routes: router.options.routes, base: router.options.history.base },
+  { routes: router.options.routes },
   ({ app, router: ssgRouter }) => {
     // Initialize analytics with router for automatic page tracking
     const { trackEvent, trackPageView } = useAnalytics(ssgRouter);

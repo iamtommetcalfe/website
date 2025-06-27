@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import { createRouter, createWebHistory, createMemoryHistory, RouteRecordRaw } from 'vue-router';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -23,8 +23,11 @@ const routes: Array<RouteRecordRaw> = [
   },
 ];
 
+// Use memory history for SSG (server environment) and web history for browser
+const history = typeof window !== 'undefined' ? createWebHistory() : createMemoryHistory();
+
 const router = createRouter({
-  history: createWebHistory(),
+  history,
   routes,
 });
 

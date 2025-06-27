@@ -19,8 +19,8 @@ export function useAnalytics(router?: Router) {
   const loadAnalytics = async (): Promise<void> => {
     if (isLoaded.value) return;
 
-    // Skip in development mode
-    if (import.meta.env.DEV) {
+    // Skip in development mode or server environment
+    if (import.meta.env.DEV || typeof window === 'undefined') {
       isLoaded.value = true;
       return;
     }
@@ -75,6 +75,11 @@ export function useAnalytics(router?: Router) {
       return;
     }
 
+    // Skip in server environment
+    if (typeof window === 'undefined') {
+      return;
+    }
+
     // Send page_view event
     window.gtag('event', 'page_view', {
       page_path: path,
@@ -102,6 +107,11 @@ export function useAnalytics(router?: Router) {
       return;
     }
 
+    // Skip in server environment
+    if (typeof window === 'undefined') {
+      return;
+    }
+
     // Ensure the send_to parameter is included
     const eventParams = {
       ...params,
@@ -111,8 +121,8 @@ export function useAnalytics(router?: Router) {
     window.gtag('event', eventName, eventParams);
   };
 
-  // Set up automatic page tracking if router is provided
-  if (router) {
+  // Set up automatic page tracking if router is provided and in browser environment
+  if (router && typeof window !== 'undefined') {
     router.afterEach((to) => {
       // Small delay to ensure the page title is updated
       setTimeout(() => {
