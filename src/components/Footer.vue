@@ -37,12 +37,6 @@
     </div>
 
     <div class="clearAfter"></div>
-
-    <!-- Hidden build info for cache verification -->
-    <div v-if="buildTimestamp" class="build-info" @click="toggleBuildInfo">
-      <span v-if="showBuildInfo">Build: {{ buildTimestamp }}</span>
-      <span v-else class="build-dot" title="Click to show build information"></span>
-    </div>
   </div>
 </template>
 
@@ -149,5 +143,25 @@ const {
 
 .dark-theme .build-dot {
   background-color: #666;
+}
+
+.refresh-button {
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: 5px;
+  padding: 0;
+  transition: transform 0.3s ease;
+}
+
+.refresh-button:hover {
+  transform: rotate(180deg);
+  color: #00b3fe;
+}
+
+.dark-theme .refresh-button:hover {
+  color: #00b3fe;
 }
 </style>
