@@ -16,6 +16,7 @@
             alt="Tom Stirrop-Metcalfe - Github Profile"
             width="15"
             height="14"
+            loading="lazy"
           />
         </picture>
       </a>
@@ -31,6 +32,7 @@
             alt="Tom Stirrop-Metcalfe - LinkedIn Profile"
             width="15"
             height="14"
+            loading="lazy"
           />
         </picture>
       </a>

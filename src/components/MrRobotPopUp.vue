@@ -1,7 +1,11 @@
 <template>
   <div v-if="isVisible" class="popup-overlay" @click="closePopup">
     <div class="popup-content" @click.stop>
-      <img :src="helloFriendGif" alt="Hello Friend - Mr. Robot" class="popup-image" />
+      <video autoplay loop muted playsinline class="popup-image">
+        <source :src="helloFriendWebM" type="video/webm" />
+        <source :src="helloFriendMP4" type="video/mp4" />
+        <img :src="helloFriendGif" alt="Hello Friend - Mr. Robot" class="popup-image" />
+      </video>
     </div>
   </div>
 </template>
@@ -9,6 +13,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import helloFriendGif from '@/assets/images/hello-friend.gif';
+import helloFriendMP4 from '@/assets/images/hello-friend.mp4';
+import helloFriendWebM from '@/assets/images/hello-friend.webm';
 
 export default defineComponent({
   name: 'MrRobotPopUp',
@@ -23,6 +29,8 @@ export default defineComponent({
   setup() {
     return {
       helloFriendGif,
+      helloFriendMP4,
+      helloFriendWebM,
     };
   },
   methods: {

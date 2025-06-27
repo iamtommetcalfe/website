@@ -100,6 +100,10 @@ const { showEasterEgg, toggleEasterEgg, closeEasterEgg } = useEasterEgg();
 - Automatically adds a global keydown event listener when mounted
 - Detects when the user types "hireme" anywhere on the page
 - Shows the easter egg modal when the secret code is detected
+- Tracks user interactions with Google Analytics:
+  - When the easter egg is triggered by typing "hireme"
+  - When the easter egg is manually toggled
+  - When the easter egg is closed
 - Cleans up event listeners when the component is unmounted
 
 ## Benefits of Using Composables
