@@ -48,7 +48,11 @@
           <p>I'm passionate about building great products and leading high-performing teams.</p>
           <p>Let's connect and discuss how I can help your organization!</p>
           <div class="contact-buttons">
-            <a href="https://www.linkedin.com/in/iamtomstirropmetcalfe/" class="contact-button linkedin" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/iamtomstirropmetcalfe/"
+              class="contact-button linkedin"
+              target="_blank"
+            >
               Connect on LinkedIn
             </a>
           </div>
@@ -241,13 +245,23 @@ const themeButtonTitle = computed(() =>
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideIn {
-  from { transform: translateY(-20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Build Info Styles */
