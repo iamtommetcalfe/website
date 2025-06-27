@@ -78,6 +78,30 @@ const { showBuildInfo, timestamp, toggleBuildInfo, forceRefresh } = useBuildInfo
 - `toggleBuildInfo()`: Function to toggle build info visibility
 - `forceRefresh()`: Function to force refresh the page, bypassing cache
 
+### useEasterEgg
+
+Manages the "hire me" easter egg functionality.
+
+```typescript
+import { useEasterEgg } from '@/composables/useEasterEgg';
+
+// In a component setup function
+const { showEasterEgg, toggleEasterEgg, closeEasterEgg } = useEasterEgg();
+```
+
+**Returns:**
+
+- `showEasterEgg`: Reactive boolean controlling visibility of the easter egg
+- `toggleEasterEgg()`: Function to toggle easter egg visibility
+- `closeEasterEgg()`: Function to close the easter egg
+
+**Behavior:**
+
+- Automatically adds a global keydown event listener when mounted
+- Detects when the user types "hireme" anywhere on the page
+- Shows the easter egg modal when the secret code is detected
+- Cleans up event listeners when the component is unmounted
+
 ## Benefits of Using Composables
 
 1. **Code Reuse**: Extract common logic into reusable functions
