@@ -45,16 +45,16 @@
 </template>
 
 <script setup lang="ts">
-import { ref, defineAsyncComponent } from 'vue';
+import { ref, defineAsyncComponent, getCurrentInstance } from 'vue';
 import imageUrlJPEG from '@/assets/images/tom-metcalfe-birmingham.jpeg';
 import imageUrlWEBP from '@/assets/images/tom-metcalfe-birmingham.webp';
-import { useAnalytics } from '@/composables/useAnalytics';
 
 // Dynamically import the MrRobotPopUp component
 const MrRobotPopUp = defineAsyncComponent(() => import('@/components/MrRobotPopUp.vue'));
 
-// Initialize analytics
-const { trackEvent } = useAnalytics();
+// Get the current instance to access global properties
+const app = getCurrentInstance();
+const trackEvent = app?.appContext.config.globalProperties.$trackEvent;
 
 // State for popup visibility
 const isPopupVisible = ref(false);

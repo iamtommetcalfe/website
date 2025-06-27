@@ -1,17 +1,20 @@
-import { ref, onMounted, onUnmounted } from 'vue';
-import { useAnalytics } from './useAnalytics';
+import { ref, onMounted, onUnmounted, getCurrentInstance } from 'vue';
 
 /**
  * Composable for managing the "hire me" easter egg
  *
+ * @param {Function} customTrackEvent - Optional custom tracking function
  * @returns {Object} Easter egg functions and state
  */
-export function useEasterEgg() {
+export function useEasterEgg(customTrackEvent?: Function) {
   // State for whether to show the easter egg
   const showEasterEgg = ref(false);
 
-  // Initialize analytics
-  const { trackEvent } = useAnalytics();
+  // Get the current instance to access global properties
+  const app = getCurrentInstance();
+
+  // Use provided tracking function or get from global properties
+  const trackEvent = customTrackEvent || app?.appContext.config.globalProperties.$trackEvent;
 
   // The secret code to trigger the easter egg
   const secretCode = 'hireme';

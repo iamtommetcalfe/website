@@ -29,22 +29,23 @@ export function useAnalytics(router?: Router) {
       // Create the script element
       const script = document.createElement('script');
       script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-      script.defer = true;
+      script.async = true; // Use async instead of defer for faster loading
 
       // Set up the gtag function
       window.dataLayer = window.dataLayer || [];
-      window.gtag = function (...args: unknown[]) {
-        dataLayer.push(args);
+      window.gtag = function() {
+        window.dataLayer.push(arguments);
       };
+
+      // Append the script to the body
+      document.body.appendChild(script);
 
       // Initialize gtag
       window.gtag('js', new Date());
       window.gtag('config', GA_MEASUREMENT_ID, {
         send_page_view: false, // We'll send page views manually for better control
+        transport_type: 'beacon', // Use beacon for more reliable tracking
       });
-
-      // Append the script to the body
-      document.body.appendChild(script);
 
       // Mark as loaded and resolve the promise when the script loads
       script.onload = () => {
@@ -69,13 +70,16 @@ export function useAnalytics(router?: Router) {
     await loadAnalytics();
 
     if (import.meta.env.DEV) {
+      console.log('GA Page View (DEV):', path, title);
       return;
     }
 
+    // Send page_view event
     window.gtag('event', 'page_view', {
       page_path: path,
       page_title: title,
       page_location: window.location.href,
+      send_to: GA_MEASUREMENT_ID
     });
   };
 
@@ -92,10 +96,17 @@ export function useAnalytics(router?: Router) {
     await loadAnalytics();
 
     if (import.meta.env.DEV) {
+      console.log('GA Event (DEV):', eventName, params);
       return;
     }
 
-    window.gtag('event', eventName, params);
+    // Ensure the send_to parameter is included
+    const eventParams = {
+      ...params,
+      send_to: GA_MEASUREMENT_ID
+    };
+
+    window.gtag('event', eventName, eventParams);
   };
 
   // Set up automatic page tracking if router is provided
