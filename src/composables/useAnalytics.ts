@@ -33,8 +33,8 @@ export function useAnalytics(router?: Router) {
 
       // Set up the gtag function
       window.dataLayer = window.dataLayer || [];
-      window.gtag = function() {
-        window.dataLayer.push(arguments);
+      window.gtag = function(...args: unknown[]) {
+        window.dataLayer.push(...args);
       };
 
       // Append the script to the body
@@ -70,6 +70,7 @@ export function useAnalytics(router?: Router) {
     await loadAnalytics();
 
     if (import.meta.env.DEV) {
+      // eslint-disable-next-line no-console
       console.log('GA Page View (DEV):', path, title);
       return;
     }
@@ -96,6 +97,7 @@ export function useAnalytics(router?: Router) {
     await loadAnalytics();
 
     if (import.meta.env.DEV) {
+      // eslint-disable-next-line no-console
       console.log('GA Event (DEV):', eventName, params);
       return;
     }

@@ -3,10 +3,10 @@ import { ref, onMounted, onUnmounted, getCurrentInstance } from 'vue';
 /**
  * Composable for managing the "hire me" easter egg
  *
- * @param {Function} customTrackEvent - Optional custom tracking function
+ * @param {(eventName: string, params: Record<string, unknown>) => void} customTrackEvent - Optional custom tracking function
  * @returns {Object} Easter egg functions and state
  */
-export function useEasterEgg(customTrackEvent?: Function) {
+export function useEasterEgg(customTrackEvent?: (eventName: string, params: Record<string, unknown>) => void) {
   // State for whether to show the easter egg
   const showEasterEgg = ref(false);
 
