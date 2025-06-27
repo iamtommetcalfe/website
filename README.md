@@ -43,6 +43,12 @@ npm run format
 npm run fix
 ```
 
+### Pre-commit Hooks
+
+The project uses Husky and lint-staged to automatically run ESLint and Prettier on staged files before each commit. This ensures that all committed code follows the project's code style and passes linting checks.
+
+If any linting or formatting issues are found during the commit process, the commit will fail, and you'll need to fix the issues before you can commit your changes. This helps maintain code quality and consistency throughout the codebase.
+
 For more information about linting and formatting, see the [Linting Guide](docs/linting-guide.md).
 
 ## Documentation
