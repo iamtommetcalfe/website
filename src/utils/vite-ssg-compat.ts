@@ -22,9 +22,18 @@ type SetupFunction = (params: {
  * and providing a thin wrapper around the original ViteSSG function
  */
 export function ViteSSG(rootComponent: Component, options: UserOptions, fn?: SetupFunction) {
-  // Just pass through to the original ViteSSG function
+  // Filter out the sitemap.xml route to prevent conflicts during static site generation
+  // This allows the physical sitemap.xml file in the public directory to be used instead
+  const filteredOptions = { ...options };
+  if (filteredOptions.routes) {
+    filteredOptions.routes = filteredOptions.routes.filter(
+      (route) => route.path !== '/sitemap.xml'
+    );
+  }
+
+  // Pass the filtered options to the original ViteSSG function
   // The actual compatibility is handled by installing with --legacy-peer-deps
-  return OriginalViteSSG(rootComponent, options, fn);
+  return OriginalViteSSG(rootComponent, filteredOptions, fn);
 }
 
 // Re-export other exports from vite-ssg if needed
