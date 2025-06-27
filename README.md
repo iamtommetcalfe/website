@@ -7,13 +7,16 @@
 
 # Personal Website
 
-This is the repository for Tom Stirrop-Metcalfe's personal website, built with Vue.js, TypeScript, and Vite.
+This is the repository for Tom Stirrop-Metcalfe's personal website, built with Vue.js, TypeScript, and Vite. The site is statically generated during the build process to ensure optimal performance and SEO.
 
 ## Build Setup
 
 ```bash
-# install dependencies
+# install dependencies (standard way)
 npm install
+
+# install dependencies with compatibility mode for Vite 6
+npm run install-compat
 
 # serve with hot reload at localhost:5173
 npm run dev
@@ -21,12 +24,17 @@ npm run dev
 # build for production
 npm run build
 
+# build for production with compatibility mode for Vite 6
+npm run build-compat
+
 # preview the production build locally
 npm run preview
 
 # run type checking
 npm run type-check
 ```
+
+> **Note:** The project uses Vite 6 with a compatibility layer for vite-ssg. If you encounter dependency conflicts during installation, use the `install-compat` script which uses the `--legacy-peer-deps` flag. See [Dependency Version Fix](docs/dependency-version-fix.md) for details.
 
 ## Code Quality
 
@@ -51,8 +59,21 @@ If any linting or formatting issues are found during the commit process, the com
 
 For more information about linting and formatting, see the [Linting Guide](docs/linting-guide.md).
 
+## Static Site Generation
+
+The website uses [vite-ssg](https://github.com/antfu/vite-ssg) to generate static HTML for all routes during the build process. This provides several benefits:
+
+- **Improved SEO**: Search engines can index the content without executing JavaScript
+- **Faster Initial Load**: Users see the content immediately without waiting for JavaScript to load
+- **Better Performance**: Reduced time-to-interactive and improved Core Web Vitals
+- **Enhanced Accessibility**: Content is available even if JavaScript fails to load
+
+In development mode, the site runs as a standard single-page application (SPA). During the production build process, each route is pre-rendered to static HTML.
+
 ## Documentation
 
 - [Linting Guide](docs/linting-guide.md) - How to automatically fix linting and formatting errors
 - [Tasks](docs/tasks.md) - List of improvement tasks for the project
 - [Website Improvements Summary](docs/website-improvements-summary.md) - Summary of all improvements made to the website
+- [Static Site Generation](docs/static-site-generation.md) - Details about the static site generation implementation
+- [Dependency Version Fix](docs/dependency-version-fix.md) - Explanation of dependency version constraints and compatibility
