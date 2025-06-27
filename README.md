@@ -1,6 +1,6 @@
 <p style="margin:auto;width:100%;text-align: center">
     <a href="https://www.iamtommetcalfe.com" target="_blank">
-        <img alt="Tom Metcalfe Logo" src="https://raw.githubusercontent.com/iamtommetcalfe/website/gh-pages/img/tom-metcalfe-logo.png"
+        <img alt="Tom Metcalfe Logo" src="https://raw.githubusercontent.com/iamtommetcalfe/website/refs/heads/gh-pages/images/large-icon.png"
             width="300">
     </a>
 </p>
@@ -34,7 +34,7 @@ npm run preview
 npm run type-check
 ```
 
-> **Note:** The project uses Vite 6 with a compatibility layer for vite-ssg. If you encounter dependency conflicts during installation, use the `install-compat` script which uses the `--legacy-peer-deps` flag. See [Dependency Version Fix](docs/dependency-version-fix.md) for details.
+> **Note:** The project uses Vite 6 with a compatibility layer for vite-ssg. If you encounter dependency conflicts during installation, use the `install-compat` script which uses the `--legacy-peer-deps` flag.
 
 ## Code Quality
 
@@ -57,8 +57,6 @@ The project uses Husky and lint-staged to automatically run ESLint and Prettier 
 
 If any linting or formatting issues are found during the commit process, the commit will fail, and you'll need to fix the issues before you can commit your changes. This helps maintain code quality and consistency throughout the codebase.
 
-For more information about linting and formatting, see the [Linting Guide](docs/linting-guide.md).
-
 ## Static Site Generation
 
 The website uses [vite-ssg](https://github.com/antfu/vite-ssg) to generate static HTML for all routes during the build process. This provides several benefits:
@@ -69,13 +67,3 @@ The website uses [vite-ssg](https://github.com/antfu/vite-ssg) to generate stati
 - **Enhanced Accessibility**: Content is available even if JavaScript fails to load
 
 In development mode, the site runs as a standard single-page application (SPA). During the production build process, each route is pre-rendered to static HTML.
-
-## Documentation
-
-- [Linting Guide](docs/linting-guide.md) - How to automatically fix linting and formatting errors
-- [Tasks](docs/tasks.md) - List of improvement tasks for the project
-- [Website Improvements Summary](docs/website-improvements-summary.md) - Summary of all improvements made to the website
-- [Static Site Generation](docs/static-site-generation.md) - Details about the static site generation implementation
-- [Dependency Version Fix](docs/dependency-version-fix.md) - Explanation of dependency version constraints and compatibility
-- [SSG Window Reference Fix](docs/ssg-window-fix.md) - How browser-specific code is handled during static site generation
-- [Trailing Slash Fix](docs/trailing-slash-fix.md) - How to fix issues with trailing slashes in URLs causing 404 errors
