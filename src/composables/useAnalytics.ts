@@ -33,7 +33,7 @@ export function useAnalytics(router?: Router) {
 
       // Set up the gtag function
       window.dataLayer = window.dataLayer || [];
-      window.gtag = function(...args: unknown[]) {
+      window.gtag = function (...args: unknown[]) {
         window.dataLayer.push(...args);
       };
 
@@ -80,7 +80,7 @@ export function useAnalytics(router?: Router) {
       page_path: path,
       page_title: title,
       page_location: window.location.href,
-      send_to: GA_MEASUREMENT_ID
+      send_to: GA_MEASUREMENT_ID,
     });
   };
 
@@ -105,7 +105,7 @@ export function useAnalytics(router?: Router) {
     // Ensure the send_to parameter is included
     const eventParams = {
       ...params,
-      send_to: GA_MEASUREMENT_ID
+      send_to: GA_MEASUREMENT_ID,
     };
 
     window.gtag('event', eventName, eventParams);
