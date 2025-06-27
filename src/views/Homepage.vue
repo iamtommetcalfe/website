@@ -33,6 +33,7 @@
           width="248"
           class="tom-metcalfe-image"
           height="248"
+          loading="lazy"
           alt="Tom Stirrop-Metcalfe | Software Engineering Manager | Birmingham, United Kingdom"
         />
       </picture>
@@ -47,9 +48,13 @@
 import { ref, defineAsyncComponent } from 'vue';
 import imageUrlJPEG from '@/assets/images/tom-metcalfe-birmingham.jpeg';
 import imageUrlWEBP from '@/assets/images/tom-metcalfe-birmingham.webp';
+import { useAnalytics } from '@/composables/useAnalytics';
 
 // Dynamically import the MrRobotPopUp component
 const MrRobotPopUp = defineAsyncComponent(() => import('@/components/MrRobotPopUp.vue'));
+
+// Initialize analytics
+const { trackEvent } = useAnalytics();
 
 // State for popup visibility
 const isPopupVisible = ref(false);
@@ -57,6 +62,12 @@ const isPopupVisible = ref(false);
 // Methods for popup control
 const showMrRobotPopup = () => {
   isPopupVisible.value = true;
+
+  // Track the event in Google Analytics
+  trackEvent('hello_button_click', {
+    event_category: 'user_interaction',
+    event_label: 'Hello Button Click',
+  });
 };
 
 const closePopup = () => {
