@@ -31,10 +31,12 @@ export function useTheme() {
   watch(
     isDarkTheme,
     (newValue) => {
-      if (newValue) {
-        document.documentElement.classList.add('dark-mode');
-      } else {
-        document.documentElement.classList.remove('dark-mode');
+      if (typeof document !== 'undefined') {
+        if (newValue) {
+          document.documentElement.classList.add('dark-mode');
+        } else {
+          document.documentElement.classList.remove('dark-mode');
+        }
       }
     },
     { immediate: true }

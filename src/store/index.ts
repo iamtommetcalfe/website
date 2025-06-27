@@ -22,7 +22,7 @@ export default createStore<State>({
         isAuthenticated: false,
         name: '',
       },
-      theme: localStorage.getItem('theme') || 'light',
+      theme: typeof window !== 'undefined' ? localStorage.getItem('theme') || 'light' : 'light',
     };
   },
   mutations: {
@@ -35,7 +35,9 @@ export default createStore<State>({
     },
     setTheme(state, theme: string) {
       state.theme = theme;
-      localStorage.setItem('theme', theme);
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('theme', theme);
+      }
     },
   },
   actions: {

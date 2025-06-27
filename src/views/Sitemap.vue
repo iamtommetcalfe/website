@@ -29,19 +29,22 @@ export default defineComponent({
     };
   },
   mounted() {
-    // Set the content type to XML
-    document.title = 'Sitemap';
+    // Only execute in browser environment
+    if (typeof document !== 'undefined') {
+      // Set the content type to XML
+      document.title = 'Sitemap';
 
-    // Set the content type header
-    const metaContentType = document.createElement('meta');
-    metaContentType.httpEquiv = 'Content-Type';
-    metaContentType.content = 'text/xml; charset=UTF-8';
-    document.head.appendChild(metaContentType);
+      // Set the content type header
+      const metaContentType = document.createElement('meta');
+      metaContentType.httpEquiv = 'Content-Type';
+      metaContentType.content = 'text/xml; charset=UTF-8';
+      document.head.appendChild(metaContentType);
 
-    // Replace the entire HTML document with the raw XML
-    document.open('text/xml');
-    document.write(this.rawSitemapContent);
-    document.close();
+      // Replace the entire HTML document with the raw XML
+      document.open('text/xml');
+      document.write(this.rawSitemapContent);
+      document.close();
+    }
   },
   beforeUnmount() {
     // This won't actually be called since we've replaced the entire document
