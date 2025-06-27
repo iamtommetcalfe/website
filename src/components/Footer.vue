@@ -47,7 +47,6 @@ import linkedInIconPNG from '@/assets/images/linked-in-icon.png';
 import githubIconWEBP from '@/assets/images/github-icon.webp';
 import githubIconPNG from '@/assets/images/github-icon.png';
 import { useTheme } from '@/composables/useTheme';
-import { useBuildInfo } from '@/composables/useBuildInfo';
 
 // Use the theme composable
 const { isDarkTheme, toggleTheme } = useTheme();
@@ -57,13 +56,6 @@ const themeButtonText = computed(() => (isDarkTheme.value ? '☀️' : '🌙'));
 const themeButtonTitle = computed(() =>
   isDarkTheme.value ? 'Switch to Light Mode' : 'Switch to Dark Mode'
 );
-
-// Use the build info composable
-const {
-  showBuildInfo,
-  timestamp: buildTimestamp,
-  toggleBuildInfo,
-} = useBuildInfo(import.meta.env.VITE_BUILD_TIMESTAMP);
 </script>
 
 <style scoped>
