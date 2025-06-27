@@ -78,3 +78,4 @@ In development mode, the site runs as a standard single-page application (SPA). 
 - [Static Site Generation](docs/static-site-generation.md) - Details about the static site generation implementation
 - [Dependency Version Fix](docs/dependency-version-fix.md) - Explanation of dependency version constraints and compatibility
 - [SSG Window Reference Fix](docs/ssg-window-fix.md) - How browser-specific code is handled during static site generation
+- [Trailing Slash Fix](docs/trailing-slash-fix.md) - How to fix issues with trailing slashes in URLs causing 404 errors

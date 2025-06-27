@@ -1,72 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <!-- DNS prefetch and preconnect for performance -->
-    <link rel="dns-prefetch" href="https://www.google-analytics.com">
-    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <link rel="preconnect" href="https://www.google-analytics.com" />
 
-    <link rel="manifest" href="./manifest.json">
-    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Tom Stirrop-Metcalfe">
-    <meta name="keywords" content="tom stirrop-metcalfe, thomas stirrop-metcalfe, software engineer, software engineering manager, birmingham">
-    <meta name="description" content="My name is Tom Stirrop-Metcalfe. I am a passionate and driven engineering leader who wants to enable others to realise their full potential.">
-    <meta name="theme-color" content="#384452">
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="Tom Stirrop-Metcalfe" />
+    <meta
+      name="keywords"
+      content="tom stirrop-metcalfe, thomas stirrop-metcalfe, software engineer, software engineering manager, birmingham"
+    />
+    <meta
+      name="description"
+      content="My name is Tom Stirrop-Metcalfe. I am a passionate and driven engineering leader who wants to enable others to realise their full potential."
+    />
+    <meta name="theme-color" content="#384452" />
     <!-- Cache busting meta tag -->
-    <meta name="build-timestamp" content="<%= VITE_BUILD_TIMESTAMP %>">
+    <meta name="build-timestamp" content="<%= VITE_BUILD_TIMESTAMP %>" />
     <title>Tom Stirrop-Metcalfe | Software Engineer & Engineering Manager | Birmingham</title>
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://iamtommetcalfe.com/">
-    <meta property="og:title" content="Tom Stirrop-Metcalfe | Software Engineer & Engineering Manager">
-    <meta property="og:description" content="My name is Tom Stirrop-Metcalfe. I am a passionate and driven engineering leader who wants to enable others to realise their full potential.">
-    <meta property="og:image" content="https://iamtommetcalfe.com/images/tom-metcalfe-birmingham.jpeg">
-    <meta property="og:image:alt" content="Tom Stirrop-Metcalfe - Software Engineering Manager">
-    <meta property="og:site_name" content="Tom Stirrop-Metcalfe">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://iamtommetcalfe.com/" />
+    <meta
+      property="og:title"
+      content="Tom Stirrop-Metcalfe | Software Engineer & Engineering Manager"
+    />
+    <meta
+      property="og:description"
+      content="My name is Tom Stirrop-Metcalfe. I am a passionate and driven engineering leader who wants to enable others to realise their full potential."
+    />
+    <meta
+      property="og:image"
+      content="https://iamtommetcalfe.com/images/tom-metcalfe-birmingham.jpeg"
+    />
+    <meta property="og:image:alt" content="Tom Stirrop-Metcalfe - Software Engineering Manager" />
+    <meta property="og:site_name" content="Tom Stirrop-Metcalfe" />
 
     <!-- X (formerly Twitter) -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://iamtommetcalfe.com/">
-    <meta name="twitter:title" content="Tom Stirrop-Metcalfe | Software Engineer & Engineering Manager">
-    <meta name="twitter:description" content="My name is Tom Stirrop-Metcalfe. I am a passionate and driven engineering leader who wants to enable others to realise their full potential.">
-    <meta name="twitter:image" content="https://iamtommetcalfe.com/images/tom-metcalfe-birmingham.jpeg">
-    <meta name="twitter:image:alt" content="Tom Stirrop-Metcalfe - Software Engineering Manager">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://iamtommetcalfe.com/" />
+    <meta
+      name="twitter:title"
+      content="Tom Stirrop-Metcalfe | Software Engineer & Engineering Manager"
+    />
+    <meta
+      name="twitter:description"
+      content="My name is Tom Stirrop-Metcalfe. I am a passionate and driven engineering leader who wants to enable others to realise their full potential."
+    />
+    <meta
+      name="twitter:image"
+      content="https://iamtommetcalfe.com/images/tom-metcalfe-birmingham.jpeg"
+    />
+    <meta name="twitter:image:alt" content="Tom Stirrop-Metcalfe - Software Engineering Manager" />
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://iamtommetcalfe.com/">
+    <link rel="canonical" href="https://iamtommetcalfe.com/" />
 
     <!-- Structured Data (JSON-LD) for better search results -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Tom Stirrop-Metcalfe",
-      "jobTitle": "Software Engineering Manager",
-      "url": "https://iamtommetcalfe.com",
-      "sameAs": [
-        "https://github.com/iamtommetcalfe",
-        "https://www.linkedin.com/in/iamtomstirropmetcalfe/"
-      ],
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Amiqus"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Birmingham",
-        "addressCountry": "UK"
-      },
-      "description": "A passionate and driven engineering leader who enables others to realise their full potential."
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Tom Stirrop-Metcalfe",
+        "jobTitle": "Software Engineering Manager",
+        "url": "https://iamtommetcalfe.com",
+        "sameAs": [
+          "https://github.com/iamtommetcalfe",
+          "https://www.linkedin.com/in/iamtomstirropmetcalfe/"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Amiqus"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Birmingham",
+          "addressCountry": "UK"
+        },
+        "description": "A passionate and driven engineering leader who enables others to realise their full potential."
+      }
     </script>
-</head>
-<body>
-<div id="app"></div>
-<script type="module" src="./src/main.ts"></script>
-<!-- built files will be auto injected -->
-</body>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+    <!-- built files will be auto injected -->
+  </body>
 </html>
