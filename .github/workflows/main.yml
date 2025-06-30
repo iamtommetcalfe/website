@@ -70,9 +70,7 @@ jobs:
           curl -X PURGE https://iamtommetcalfe.com/manifest.json || true
 
           # Purge common routes
-          curl -X PURGE https://iamtommetcalfe.com/about || true
-          curl -X PURGE https://iamtommetcalfe.com/contact || true
-          curl -X PURGE https://iamtommetcalfe.com/projects || true
+          curl -X PURGE https://iamtommetcalfe.com/about/ || true
 
           # Purge asset directories
           curl -X PURGE https://iamtommetcalfe.com/assets/ || true

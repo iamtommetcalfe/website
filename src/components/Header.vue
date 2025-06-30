@@ -11,7 +11,7 @@
       <div id="navBar">
         <ul>
           <li>
-            <router-link to="/about" title="About Tom Stirrop-Metcalfe">About</router-link>
+            <router-link to="/about/" title="About Tom Stirrop-Metcalfe">About</router-link>
           </li>
         </ul>
       </div>
