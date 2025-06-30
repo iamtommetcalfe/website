@@ -25,8 +25,11 @@ export const loadAnalytics = (): Promise<void> => {
 
     // Set up the gtag function
     window.dataLayer = window.dataLayer || [];
-    window.gtag = function (...args: unknown[]) {
-      dataLayer.push(args);
+    window.gtag = function (command: string, ...args: unknown[]) {
+      // Create an array with the command and args
+      const gtag_args = [command, ...args];
+      // Push the array to the dataLayer
+      dataLayer.push(gtag_args);
     };
 
     // Initialize gtag
@@ -88,6 +91,6 @@ export const sendEvent = async (
 declare global {
   interface Window {
     dataLayer: unknown[];
-    gtag: (...args: unknown[]) => void;
+    gtag: (command: string, ...args: unknown[]) => void;
   }
 }

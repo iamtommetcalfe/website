@@ -33,8 +33,11 @@ export function useAnalytics(router?: Router) {
 
       // Set up the gtag function
       window.dataLayer = window.dataLayer || [];
-      window.gtag = function (...args: unknown[]) {
-        window.dataLayer.push(args);
+      window.gtag = function (command: string, ...args: unknown[]) {
+        // Create an array with the command and args
+        const gtag_args = [command, ...args];
+        // Push the array to the dataLayer
+        window.dataLayer.push(gtag_args);
       };
 
       // Append the script to the body
@@ -77,6 +80,7 @@ export function useAnalytics(router?: Router) {
 
     // Skip in server environment
     if (typeof window === 'undefined') {
+      console.log('Skipping GA Page View in server environment:', path, title);
       return;
     }
 
@@ -109,6 +113,7 @@ export function useAnalytics(router?: Router) {
 
     // Skip in server environment
     if (typeof window === 'undefined') {
+      console.log('Skipping GA Event in server environment:', eventName, params);
       return;
     }
 
@@ -144,6 +149,6 @@ export function useAnalytics(router?: Router) {
 declare global {
   interface Window {
     dataLayer: unknown[];
-    gtag: (...args: unknown[]) => void;
+    gtag: (command: string, ...args: unknown[]) => void;
   }
 }
