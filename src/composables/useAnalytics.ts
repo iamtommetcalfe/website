@@ -34,7 +34,7 @@ export function useAnalytics(router?: Router) {
       // Set up the gtag function
       window.dataLayer = window.dataLayer || [];
       window.gtag = function (...args: unknown[]) {
-        window.dataLayer.push(...args);
+        window.dataLayer.push(args);
       };
 
       // Append the script to the body

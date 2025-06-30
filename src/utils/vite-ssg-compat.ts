@@ -1,19 +1,19 @@
 import { ViteSSG as OriginalViteSSG } from 'vite-ssg';
-import type { RouteRecordRaw } from 'vue-router';
+import type { RouteRecordRaw, Router } from 'vue-router';
 import type { App, Component } from 'vue';
 
 // Define the types for the ViteSSG function
 type UserOptions = {
   routes: RouteRecordRaw[];
   base?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 };
 
 type SetupFunction = (params: {
   app: App;
-  router: any;
+  router: Router;
   routes: RouteRecordRaw[];
-  initialState: any;
+  initialState: unknown;
 }) => void;
 
 /**
