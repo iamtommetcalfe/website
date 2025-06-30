@@ -44,7 +44,7 @@
     <div v-if="showEasterEgg" class="easter-egg-modal" :class="{ 'dark-theme': isDarkTheme }">
       <div class="easter-egg-content">
         <button class="close-button" @click="closeEasterEgg">&times;</button>
-        <h2>🎉 You Found Me! 🎉</h2>
+        <h2>🎉 You found me! 🎉</h2>
         <p>Looking for an experienced engineering leader?</p>
         <div class="hire-me-content">
           <p>I'm passionate about building great products and leading high-performing teams.</p>

@@ -1,5 +1,6 @@
 import { ref } from 'vue';
 import { Router } from 'vue-router';
+import { checkAnalyticsAvailable } from '@/utils/analytics';
 
 // Google Analytics Measurement ID
 const GA_MEASUREMENT_ID = 'G-8998EV7FR0';
@@ -11,56 +12,38 @@ const GA_MEASUREMENT_ID = 'G-8998EV7FR0';
  * @returns {Object} Analytics tracking functions
  */
 export function useAnalytics(router?: Router) {
-  const isLoaded = ref(false);
+  const isAvailable = ref(false);
+  const isChecked = ref(false);
 
   /**
-   * Loads the Google Analytics script dynamically
+   * Checks if Google Analytics is available
+   * Since the script is now loaded directly in the HTML, we just need to check if gtag is defined
    */
-  const loadAnalytics = async (): Promise<void> => {
-    if (isLoaded.value) return;
-
-    // Skip in development mode or server environment
-    if (import.meta.env.DEV || typeof window === 'undefined') {
-      isLoaded.value = true;
-      return;
+  const checkAnalytics = (): boolean => {
+    // Skip in server environment
+    if (typeof window === 'undefined') {
+      return false;
     }
 
-    return new Promise((resolve) => {
-      // Create the script element
-      const script = document.createElement('script');
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-      script.async = true; // Use async instead of defer for faster loading
+    // If already checked, return the cached result
+    if (isChecked.value) {
+      return isAvailable.value;
+    }
 
-      // Set up the gtag function
-      window.dataLayer = window.dataLayer || [];
-      window.gtag = function (command: string, ...args: unknown[]) {
-        // Create an array with the command and args
-        const gtag_args = [command, ...args];
-        // Push the array to the dataLayer
-        window.dataLayer.push(gtag_args);
-      };
+    // eslint-disable-next-line no-console
+    console.log('Checking if Google Analytics is available');
 
-      // Append the script to the body
-      document.body.appendChild(script);
+    // Check if GA is available using the utility function
+    const available = checkAnalyticsAvailable();
 
-      // Initialize gtag
-      window.gtag('js', new Date());
-      window.gtag('config', GA_MEASUREMENT_ID, {
-        send_page_view: false, // We'll send page views manually for better control
-        transport_type: 'beacon', // Use beacon for more reliable tracking
-      });
+    // Cache the result
+    isAvailable.value = available;
+    isChecked.value = true;
 
-      // Mark as loaded and resolve the promise when the script loads
-      script.onload = () => {
-        isLoaded.value = true;
-        resolve();
-      };
+    // eslint-disable-next-line no-console
+    console.log('Google Analytics available:', available);
 
-      // Also resolve if there's an error, to prevent blocking the app
-      script.onerror = () => {
-        resolve();
-      };
-    });
+    return available;
   };
 
   /**
@@ -70,19 +53,31 @@ export function useAnalytics(router?: Router) {
    * @param {string} title - The page title
    */
   const trackPageView = async (path: string, title: string): Promise<void> => {
-    await loadAnalytics();
-
-    if (import.meta.env.DEV) {
-      // eslint-disable-next-line no-console
-      console.log('GA Page View (DEV):', path, title);
-      return;
-    }
-
     // Skip in server environment
     if (typeof window === 'undefined') {
+      // eslint-disable-next-line no-console
       console.log('Skipping GA Page View in server environment:', path, title);
       return;
     }
+
+    // eslint-disable-next-line no-console
+    console.log('trackPageView called with:', { path, title });
+
+    // Check if GA is available
+    if (!checkAnalytics()) {
+      // eslint-disable-next-line no-console
+      console.warn('Google Analytics is not available, skipping page_view tracking');
+      return;
+    }
+
+    // Debug info
+    // eslint-disable-next-line no-console
+    console.log('Sending page_view event to GA:', {
+      page_path: path,
+      page_title: title,
+      page_location: window.location.href,
+      dataLayerState: window.dataLayer ? window.dataLayer.length : 'undefined',
+    });
 
     // Send page_view event
     window.gtag('event', 'page_view', {
@@ -91,6 +86,9 @@ export function useAnalytics(router?: Router) {
       page_location: window.location.href,
       send_to: GA_MEASUREMENT_ID,
     });
+
+    // eslint-disable-next-line no-console
+    console.log('page_view event sent');
   };
 
   /**
@@ -103,17 +101,20 @@ export function useAnalytics(router?: Router) {
     eventName: string,
     params: Record<string, unknown> = {}
   ): Promise<void> => {
-    await loadAnalytics();
-
-    if (import.meta.env.DEV) {
+    // Skip in server environment
+    if (typeof window === 'undefined') {
       // eslint-disable-next-line no-console
-      console.log('GA Event (DEV):', eventName, params);
+      console.log('Skipping GA Event in server environment:', eventName, params);
       return;
     }
 
-    // Skip in server environment
-    if (typeof window === 'undefined') {
-      console.log('Skipping GA Event in server environment:', eventName, params);
+    // eslint-disable-next-line no-console
+    console.log('trackEvent called with:', { eventName, params });
+
+    // Check if GA is available
+    if (!checkAnalytics()) {
+      // eslint-disable-next-line no-console
+      console.warn('Google Analytics is not available, skipping event tracking');
       return;
     }
 
@@ -123,23 +124,64 @@ export function useAnalytics(router?: Router) {
       send_to: GA_MEASUREMENT_ID,
     };
 
+    // Debug info
+    // eslint-disable-next-line no-console
+    console.log('Sending event to GA:', {
+      eventName,
+      eventParams,
+      dataLayerState: window.dataLayer ? window.dataLayer.length : 'undefined',
+    });
+
     window.gtag('event', eventName, eventParams);
+
+    // eslint-disable-next-line no-console
+    console.log(`Event '${eventName}' sent to GA`);
   };
+
+  // Check analytics availability as soon as possible
+  if (typeof window !== 'undefined') {
+    // eslint-disable-next-line no-console
+    console.log('Checking analytics availability');
+    // Check if GA is available
+    checkAnalytics();
+  }
 
   // Set up automatic page tracking if router is provided and in browser environment
   if (router && typeof window !== 'undefined') {
-    router.afterEach((to) => {
+    // eslint-disable-next-line no-console
+    console.log('Setting up automatic page tracking with router');
+
+    router.afterEach((to, from) => {
+      // eslint-disable-next-line no-console
+      console.log('Router navigation detected:', {
+        to: to.fullPath,
+        from: from?.fullPath || 'initial',
+        toName: to.name,
+        toMeta: to.meta,
+        analyticsAvailable: isAvailable.value,
+      });
+
       // Small delay to ensure the page title is updated
       setTimeout(() => {
         const title =
           document.title || (to.meta.title as string) || (to.name as string) || 'Unknown';
+
+        // eslint-disable-next-line no-console
+        console.log('Tracking page view after navigation with title:', title);
+
         trackPageView(to.fullPath, title);
       }, 100);
+    });
+  } else {
+    // eslint-disable-next-line no-console
+    console.log('Automatic page tracking not set up:', {
+      hasRouter: !!router,
+      hasWindow: typeof window !== 'undefined',
     });
   }
 
   return {
-    isLoaded,
+    isAvailable,
     trackPageView,
     trackEvent,
   };
