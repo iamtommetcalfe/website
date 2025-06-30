@@ -164,6 +164,7 @@ const themeButtonTitle = computed(() =>
   position: relative;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   animation: slideIn 0.4s ease;
+  color: #384452;
 }
 
 .dark-theme .easter-egg-content {
