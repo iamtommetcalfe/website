@@ -1,31 +1,73 @@
-import { ref, onMounted, onUnmounted, getCurrentInstance } from 'vue';
+import { ref, onMounted, onUnmounted, getCurrentInstance, Ref } from 'vue';
+
+/**
+ * Type definition for analytics tracking function
+ */
+type TrackEventFunction = (eventName: string, params: Record<string, unknown>) => void;
+
+/**
+ * Interface for the return value of the useEasterEgg composable
+ *
+ * @interface EasterEggReturn
+ * @property {Ref<boolean>} showEasterEgg - Whether to show the easter egg
+ * @property {() => void} toggleEasterEgg - Function to toggle the visibility of the easter egg
+ * @property {() => void} closeEasterEgg - Function to close the easter egg
+ */
+interface EasterEggReturn {
+  showEasterEgg: Ref<boolean>;
+  toggleEasterEgg: () => void;
+  closeEasterEgg: () => void;
+}
 
 /**
  * Composable for managing the "hire me" easter egg
  *
- * @param {(eventName: string, params: Record<string, unknown>) => void} customTrackEvent - Optional custom tracking function
- * @returns {Object} Easter egg functions and state
+ * This composable provides functionality for a keyboard-activated easter egg
+ * that can be triggered by typing "hireme" anywhere on the site. It also
+ * includes tracking for when the easter egg is triggered, toggled, or closed.
+ *
+ * @param {TrackEventFunction} [customTrackEvent] - Optional custom tracking function
+ * @returns {EasterEggReturn} Object containing easter egg state and functions
+ *
+ * @example
+ * // Basic usage
+ * const { showEasterEgg, closeEasterEgg } = useEasterEgg();
+ *
+ * @example
+ * // With custom tracking function
+ * const { showEasterEgg } = useEasterEgg((event, params) => {
+ *   console.log(`Tracked: ${event}`, params);
+ * });
  */
-export function useEasterEgg(
-  customTrackEvent?: (eventName: string, params: Record<string, unknown>) => void
-) {
+export function useEasterEgg(customTrackEvent?: TrackEventFunction): EasterEggReturn {
   // State for whether to show the easter egg
-  const showEasterEgg = ref(false);
+  const showEasterEgg: Ref<boolean> = ref(false);
 
   // Get the current instance to access global properties
   const app = getCurrentInstance();
 
   // Use provided tracking function or get from global properties
-  const trackEvent = customTrackEvent || app?.appContext.config.globalProperties.$trackEvent;
+  // Use a safe fallback function if neither is available
+  const trackEvent: TrackEventFunction =
+    customTrackEvent ||
+    app?.appContext.config.globalProperties.$trackEvent ||
+    ((eventName: string, params: Record<string, unknown>) => {
+      // Silent fallback if no tracking function is available
+      console.debug('[useEasterEgg] No tracking function available', { eventName, params });
+    });
 
   // The secret code to trigger the easter egg
-  const secretCode = 'hireme';
+  const secretCode: string = 'hireme';
 
   // The current sequence of keys pressed
-  let keySequence = '';
+  let keySequence: string = '';
 
-  // Handle keydown events to detect the secret code
-  const handleKeyDown = (event: KeyboardEvent) => {
+  /**
+   * Handle keydown events to detect the secret code
+   *
+   * @param {KeyboardEvent} event - The keyboard event
+   */
+  const handleKeyDown = (event: KeyboardEvent): void => {
     // Add the key to the sequence
     keySequence += event.key.toLowerCase();
 
@@ -50,8 +92,10 @@ export function useEasterEgg(
     }
   };
 
-  // Toggle the visibility of the easter egg
-  const toggleEasterEgg = () => {
+  /**
+   * Toggle the visibility of the easter egg
+   */
+  const toggleEasterEgg = (): void => {
     showEasterEgg.value = !showEasterEgg.value;
 
     // Track the event in Google Analytics if the easter egg is being shown
@@ -63,8 +107,10 @@ export function useEasterEgg(
     }
   };
 
-  // Close the easter egg
-  const closeEasterEgg = () => {
+  /**
+   * Close the easter egg
+   */
+  const closeEasterEgg = (): void => {
     // Only track if it was actually visible before closing
     if (showEasterEgg.value) {
       trackEvent('easter_egg_closed', {
