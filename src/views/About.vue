@@ -78,7 +78,15 @@
 </template>
 
 <script setup lang="ts">
-// About page component using Composition API
+import { useSeo } from '@/composables/useSeo';
+
+// Set SEO metadata for the About page
+useSeo({
+  title: 'About - Tom Stirrop-Metcalfe | Software Engineering Manager',
+  description:
+    'Learn more about Tom Stirrop-Metcalfe, a passionate and committed engineering leader with over 15 years of experience in software development.',
+  canonicalUrl: 'https://iamtommetcalfe.com/about/',
+});
 </script>
 
 <style scoped>

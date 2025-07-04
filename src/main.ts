@@ -16,7 +16,7 @@ console.log('[main] Starting app initialization', {
 export const createApp = ViteSSG(
   App,
   { routes: router.options.routes },
-  ({ app, router: ssgRouter }) => {
+  ({ app, router: ssgRouter, head, isClient, initialState }) => {
     // eslint-disable-next-line no-console
     console.log('[main] App setup function called, initializing components');
 
@@ -41,6 +41,68 @@ export const createApp = ViteSSG(
     // eslint-disable-next-line no-console
     console.log('[main] Registering Vuex store');
     app.use(store);
+
+    // Handle SEO metadata from SSR context during static site generation
+    if (!isClient) {
+      // eslint-disable-next-line no-console
+      console.log('[main] Setting up SSR hooks for SEO metadata');
+
+      // Add hook to apply SEO metadata from context
+      ssgRouter.beforeResolve(async (to, from, next) => {
+        try {
+          // Get the matched components for the route
+          const matched = ssgRouter.resolve(to).matched;
+          const matchedComponents = [];
+
+          for (const record of matched) {
+            for (const name in record.components) {
+              const component = record.components[name];
+              matchedComponents.push(component);
+            }
+          }
+
+          // Load the components
+          await Promise.all(
+            matchedComponents.map((Component) => {
+              if (Component.ssrRender) {
+                return Component();
+              }
+              return Promise.resolve(Component);
+            })
+          );
+
+          // Check if the SSR context has SEO metadata
+          if (initialState.seoMeta) {
+            // eslint-disable-next-line no-console
+            console.log('[main] Applying SEO metadata from SSR context:', initialState.seoMeta);
+
+            // Apply SEO metadata to head
+            if (initialState.seoMeta.title) {
+              head.title = initialState.seoMeta.title;
+            }
+
+            if (initialState.seoMeta.description) {
+              head.meta.push({
+                name: 'description',
+                content: initialState.seoMeta.description,
+              });
+            }
+
+            if (initialState.seoMeta.canonicalUrl) {
+              head.link.push({
+                rel: 'canonical',
+                href: initialState.seoMeta.canonicalUrl,
+              });
+            }
+          }
+        } catch (error) {
+          // eslint-disable-next-line no-console
+          console.error('[main] Error in SSR hook:', error);
+        }
+
+        next();
+      });
+    }
 
     // eslint-disable-next-line no-console
     console.log('[main] App initialization complete');

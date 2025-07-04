@@ -48,6 +48,15 @@
 import { ref, defineAsyncComponent, getCurrentInstance } from 'vue';
 import imageUrlJPEG from '@/assets/images/tom-metcalfe-birmingham.jpeg';
 import imageUrlWEBP from '@/assets/images/tom-metcalfe-birmingham.webp';
+import { useSeo } from '@/composables/useSeo';
+
+// Set SEO metadata for the Homepage
+useSeo({
+  title: 'Tom Stirrop-Metcalfe | Software Engineering Manager | Birmingham',
+  description:
+    'My name is Tom Stirrop-Metcalfe. I am a passionate and driven engineering leader who wants to enable others to realise their full potential.',
+  canonicalUrl: 'https://iamtommetcalfe.com/',
+});
 
 // Dynamically import the MrRobotPopUp component
 const MrRobotPopUp = defineAsyncComponent(() => import('@/components/MrRobotPopUp.vue'));
