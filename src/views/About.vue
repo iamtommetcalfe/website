@@ -77,10 +77,8 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'About',
-};
+<script setup lang="ts">
+// About page component using Composition API
 </script>
 
 <style scoped>
