@@ -12,8 +12,7 @@
     "fix": "npm run lint && npm run format",
     "prepare": "husky",
     "lint-staged": "lint-staged",
-    "install-compat": "npm install --legacy-peer-deps",
-    "build-compat": "npm run install-compat && npm run build"
+    "install-compat": "npm install --legacy-peer-deps"
   },
   "dependencies": {
     "vue": "^3.5.17",
