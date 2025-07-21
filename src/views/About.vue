@@ -86,6 +86,36 @@ useSeo({
   description:
     'Learn more about Tom Stirrop-Metcalfe, a passionate and committed engineering leader with over 15 years of experience in software development.',
   canonicalUrl: 'https://iamtommetcalfe.com/about/',
+  structuredData: [
+    // AboutPage schema
+    {
+      '@context': 'https://schema.org',
+      '@type': 'AboutPage',
+      name: 'About - Tom Stirrop-Metcalfe | Software Engineering Manager',
+      description:
+        'Learn more about Tom Stirrop-Metcalfe, a passionate and committed engineering leader with over 15 years of experience in software development.',
+      url: 'https://iamtommetcalfe.com/about/',
+      author: {
+        '@type': 'Person',
+        name: 'Tom Stirrop-Metcalfe',
+      },
+      inLanguage: 'en-GB',
+      isPartOf: {
+        '@type': 'WebSite',
+        name: 'Tom Stirrop-Metcalfe',
+        url: 'https://iamtommetcalfe.com/',
+      },
+      mainEntity: {
+        '@type': 'Person',
+        name: 'Tom Stirrop-Metcalfe',
+        jobTitle: 'Software Engineering Manager',
+        description:
+          'A passionate and committed engineering leader with over 15 years of experience in software development.',
+        url: 'https://iamtommetcalfe.com/',
+        sameAs: ['https://github.com/iamtommetcalfe'],
+      },
+    },
+  ],
 });
 </script>
 

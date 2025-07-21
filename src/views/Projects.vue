@@ -65,6 +65,80 @@ useSeo({
   description:
     "Explore Tom Stirrop-Metcalfe's public GitHub projects, including ENCOM Smart Home, Amiqus ATS Demo, and Vue Pokédex.",
   canonicalUrl: 'https://iamtommetcalfe.com/projects/',
+  structuredData: [
+    // CollectionPage schema with ItemList
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'Projects - Tom Stirrop-Metcalfe | Software Engineering Manager',
+      description:
+        "Explore Tom Stirrop-Metcalfe's public GitHub projects, including ENCOM Smart Home, Amiqus ATS Demo, and Vue Pokédex.",
+      url: 'https://iamtommetcalfe.com/projects/',
+      author: {
+        '@type': 'Person',
+        name: 'Tom Stirrop-Metcalfe',
+      },
+      inLanguage: 'en-GB',
+      isPartOf: {
+        '@type': 'WebSite',
+        name: 'Tom Stirrop-Metcalfe',
+        url: 'https://iamtommetcalfe.com/',
+      },
+      mainEntity: {
+        '@type': 'ItemList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            item: {
+              '@type': 'SoftwareSourceCode',
+              name: 'ENCOM Smart Home',
+              description:
+                'Encom is a modern smart home dashboard application designed to be served on your home network.',
+              codeRepository: 'https://github.com/iamtommetcalfe/encom-smart-home',
+              programmingLanguage: 'JavaScript',
+              author: {
+                '@type': 'Person',
+                name: 'Tom Stirrop-Metcalfe',
+              },
+            },
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            item: {
+              '@type': 'SoftwareSourceCode',
+              name: 'Amiqus ATS Demo',
+              description:
+                'Explore how the Amiqus API can power applicant screening in an ATS. This demo app, built with Laravel and Vite, walks through identity checks, record handling, and integration flows.',
+              codeRepository: 'https://github.com/iamtommetcalfe/amiqus-ats-demo',
+              programmingLanguage: 'PHP',
+              author: {
+                '@type': 'Person',
+                name: 'Tom Stirrop-Metcalfe',
+              },
+            },
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            item: {
+              '@type': 'SoftwareSourceCode',
+              name: 'Vue Pokédex',
+              description:
+                'A modern Pokédex built with Vue 3 and TypeScript, utilizing the PokéAPI to provide detailed information on Pokémon. Explore, search, and immerse yourself in the Pokémon universe.',
+              codeRepository: 'https://github.com/iamtommetcalfe/my-vue-pokedex',
+              programmingLanguage: 'TypeScript',
+              author: {
+                '@type': 'Person',
+                name: 'Tom Stirrop-Metcalfe',
+              },
+            },
+          },
+        ],
+      },
+    },
+  ],
 });
 </script>
 

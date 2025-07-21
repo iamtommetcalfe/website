@@ -56,6 +56,44 @@ useSeo({
   description:
     'My name is Tom Stirrop-Metcalfe. I am a passionate and driven engineering leader who wants to enable others to realise their full potential.',
   canonicalUrl: 'https://iamtommetcalfe.com/',
+  structuredData: [
+    // Person schema
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: 'Tom Stirrop-Metcalfe',
+      jobTitle: 'Software Engineering Manager',
+      description:
+        'A passionate and committed engineering leader with over 15 years of experience in PHP programming and 10+ years leading teams.',
+      image: 'https://iamtommetcalfe.com/assets/images/tom-metcalfe-birmingham.jpeg',
+      url: 'https://iamtommetcalfe.com/',
+      sameAs: ['https://github.com/iamtommetcalfe'],
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Birmingham',
+        addressCountry: 'United Kingdom',
+      },
+    },
+    // WebPage schema
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: 'Tom Stirrop-Metcalfe | Software Engineering Manager | Birmingham',
+      description:
+        'My name is Tom Stirrop-Metcalfe. I am a passionate and driven engineering leader who wants to enable others to realise their full potential.',
+      url: 'https://iamtommetcalfe.com/',
+      author: {
+        '@type': 'Person',
+        name: 'Tom Stirrop-Metcalfe',
+      },
+      inLanguage: 'en-GB',
+      isPartOf: {
+        '@type': 'WebSite',
+        name: 'Tom Stirrop-Metcalfe',
+        url: 'https://iamtommetcalfe.com/',
+      },
+    },
+  ],
 });
 
 // Dynamically import the MrRobotPopUp component

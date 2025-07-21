@@ -2,12 +2,22 @@ import { watch, onMounted, onServerPrefetch, useSSRContext } from 'vue';
 import { useRoute } from 'vue-router';
 
 /**
+ * Interface for structured data (JSON-LD)
+ */
+interface StructuredData {
+  '@context': string;
+  '@type': string;
+  [key: string]: any;
+}
+
+/**
  * Interface for SEO metadata
  */
 interface SeoMetadata {
   title: string;
   description: string;
   canonicalUrl?: string;
+  structuredData?: StructuredData | StructuredData[];
 }
 
 /**
@@ -68,6 +78,31 @@ export function useSeo(metadata: SeoMetadata): void {
     if (twitterUrl) {
       twitterUrl.setAttribute('content', canonicalUrl);
     }
+
+    // Update structured data (JSON-LD)
+    if (metadata.structuredData) {
+      updateStructuredData(metadata.structuredData);
+    }
+  };
+
+  // Function to update structured data (JSON-LD)
+  const updateStructuredData = (data: StructuredData | StructuredData[]) => {
+    // Remove any existing JSON-LD scripts
+    const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
+    existingScripts.forEach((script) => {
+      script.remove();
+    });
+
+    // Convert single object to array for consistent handling
+    const dataArray = Array.isArray(data) ? data : [data];
+
+    // Create and append new JSON-LD scripts
+    dataArray.forEach((item) => {
+      const script = document.createElement('script');
+      script.setAttribute('type', 'application/ld+json');
+      script.textContent = JSON.stringify(item);
+      document.head.appendChild(script);
+    });
   };
 
   // Function to update Open Graph and Twitter meta tags
@@ -120,6 +155,7 @@ export function useSeo(metadata: SeoMetadata): void {
           title: metadata.title,
           description: metadata.description,
           canonicalUrl: metadata.canonicalUrl || `https://iamtommetcalfe.com${route.path}`,
+          structuredData: metadata.structuredData,
         };
       }
     } catch (e) {
