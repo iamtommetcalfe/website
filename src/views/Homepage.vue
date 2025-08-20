@@ -52,7 +52,7 @@ import { useSeo } from '@/composables/useSeo';
 
 // Set SEO metadata for the Homepage
 useSeo({
-  title: 'Tom Stirrop-Metcalfe | Software Engineering Manager | Birmingham',
+  title: 'Homagepage | Tom Stirrop-Metcalfe | Engineering Leader',
   description:
     'My name is Tom Stirrop-Metcalfe. I am a passionate and driven engineering leader who wants to enable others to realise their full potential.',
   canonicalUrl: 'https://iamtommetcalfe.com/',
