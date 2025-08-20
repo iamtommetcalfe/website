@@ -61,7 +61,7 @@ import { useSeo } from '@/composables/useSeo';
 
 // Set SEO metadata for the Projects page
 useSeo({
-  title: 'Projects - Tom Stirrop-Metcalfe | Software Engineering Manager',
+  title: 'Projects | Tom Stirrop-Metcalfe | Engineering Leader',
   description:
     "Explore Tom Stirrop-Metcalfe's public GitHub projects, including ENCOM Smart Home, Amiqus ATS Demo, and Vue Pokédex.",
   canonicalUrl: 'https://iamtommetcalfe.com/projects/',
