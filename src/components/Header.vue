@@ -4,7 +4,7 @@
       <router-link
         id="homepageTitle"
         to="/"
-        title="Tom Stirrop-Metcalfe | Software Engineering Manager | Birmingham | Homepage"
+        title="Tom Stirrop-Metcalfe | Engineering Leader | Homepage"
       >
         Tom Stirrop-Metcalfe <span>.</span>
       </router-link>
