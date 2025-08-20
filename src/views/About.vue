@@ -82,7 +82,7 @@ import { useSeo } from '@/composables/useSeo';
 
 // Set SEO metadata for the About page
 useSeo({
-  title: 'About - Tom Stirrop-Metcalfe | Software Engineering Manager',
+  title: 'About - Tom Stirrop-Metcalfe | Engineering Leader',
   description:
     'Learn more about Tom Stirrop-Metcalfe, a passionate and committed engineering leader with over 15 years of experience in software development.',
   canonicalUrl: 'https://iamtommetcalfe.com/about/',
