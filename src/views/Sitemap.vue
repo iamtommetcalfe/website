@@ -15,19 +15,19 @@ export default defineComponent({
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://iamtommetcalfe.com/</loc>
-    <lastmod>2025-06-30</lastmod>
+    <lastmod>2025-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://iamtommetcalfe.com/about/</loc>
-    <lastmod>2025-06-30</lastmod>
+    <lastmod>2025-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://iamtommetcalfe.com/projects/</loc>
-    <lastmod>2025-07-04</lastmod>
+    <lastmod>2025-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
