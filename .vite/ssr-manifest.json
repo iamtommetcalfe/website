@@ -140,13 +140,13 @@
     "/assets/manifest.hgQmXtGG.json"
   ],
   "src/assets/images/dead-link.jpeg": [
-    "/assets/NotFound.B1Wi3-AV.js",
+    "/assets/NotFound.CbySJMqW.js",
     "/assets/NotFound.B4ZBH29W.css",
     "/assets/dead-link.4eWh7hfd.webp",
     "/assets/dead-link.5G_SYuHU.jpeg"
   ],
   "src/assets/images/dead-link.webp": [
-    "/assets/NotFound.B1Wi3-AV.js",
+    "/assets/NotFound.CbySJMqW.js",
     "/assets/NotFound.B4ZBH29W.css",
     "/assets/dead-link.4eWh7hfd.webp",
     "/assets/dead-link.5G_SYuHU.jpeg"
@@ -162,21 +162,21 @@
     "/assets/manifest.hgQmXtGG.json"
   ],
   "src/assets/images/hello-friend.gif": [
-    "/assets/MrRobotPopUp.D8ECKeYR.js",
+    "/assets/MrRobotPopUp.CNuCxWD5.js",
     "/assets/MrRobotPopUp.qs08TF0z.css",
     "/assets/hello-friend.BRXyc4kj.gif",
     "/assets/hello-friend.Cfq0nHK9.mp4",
     "/assets/hello-friend.2SJuWZHj.webm"
   ],
   "src/assets/images/hello-friend.mp4": [
-    "/assets/MrRobotPopUp.D8ECKeYR.js",
+    "/assets/MrRobotPopUp.CNuCxWD5.js",
     "/assets/MrRobotPopUp.qs08TF0z.css",
     "/assets/hello-friend.BRXyc4kj.gif",
     "/assets/hello-friend.Cfq0nHK9.mp4",
     "/assets/hello-friend.2SJuWZHj.webm"
   ],
   "src/assets/images/hello-friend.webm": [
-    "/assets/MrRobotPopUp.D8ECKeYR.js",
+    "/assets/MrRobotPopUp.CNuCxWD5.js",
     "/assets/MrRobotPopUp.qs08TF0z.css",
     "/assets/hello-friend.BRXyc4kj.gif",
     "/assets/hello-friend.Cfq0nHK9.mp4",
@@ -193,13 +193,13 @@
     "/assets/manifest.hgQmXtGG.json"
   ],
   "src/assets/images/tom-metcalfe-birmingham.jpeg": [
-    "/assets/Homepage.CuArdjV9.js",
+    "/assets/Homepage.BVHUWop8.js",
     "/assets/Homepage.C1Dolsxg.css",
     "/assets/tom-metcalfe-birmingham.0WSFav36.jpeg",
     "/assets/tom-metcalfe-birmingham.y1bO_yNr.webp"
   ],
   "src/assets/images/tom-metcalfe-birmingham.webp": [
-    "/assets/Homepage.CuArdjV9.js",
+    "/assets/Homepage.BVHUWop8.js",
     "/assets/Homepage.C1Dolsxg.css",
     "/assets/tom-metcalfe-birmingham.0WSFav36.jpeg",
     "/assets/tom-metcalfe-birmingham.y1bO_yNr.webp"
@@ -245,21 +245,21 @@
     "/assets/manifest.hgQmXtGG.json"
   ],
   "src/components/MrRobotPopUp.vue": [
-    "/assets/MrRobotPopUp.D8ECKeYR.js",
+    "/assets/MrRobotPopUp.CNuCxWD5.js",
     "/assets/MrRobotPopUp.qs08TF0z.css",
     "/assets/hello-friend.BRXyc4kj.gif",
     "/assets/hello-friend.Cfq0nHK9.mp4",
     "/assets/hello-friend.2SJuWZHj.webm"
   ],
   "src/components/MrRobotPopUp.vue?vue&type=script&lang.ts": [
-    "/assets/MrRobotPopUp.D8ECKeYR.js",
+    "/assets/MrRobotPopUp.CNuCxWD5.js",
     "/assets/MrRobotPopUp.qs08TF0z.css",
     "/assets/hello-friend.BRXyc4kj.gif",
     "/assets/hello-friend.Cfq0nHK9.mp4",
     "/assets/hello-friend.2SJuWZHj.webm"
   ],
   "src/components/MrRobotPopUp.vue?vue&type=style&index=0&scoped=ff79a786&lang.css": [
-    "/assets/MrRobotPopUp.D8ECKeYR.js",
+    "/assets/MrRobotPopUp.CNuCxWD5.js",
     "/assets/MrRobotPopUp.qs08TF0z.css",
     "/assets/hello-friend.BRXyc4kj.gif",
     "/assets/hello-friend.Cfq0nHK9.mp4",
@@ -276,7 +276,7 @@
     "/assets/manifest.hgQmXtGG.json"
   ],
   "src/composables/useSeo.ts": [
-    "/assets/useSeo.DsjHxIw9.js"
+    "/assets/useSeo.BRqmKpnC.js"
   ],
   "src/composables/useTheme.ts": [
     "/assets/github-icon.Qd7urqhd.webp",
@@ -303,69 +303,64 @@
     "/assets/github-icon.C-z2i_tT.png",
     "/assets/manifest.hgQmXtGG.json"
   ],
-  "src/utils/vite-ssg-compat.ts": [
-    "/assets/github-icon.Qd7urqhd.webp",
-    "/assets/github-icon.C-z2i_tT.png",
-    "/assets/manifest.hgQmXtGG.json"
-  ],
   "src/views/About.vue": [
-    "/assets/About.B7OnySLV.js",
+    "/assets/About.BWE-tgN6.js",
     "/assets/About.CEzNL5T3.css"
   ],
   "src/views/About.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/About.B7OnySLV.js",
+    "/assets/About.BWE-tgN6.js",
     "/assets/About.CEzNL5T3.css"
   ],
   "src/views/About.vue?vue&type=style&index=0&scoped=225aac1f&lang.css": [
-    "/assets/About.B7OnySLV.js",
+    "/assets/About.BWE-tgN6.js",
     "/assets/About.CEzNL5T3.css"
   ],
   "src/views/Homepage.vue": [
-    "/assets/Homepage.CuArdjV9.js",
+    "/assets/Homepage.BVHUWop8.js",
     "/assets/Homepage.C1Dolsxg.css",
     "/assets/tom-metcalfe-birmingham.0WSFav36.jpeg",
     "/assets/tom-metcalfe-birmingham.y1bO_yNr.webp"
   ],
   "src/views/Homepage.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/Homepage.CuArdjV9.js",
+    "/assets/Homepage.BVHUWop8.js",
     "/assets/Homepage.C1Dolsxg.css",
     "/assets/tom-metcalfe-birmingham.0WSFav36.jpeg",
     "/assets/tom-metcalfe-birmingham.y1bO_yNr.webp"
   ],
   "src/views/Homepage.vue?vue&type=style&index=0&scoped=8ae6ee93&lang.css": [
-    "/assets/Homepage.CuArdjV9.js",
+    "/assets/Homepage.BVHUWop8.js",
     "/assets/Homepage.C1Dolsxg.css",
     "/assets/tom-metcalfe-birmingham.0WSFav36.jpeg",
     "/assets/tom-metcalfe-birmingham.y1bO_yNr.webp"
   ],
   "src/views/NotFound.vue": [
-    "/assets/NotFound.B1Wi3-AV.js",
+    "/assets/NotFound.CbySJMqW.js",
     "/assets/NotFound.B4ZBH29W.css",
     "/assets/dead-link.4eWh7hfd.webp",
     "/assets/dead-link.5G_SYuHU.jpeg"
   ],
   "src/views/NotFound.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/NotFound.B1Wi3-AV.js",
+    "/assets/NotFound.CbySJMqW.js",
     "/assets/NotFound.B4ZBH29W.css",
     "/assets/dead-link.4eWh7hfd.webp",
     "/assets/dead-link.5G_SYuHU.jpeg"
   ],
   "src/views/NotFound.vue?vue&type=style&index=0&scoped=eb3d5f3e&lang.css": [
-    "/assets/NotFound.B1Wi3-AV.js",
+    "/assets/NotFound.CbySJMqW.js",
     "/assets/NotFound.B4ZBH29W.css",
     "/assets/dead-link.4eWh7hfd.webp",
     "/assets/dead-link.5G_SYuHU.jpeg"
   ],
   "src/views/Projects.vue": [
-    "/assets/Projects.tIbGiCyo.js",
+    "/assets/Projects.BHN4A5BB.js",
     "/assets/Projects.-yLKWh4O.css"
   ],
   "src/views/Projects.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/Projects.tIbGiCyo.js",
+    "/assets/Projects.BHN4A5BB.js",
     "/assets/Projects.-yLKWh4O.css"
   ],
   "src/views/Projects.vue?vue&type=style&index=0&scoped=b7f375ff&lang.css": [
-    "/assets/Projects.tIbGiCyo.js",
+    "/assets/Projects.BHN4A5BB.js",
     "/assets/Projects.-yLKWh4O.css"
   ]
 }
