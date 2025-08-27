@@ -12,22 +12,20 @@
 import deadLinkWEBP from '@/assets/images/dead-link.webp';
 import deadLinkJPEG from '@/assets/images/dead-link.jpeg';
 import { useSeo } from '@/composables/useSeo';
+import { useHead } from '@unhead/vue';
 
 // Set SEO metadata for the 404 page
 useSeo({
   title: '404 - Page Not Found | Tom Stirrop-Metcalfe',
   description:
     'Oops! The page you are looking for does not exist. Please check the URL or navigate back to the homepage.',
-  // We don't set a canonical URL for 404 pages as they shouldn't be indexed
+  // No canonical for 404 pages; they shouldn't be indexed
 });
 
-// Add noindex meta tag for 404 pages
-if (typeof document !== 'undefined') {
-  const metaRobots = document.createElement('meta');
-  metaRobots.setAttribute('name', 'robots');
-  metaRobots.setAttribute('content', 'noindex, nofollow');
-  document.head.appendChild(metaRobots);
-}
+// Declare robots meta via Unhead instead of direct DOM manipulation
+useHead({
+  meta: [{ name: 'robots', content: 'noindex, nofollow' }],
+});
 </script>
 
 <style scoped>
