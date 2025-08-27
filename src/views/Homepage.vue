@@ -46,8 +46,8 @@
 
 <script setup lang="ts">
 import { ref, defineAsyncComponent, getCurrentInstance } from 'vue';
-import imageUrlJPEG from '@/assets/images/tom-metcalfe-birmingham.jpeg';
-import imageUrlWEBP from '@/assets/images/tom-metcalfe-birmingham.webp';
+import imageUrlJPEG from '@/assets/images/tom-stirrop-metcalfe-obi.jpeg';
+import imageUrlWEBP from '@/assets/images/tom-stirrop-metcalfe-obi.webp';
 import { useSeo } from '@/composables/useSeo';
 
 // Set SEO metadata for the Homepage
@@ -65,7 +65,7 @@ useSeo({
       jobTitle: 'Software Engineering Manager',
       description:
         'A passionate and committed engineering leader with over 15 years of experience in PHP programming and 10+ years leading teams.',
-      image: 'https://iamtommetcalfe.com/assets/images/tom-metcalfe-birmingham.jpeg',
+      image: 'https://iamtommetcalfe.com/assets/images/tom-stirrop-metcalfe-obi.jpeg',
       url: 'https://iamtommetcalfe.com/',
       sameAs: ['https://github.com/iamtommetcalfe'],
       address: {
