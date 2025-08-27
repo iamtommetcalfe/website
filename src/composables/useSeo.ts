@@ -14,8 +14,8 @@ interface StructuredData {
  * Interface for SEO metadata
  */
 interface SeoMetadata {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   canonicalUrl?: string;
   structuredData?: StructuredData | StructuredData[];
 }
@@ -24,26 +24,31 @@ interface SeoMetadata {
  * useSeo: Declarative head management using Unhead
  * Ensures metadata is rendered during SSG and on the client without manual DOM APIs.
  */
-export function useSeo(metadata: SeoMetadata): void {
+export function useSeo(metadata: SeoMetadata = {}): void {
   const route = useRoute();
   const domain = 'https://iamtommetcalfe.com';
 
   useHead(() => {
+    // Prefer explicit metadata, fall back to route meta
+    const routeMeta = (route.meta || {}) as { title?: string; description?: string };
+    const title = metadata.title ?? routeMeta.title ?? 'Tom Stirrop-Metcalfe';
+    const description = metadata.description ?? routeMeta.description ?? 'Engineering Leader.';
+
     const canonical = metadata.canonicalUrl || `${domain}${route.path}`;
 
     const metas = [
-      { name: 'description', content: metadata.description },
+      { name: 'description', content: description },
 
       // Open Graph
       { property: 'og:type', content: 'website' },
-      { property: 'og:title', content: metadata.title },
-      { property: 'og:description', content: metadata.description },
+      { property: 'og:title', content: title },
+      { property: 'og:description', content: description },
       { property: 'og:url', content: canonical },
 
       // Twitter
       { name: 'twitter:card', content: 'summary' },
-      { name: 'twitter:title', content: metadata.title },
-      { name: 'twitter:description', content: metadata.description },
+      { name: 'twitter:title', content: title },
+      { name: 'twitter:description', content: description },
       { name: 'twitter:url', content: canonical },
     ];
 
@@ -58,7 +63,7 @@ export function useSeo(metadata: SeoMetadata): void {
     }
 
     return {
-      title: metadata.title,
+      title,
       link: [{ rel: 'canonical', href: canonical }],
       meta: metas,
       script: scripts,
