@@ -19,21 +19,6 @@
     "/assets/github-icon.C-z2i_tT.png",
     "/assets/manifest.hgQmXtGG.json"
   ],
-  "node_modules/@unhead/dom/dist/index.mjs": [
-    "/assets/github-icon.Qd7urqhd.webp",
-    "/assets/github-icon.C-z2i_tT.png",
-    "/assets/manifest.hgQmXtGG.json"
-  ],
-  "node_modules/@unhead/shared/dist/index.mjs": [
-    "/assets/github-icon.Qd7urqhd.webp",
-    "/assets/github-icon.C-z2i_tT.png",
-    "/assets/manifest.hgQmXtGG.json"
-  ],
-  "node_modules/@unhead/vue/dist/shared/vue.ziyDaVMR.mjs": [
-    "/assets/github-icon.Qd7urqhd.webp",
-    "/assets/github-icon.C-z2i_tT.png",
-    "/assets/manifest.hgQmXtGG.json"
-  ],
   "node_modules/@vue/devtools-api/lib/esm/const.js": [
     "/assets/github-icon.Qd7urqhd.webp",
     "/assets/github-icon.C-z2i_tT.png",
@@ -84,22 +69,52 @@
     "/assets/github-icon.C-z2i_tT.png",
     "/assets/manifest.hgQmXtGG.json"
   ],
-  "node_modules/unhead/dist/index.mjs": [
-    "/assets/github-icon.Qd7urqhd.webp",
-    "/assets/github-icon.C-z2i_tT.png",
-    "/assets/manifest.hgQmXtGG.json"
-  ],
   "node_modules/vite-ssg/dist/index.mjs": [
     "/assets/github-icon.Qd7urqhd.webp",
     "/assets/github-icon.C-z2i_tT.png",
     "/assets/manifest.hgQmXtGG.json"
   ],
-  "node_modules/vite-ssg/dist/shared/vite-ssg.5912142e.mjs": [
+  "node_modules/vite-ssg/dist/shared/vite-ssg.C6pK7rvr.mjs": [
     "/assets/github-icon.Qd7urqhd.webp",
     "/assets/github-icon.C-z2i_tT.png",
     "/assets/manifest.hgQmXtGG.json"
   ],
-  "node_modules/vite-ssg/dist/shared/vite-ssg.a009fbf1.mjs": [
+  "node_modules/vite-ssg/dist/shared/vite-ssg.ETIvV-80.mjs": [
+    "/assets/github-icon.Qd7urqhd.webp",
+    "/assets/github-icon.C-z2i_tT.png",
+    "/assets/manifest.hgQmXtGG.json"
+  ],
+  "node_modules/vite-ssg/node_modules/@unhead/vue/dist/client.mjs": [
+    "/assets/github-icon.Qd7urqhd.webp",
+    "/assets/github-icon.C-z2i_tT.png",
+    "/assets/manifest.hgQmXtGG.json"
+  ],
+  "node_modules/vite-ssg/node_modules/@unhead/vue/dist/shared/vue.BYLJNEcq.mjs": [
+    "/assets/github-icon.Qd7urqhd.webp",
+    "/assets/github-icon.C-z2i_tT.png",
+    "/assets/manifest.hgQmXtGG.json"
+  ],
+  "node_modules/vite-ssg/node_modules/unhead/dist/client.mjs": [
+    "/assets/github-icon.Qd7urqhd.webp",
+    "/assets/github-icon.C-z2i_tT.png",
+    "/assets/manifest.hgQmXtGG.json"
+  ],
+  "node_modules/vite-ssg/node_modules/unhead/dist/shared/unhead.CAk5S5m6.mjs": [
+    "/assets/github-icon.Qd7urqhd.webp",
+    "/assets/github-icon.C-z2i_tT.png",
+    "/assets/manifest.hgQmXtGG.json"
+  ],
+  "node_modules/vite-ssg/node_modules/unhead/dist/shared/unhead.DZbvapt-.mjs": [
+    "/assets/github-icon.Qd7urqhd.webp",
+    "/assets/github-icon.C-z2i_tT.png",
+    "/assets/manifest.hgQmXtGG.json"
+  ],
+  "node_modules/vite-ssg/node_modules/unhead/dist/shared/unhead.Di5OD67x.mjs": [
+    "/assets/github-icon.Qd7urqhd.webp",
+    "/assets/github-icon.C-z2i_tT.png",
+    "/assets/manifest.hgQmXtGG.json"
+  ],
+  "node_modules/vite-ssg/node_modules/unhead/dist/shared/unhead.yem5I2v_.mjs": [
     "/assets/github-icon.Qd7urqhd.webp",
     "/assets/github-icon.C-z2i_tT.png",
     "/assets/manifest.hgQmXtGG.json"
@@ -125,13 +140,13 @@
     "/assets/manifest.hgQmXtGG.json"
   ],
   "src/assets/images/dead-link.jpeg": [
-    "/assets/NotFound.DYoVbhZh.js",
+    "/assets/NotFound.DXak-nk3.js",
     "/assets/NotFound.B4ZBH29W.css",
     "/assets/dead-link.4eWh7hfd.webp",
     "/assets/dead-link.5G_SYuHU.jpeg"
   ],
   "src/assets/images/dead-link.webp": [
-    "/assets/NotFound.DYoVbhZh.js",
+    "/assets/NotFound.DXak-nk3.js",
     "/assets/NotFound.B4ZBH29W.css",
     "/assets/dead-link.4eWh7hfd.webp",
     "/assets/dead-link.5G_SYuHU.jpeg"
@@ -147,21 +162,21 @@
     "/assets/manifest.hgQmXtGG.json"
   ],
   "src/assets/images/hello-friend.gif": [
-    "/assets/MrRobotPopUp.jMvt9O7o.js",
+    "/assets/MrRobotPopUp.D7D7kHST.js",
     "/assets/MrRobotPopUp.CSKjZipJ.css",
     "/assets/hello-friend.BRXyc4kj.gif",
     "/assets/hello-friend.Cfq0nHK9.mp4",
     "/assets/hello-friend.2SJuWZHj.webm"
   ],
   "src/assets/images/hello-friend.mp4": [
-    "/assets/MrRobotPopUp.jMvt9O7o.js",
+    "/assets/MrRobotPopUp.D7D7kHST.js",
     "/assets/MrRobotPopUp.CSKjZipJ.css",
     "/assets/hello-friend.BRXyc4kj.gif",
     "/assets/hello-friend.Cfq0nHK9.mp4",
     "/assets/hello-friend.2SJuWZHj.webm"
   ],
   "src/assets/images/hello-friend.webm": [
-    "/assets/MrRobotPopUp.jMvt9O7o.js",
+    "/assets/MrRobotPopUp.D7D7kHST.js",
     "/assets/MrRobotPopUp.CSKjZipJ.css",
     "/assets/hello-friend.BRXyc4kj.gif",
     "/assets/hello-friend.Cfq0nHK9.mp4",
@@ -178,13 +193,13 @@
     "/assets/manifest.hgQmXtGG.json"
   ],
   "src/assets/images/tom-metcalfe-birmingham.jpeg": [
-    "/assets/Homepage.DO2bvRE0.js",
+    "/assets/Homepage.BfJuYCj3.js",
     "/assets/Homepage.C1Dolsxg.css",
     "/assets/tom-metcalfe-birmingham.0WSFav36.jpeg",
     "/assets/tom-metcalfe-birmingham.y1bO_yNr.webp"
   ],
   "src/assets/images/tom-metcalfe-birmingham.webp": [
-    "/assets/Homepage.DO2bvRE0.js",
+    "/assets/Homepage.BfJuYCj3.js",
     "/assets/Homepage.C1Dolsxg.css",
     "/assets/tom-metcalfe-birmingham.0WSFav36.jpeg",
     "/assets/tom-metcalfe-birmingham.y1bO_yNr.webp"
@@ -230,21 +245,21 @@
     "/assets/manifest.hgQmXtGG.json"
   ],
   "src/components/MrRobotPopUp.vue": [
-    "/assets/MrRobotPopUp.jMvt9O7o.js",
+    "/assets/MrRobotPopUp.D7D7kHST.js",
     "/assets/MrRobotPopUp.CSKjZipJ.css",
     "/assets/hello-friend.BRXyc4kj.gif",
     "/assets/hello-friend.Cfq0nHK9.mp4",
     "/assets/hello-friend.2SJuWZHj.webm"
   ],
   "src/components/MrRobotPopUp.vue?vue&type=script&lang.ts": [
-    "/assets/MrRobotPopUp.jMvt9O7o.js",
+    "/assets/MrRobotPopUp.D7D7kHST.js",
     "/assets/MrRobotPopUp.CSKjZipJ.css",
     "/assets/hello-friend.BRXyc4kj.gif",
     "/assets/hello-friend.Cfq0nHK9.mp4",
     "/assets/hello-friend.2SJuWZHj.webm"
   ],
   "src/components/MrRobotPopUp.vue?vue&type=style&index=0&scoped=44178310&lang.css": [
-    "/assets/MrRobotPopUp.jMvt9O7o.js",
+    "/assets/MrRobotPopUp.D7D7kHST.js",
     "/assets/MrRobotPopUp.CSKjZipJ.css",
     "/assets/hello-friend.BRXyc4kj.gif",
     "/assets/hello-friend.Cfq0nHK9.mp4",
@@ -261,7 +276,7 @@
     "/assets/manifest.hgQmXtGG.json"
   ],
   "src/composables/useSeo.ts": [
-    "/assets/useSeo.gYiZxjHu.js"
+    "/assets/useSeo.DU9LQVjr.js"
   ],
   "src/composables/useTheme.ts": [
     "/assets/github-icon.Qd7urqhd.webp",
@@ -294,69 +309,69 @@
     "/assets/manifest.hgQmXtGG.json"
   ],
   "src/views/About.vue": [
-    "/assets/About.C4v4-HED.js",
+    "/assets/About.DAnG0a8n.js",
     "/assets/About.CEzNL5T3.css"
   ],
   "src/views/About.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/About.C4v4-HED.js",
+    "/assets/About.DAnG0a8n.js",
     "/assets/About.CEzNL5T3.css"
   ],
   "src/views/About.vue?vue&type=style&index=0&scoped=225aac1f&lang.css": [
-    "/assets/About.C4v4-HED.js",
+    "/assets/About.DAnG0a8n.js",
     "/assets/About.CEzNL5T3.css"
   ],
   "src/views/Homepage.vue": [
-    "/assets/Homepage.DO2bvRE0.js",
+    "/assets/Homepage.BfJuYCj3.js",
     "/assets/Homepage.C1Dolsxg.css",
     "/assets/tom-metcalfe-birmingham.0WSFav36.jpeg",
     "/assets/tom-metcalfe-birmingham.y1bO_yNr.webp"
   ],
   "src/views/Homepage.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/Homepage.DO2bvRE0.js",
+    "/assets/Homepage.BfJuYCj3.js",
     "/assets/Homepage.C1Dolsxg.css",
     "/assets/tom-metcalfe-birmingham.0WSFav36.jpeg",
     "/assets/tom-metcalfe-birmingham.y1bO_yNr.webp"
   ],
   "src/views/Homepage.vue?vue&type=style&index=0&scoped=8ae6ee93&lang.css": [
-    "/assets/Homepage.DO2bvRE0.js",
+    "/assets/Homepage.BfJuYCj3.js",
     "/assets/Homepage.C1Dolsxg.css",
     "/assets/tom-metcalfe-birmingham.0WSFav36.jpeg",
     "/assets/tom-metcalfe-birmingham.y1bO_yNr.webp"
   ],
   "src/views/NotFound.vue": [
-    "/assets/NotFound.DYoVbhZh.js",
+    "/assets/NotFound.DXak-nk3.js",
     "/assets/NotFound.B4ZBH29W.css",
     "/assets/dead-link.4eWh7hfd.webp",
     "/assets/dead-link.5G_SYuHU.jpeg"
   ],
   "src/views/NotFound.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/NotFound.DYoVbhZh.js",
+    "/assets/NotFound.DXak-nk3.js",
     "/assets/NotFound.B4ZBH29W.css",
     "/assets/dead-link.4eWh7hfd.webp",
     "/assets/dead-link.5G_SYuHU.jpeg"
   ],
   "src/views/NotFound.vue?vue&type=style&index=0&scoped=eb3d5f3e&lang.css": [
-    "/assets/NotFound.DYoVbhZh.js",
+    "/assets/NotFound.DXak-nk3.js",
     "/assets/NotFound.B4ZBH29W.css",
     "/assets/dead-link.4eWh7hfd.webp",
     "/assets/dead-link.5G_SYuHU.jpeg"
   ],
   "src/views/Projects.vue": [
-    "/assets/Projects.cFsWDwwh.js",
+    "/assets/Projects.CkKDJOot.js",
     "/assets/Projects.-yLKWh4O.css"
   ],
   "src/views/Projects.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/Projects.cFsWDwwh.js",
+    "/assets/Projects.CkKDJOot.js",
     "/assets/Projects.-yLKWh4O.css"
   ],
   "src/views/Projects.vue?vue&type=style&index=0&scoped=b7f375ff&lang.css": [
-    "/assets/Projects.cFsWDwwh.js",
+    "/assets/Projects.CkKDJOot.js",
     "/assets/Projects.-yLKWh4O.css"
   ],
   "src/views/Sitemap.vue": [
-    "/assets/Sitemap.C7nOmrJA.js"
+    "/assets/Sitemap.DFMbWThi.js"
   ],
   "src/views/Sitemap.vue?vue&type=script&lang.ts": [
-    "/assets/Sitemap.C7nOmrJA.js"
+    "/assets/Sitemap.DFMbWThi.js"
   ]
 }
