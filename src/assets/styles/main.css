@@ -49,3 +49,7 @@ footer {
 h2 {
   font-size: 1em;
 }
+
+li a {
+  color: #00b3fe;
+}

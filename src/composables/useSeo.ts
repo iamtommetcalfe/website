@@ -7,7 +7,7 @@ import { useRoute } from 'vue-router';
 interface StructuredData {
   '@context': string;
   '@type': string;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 /**
@@ -158,7 +158,7 @@ export function useSeo(metadata: SeoMetadata): void {
           structuredData: metadata.structuredData,
         };
       }
-    } catch (e) {
+    } catch {
       // useSSRContext() can only be used during SSR
       // This is fine, we'll just continue
     }

@@ -12,20 +12,14 @@ This is the repository for Tom Stirrop-Metcalfe's personal website, built with V
 ## Build Setup
 
 ```bash
-# install dependencies (standard way)
+# install dependencies
 npm install
-
-# install dependencies with compatibility mode for Vite 6
-npm run install-compat
 
 # serve with hot reload at localhost:5173
 npm run dev
 
 # build for production
 npm run build
-
-# build for production with compatibility mode for Vite 6
-npm run build-compat
 
 # preview the production build locally
 npm run preview
@@ -34,7 +28,7 @@ npm run preview
 npm run type-check
 ```
 
-> **Note:** The project uses Vite 6 with a compatibility layer for vite-ssg. If you encounter dependency conflicts during installation, use the `install-compat` script which uses the `--legacy-peer-deps` flag.
+> **Note:** The project uses Vite 6 with vite-ssg for static site generation. The site is pre-rendered during the build process to ensure optimal performance and SEO.
 
 ## Code Quality
 

@@ -49,12 +49,7 @@ export function useEasterEgg(customTrackEvent?: TrackEventFunction): EasterEggRe
   // Use provided tracking function or get from global properties
   // Use a safe fallback function if neither is available
   const trackEvent: TrackEventFunction =
-    customTrackEvent ||
-    app?.appContext.config.globalProperties.$trackEvent ||
-    ((eventName: string, params: Record<string, unknown>) => {
-      // Silent fallback if no tracking function is available
-      console.debug('[useEasterEgg] No tracking function available', { eventName, params });
-    });
+    customTrackEvent || app?.appContext.config.globalProperties.$trackEvent;
 
   // The secret code to trigger the easter egg
   const secretCode: string = 'hireme';
