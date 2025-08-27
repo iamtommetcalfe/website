@@ -65,7 +65,6 @@ export function useAnalytics(router?: Router) {
 
     // Check if GA is available
     if (!checkAnalytics()) {
-      // eslint-disable-next-line no-console
       console.warn('Google Analytics is not available, skipping page_view tracking');
       return;
     }
@@ -113,7 +112,6 @@ export function useAnalytics(router?: Router) {
 
     // Check if GA is available
     if (!checkAnalytics()) {
-      // eslint-disable-next-line no-console
       console.warn('Google Analytics is not available, skipping event tracking');
       return;
     }

@@ -21,7 +21,7 @@ export default defineComponent({
   props: {
     isVisible: {
       type: Boolean,
-      required: true,
+      required: false,
       default: false,
     },
   },

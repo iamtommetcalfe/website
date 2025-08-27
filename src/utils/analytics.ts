@@ -93,7 +93,7 @@ export const loadAnalytics = (): Promise<void> => {
 
     // If not available, we can't do much since the script is supposed to be in the HTML
     // Just log a warning and resolve the promise
-    // eslint-disable-next-line no-console
+
     console.warn(
       '[utils/analytics] Google Analytics is not available. Make sure the script is included in the HTML.'
     );
@@ -124,7 +124,6 @@ export const sendPageView = async (path: string, title: string): Promise<void> =
 
   // Check if Google Analytics is available before attempting to send the event
   if (!checkAnalyticsAvailable()) {
-    // eslint-disable-next-line no-console
     console.warn(
       '[utils/analytics] Google Analytics is not available, skipping page_view tracking'
     );
@@ -188,7 +187,6 @@ export const sendEvent = async (eventName: string, params: GAEventParams = {}): 
 
   // Check if Google Analytics is available before attempting to send the event
   if (!checkAnalyticsAvailable()) {
-    // eslint-disable-next-line no-console
     console.warn('[utils/analytics] Google Analytics is not available, skipping event tracking');
     return;
   }

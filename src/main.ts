@@ -96,7 +96,6 @@ export const createApp = ViteSSG(
             }
           }
         } catch (error) {
-          // eslint-disable-next-line no-console
           console.error('[main] Error in SSR hook:', error);
         }
 
