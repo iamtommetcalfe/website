@@ -5,28 +5,20 @@ on:
     types: [opened, synchronize, reopened]
 
 permissions:
-  pull-requests: write
   contents: read
+  pull-requests: write
 
 jobs:
   review:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Set up Node
-        uses: actions/setup-node@v4
+      - name: AI review
+        uses: iamtommetcalfe/openai-pr-review-action@v1
         with:
-          node-version: '20'
-
-      - name: Install deps
-        run: npm i @octokit/rest openai@^4.0.0
-
-      - name: Run reviewer
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: node .github/workflows/ai-pr-review.js
+          openai_api_key: ${{ secrets.OPENAI_API_KEY }}
+          model: gpt-4.1-mini
+          max_chars: 120000
