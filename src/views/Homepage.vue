@@ -14,7 +14,7 @@
         encouraging innovative thinking, and nurturing a positive and productive work environment.
       </p>
       <p>
-        As an engineering manager, my focus isn't just on technical aspects. I strive to bridge the
+        As an engineering leader, my focus isn't just on technical aspects. I strive to bridge the
         gap between IT and the rest of the business, communicating effectively to ensure seamless
         collaboration and mutual understanding. I am an ardent follower of tech trends and have
         expertise in back-end systems development along with a multitude of other programming
