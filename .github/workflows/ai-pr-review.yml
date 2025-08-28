@@ -1,0 +1,32 @@
+name: AI PR review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install deps
+        run: npm i @octokit/rest openai@^4.0.0
+
+      - name: Run reviewer
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: node .github/workflows/ai-pr-review.js
