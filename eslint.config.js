@@ -48,7 +48,25 @@ export default [
       },
     },
   },
-
+  // GitHub Actions scripts run in Node
+  {
+    files: ['.github/**/*.js'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: {
+        process: 'readonly',
+        __dirname: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        console: 'readonly',
+      },
+    },
+    rules: {
+      // Allow info logs in CI helper scripts
+      'no-console': ['warn', { allow: ['warn', 'error', 'info'] }],
+    },
+  },
   // JavaScript recommended rules
   js.configs.recommended,
 
