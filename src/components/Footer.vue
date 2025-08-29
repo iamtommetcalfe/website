@@ -1,7 +1,10 @@
 <template>
   <div id="footerContainer" :class="{ 'dark-theme': isDarkTheme }">
     <div id="location">
-      <b>Location</b> - <small>Engineering Function Manager @ Amiqus - <b>Birmingham</b></small>
+      <b>Location</b> -
+      <small
+        >Engineering Function Manager @ Amiqus - <span class="font-bold">Birmingham</span></small
+      >
     </div>
     <div id="social">
       <button id="themeToggle" :title="themeButtonTitle" @click="toggleTheme">
