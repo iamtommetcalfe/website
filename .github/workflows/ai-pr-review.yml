@@ -24,3 +24,5 @@ jobs:
           openai_api_key: ${{ secrets.OPENAI_API_KEY }}
           model: gpt-4.1-mini
           max_chars: 120000
+          posting_mode: review
+          
