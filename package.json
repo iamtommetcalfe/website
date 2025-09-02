@@ -24,7 +24,7 @@
     "@typescript-eslint/parser": "^8.41.0",
     "@unhead/vue": "^1.8.10",
     "@vitejs/plugin-vue": "^6.0.1",
-    "beasties": "^0.2.0",
+    "beasties": "^0.3.5",
     "eslint": "^9.34.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-vue": "^10.4.0",
