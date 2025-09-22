@@ -4,6 +4,20 @@
 
     <div class="projects-container">
       <div class="project-card">
+        <h2>Oven to Air Fryer Conversion</h2>
+        <p>
+          Quickly convert oven cooking instructions into air fryer timings and temperatures.
+        </p>
+        <a
+          href="https://www.oventoairfryer.co.uk/"
+          target="_blank"
+          class="project-link"
+          title="Oven to Air Fryer Conversion website"
+        >
+          View on oventoairfryer.co.uk
+        </a>
+      </div>
+      <div class="project-card">
         <h2>ENCOM Smart Home</h2>
         <p>
           Encom is a modern smart home dashboard application designed to be served on your home
