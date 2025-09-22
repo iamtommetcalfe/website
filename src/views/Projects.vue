@@ -5,9 +5,7 @@
     <div class="projects-container">
       <div class="project-card">
         <h2>Oven to Air Fryer Conversion</h2>
-        <p>
-          Quickly convert oven cooking instructions into air fryer timings and temperatures.
-        </p>
+        <p>Quickly convert oven cooking instructions into air fryer timings and temperatures.</p>
         <a
           href="https://www.oventoairfryer.co.uk/"
           target="_blank"
