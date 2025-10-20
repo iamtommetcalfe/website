@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ 'dark-theme': isDarkTheme }">
+  <div>
     <header id="header-container">
       <Header />
     </header>
@@ -21,10 +21,6 @@
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 import MrRobot from './components/MrRobot.vue';
-import { useTheme } from './composables/useTheme';
-
-// Use the theme composable
-const { isDarkTheme } = useTheme();
 </script>
 
 <style>
@@ -32,10 +28,6 @@ const { isDarkTheme } = useTheme();
 html {
   background-color: #ffffff;
   transition: background-color 0.3s ease;
-}
-
-html.dark-mode {
-  background-color: #121212;
 }
 
 body {
@@ -46,23 +38,5 @@ body {
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
-}
-
-.dark-theme {
-  background-color: #1e1e1e;
-  color: #f2f2f2;
-}
-
-.dark-theme #mainContent {
-  background-color: #1e1e1e;
-}
-
-.dark-theme #mainContentWrapper {
-  background-color: #1e1e1e;
-}
-
-.dark-theme footer {
-  background-color: #121212;
-  color: #f2f2f2;
 }
 </style>

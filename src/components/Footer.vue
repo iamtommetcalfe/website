@@ -1,12 +1,9 @@
 <template>
-  <div id="footerContainer" :class="{ 'dark-theme': isDarkTheme }">
+  <div id="footerContainer">
     <div id="location">
       <b>Location</b> - <small>Engineering Function Manager @ Amiqus - Birmingham</small>
     </div>
     <div id="social">
-      <button id="themeToggle" :title="themeButtonTitle" @click="toggleTheme">
-        {{ themeButtonText }}
-      </button>
       <a href="https://github.com/iamtommetcalfe" title="Tom Stirrop-Metcalfe - Github Profile">
         <picture class="tom-metcalfe-image">
           <source :srcset="githubIconWEBP" type="image/webp" />
@@ -41,7 +38,7 @@
     <div class="clearAfter"></div>
 
     <!-- Easter Egg Modal -->
-    <div v-if="showEasterEgg" class="easter-egg-modal" :class="{ 'dark-theme': isDarkTheme }">
+    <div v-if="showEasterEgg" class="easter-egg-modal">
       <div class="easter-egg-content">
         <button class="close-button" @click="closeEasterEgg">&times;</button>
         <h2>🎉 You found me! 🎉</h2>
@@ -68,25 +65,14 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
 import linkedInIconWEBP from '@/assets/images/linked-in-icon.webp';
 import linkedInIconPNG from '@/assets/images/linked-in-icon.png';
 import githubIconWEBP from '@/assets/images/github-icon.webp';
 import githubIconPNG from '@/assets/images/github-icon.png';
-import { useTheme } from '@/composables/useTheme';
 import { useEasterEgg } from '@/composables/useEasterEgg';
-
-// Use the theme composable
-const { isDarkTheme, toggleTheme } = useTheme();
 
 // Use the easter egg composable
 const { showEasterEgg, closeEasterEgg } = useEasterEgg();
-
-// Computed properties for theme button
-const themeButtonText = computed(() => (isDarkTheme.value ? '☀️' : '🌙'));
-const themeButtonTitle = computed(() =>
-  isDarkTheme.value ? 'Switch to Light Mode' : 'Switch to Dark Mode'
-);
 </script>
 
 <style scoped>
@@ -109,35 +95,6 @@ const themeButtonTitle = computed(() =>
 
 #social a {
   padding-left: 10px;
-}
-
-#themeToggle {
-  background: none;
-  border: none;
-  color: #333;
-  cursor: pointer;
-  font-size: 16px;
-  margin-right: 10px;
-  padding: 5px;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
-}
-
-.dark-theme #themeToggle {
-  color: #f2f2f2;
-}
-
-#themeToggle:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.dark-theme #themeToggle:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-#themeToggle:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px #00b3fe;
 }
 
 /* Easter Egg Modal Styles */
@@ -167,11 +124,6 @@ const themeButtonTitle = computed(() =>
   color: #384452;
 }
 
-.dark-theme .easter-egg-content {
-  background-color: #2c3e50;
-  color: #f2f2f2;
-}
-
 .close-button {
   position: absolute;
   top: 10px;
@@ -188,19 +140,11 @@ const themeButtonTitle = computed(() =>
   color: #333;
 }
 
-.dark-theme .close-button:hover {
-  color: #fff;
-}
-
 .easter-egg-content h2 {
   margin-top: 0;
   color: #384452;
   text-align: center;
   font-size: 24px;
-}
-
-.dark-theme .easter-egg-content h2 {
-  color: #00b3fe;
 }
 
 .hire-me-content {
@@ -292,10 +236,6 @@ const themeButtonTitle = computed(() =>
   border-radius: 50%;
 }
 
-.dark-theme .build-dot {
-  background-color: #666;
-}
-
 .refresh-button {
   background: none;
   border: none;
@@ -309,10 +249,6 @@ const themeButtonTitle = computed(() =>
 
 .refresh-button:hover {
   transform: rotate(180deg);
-  color: #00b3fe;
-}
-
-.dark-theme .refresh-button:hover {
   color: #00b3fe;
 }
 </style>

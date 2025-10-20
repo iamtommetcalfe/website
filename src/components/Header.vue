@@ -1,5 +1,5 @@
 <template>
-  <nav :class="{ 'dark-theme': isDarkTheme }">
+  <nav>
     <div id="logoContainer">
       <router-link
         id="homepageTitle"
@@ -53,11 +53,7 @@
 </template>
 
 <script setup lang="ts">
-import { useTheme } from '@/composables/useTheme';
 import { ref } from 'vue';
-
-// Use the theme composable
-const { isDarkTheme } = useTheme();
 
 // Mobile menu state
 const isMobileMenuOpen = ref(false);
@@ -101,10 +97,6 @@ nav {
     sans-serif;
   transition: background-color 0.3s ease;
   position: relative;
-}
-
-nav.dark-theme {
-  background-color: #121212;
 }
 
 #homepageTitle {
@@ -219,10 +211,6 @@ nav.dark-theme {
 
 .mobile-nav.open {
   transform: translateY(0);
-}
-
-.dark-theme .mobile-nav {
-  background-color: #121212;
 }
 
 .mobile-nav ul {
