@@ -29,97 +29,35 @@
           </ul>
         </div>
 
-        <!-- Mobile Navigation Button -->
-        <div class="hamburger-menu" :class="{ active: isMobileMenuOpen }" @click="toggleMobileMenu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
-        <!-- Mobile Navigation Menu -->
-        <div class="mobile-nav" :class="{ open: isMobileMenuOpen }">
-          <ul>
-            <li>
-              <router-link
-                to="/about/"
-                title="About Tom Stirrop-Metcalfe"
-                aria-current-value="page"
-                @click="closeMobileMenu"
-                >About</router-link
-              >
-            </li>
-            <li>
-              <router-link
-                to="/projects/"
-                title="Tom Stirrop-Metcalfe's Projects"
-                aria-current-value="page"
-                @click="closeMobileMenu"
-                >Projects</router-link
-              >
-            </li>
-          </ul>
-        </div>
+        <!-- Mobile Navigation -->
+        <MobileNav />
       </div>
     </nav>
   </header>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-
-// Mobile menu state
-const isMobileMenuOpen = ref(false);
-
-// Toggle mobile menu
-const toggleMobileMenu = () => {
-  isMobileMenuOpen.value = !isMobileMenuOpen.value;
-
-  // Prevent scrolling when menu is open
-  if (isMobileMenuOpen.value) {
-    document.body.style.overflow = 'hidden';
-  } else {
-    document.body.style.overflow = '';
-  }
-};
-
-// Close mobile menu
-const closeMobileMenu = () => {
-  isMobileMenuOpen.value = false;
-  document.body.style.overflow = '';
-};
+import MobileNav from '@/components/MobileNav.vue';
 </script>
 
 <style scoped>
 nav {
-  background-color: #303030;
+  background-color: var(--color-bg-header);
   width: 100%;
   height: 64px;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    avenir next,
-    avenir,
-    helvetica neue,
-    helvetica,
-    ubuntu,
-    roboto,
-    noto,
-    segoe ui,
-    arial,
-    sans-serif;
   transition: background-color 0.3s ease;
   position: relative;
 }
 
 #homepageTitle {
-  color: #fff;
+  color: var(--color-text-inverse);
   font-weight: 900;
   font-size: 28px;
   text-decoration: none;
 }
 
 #homepageTitle span {
-  color: #00b3fe;
+  color: var(--color-primary);
   padding-left: 3px;
   text-decoration: none;
 }
@@ -128,11 +66,11 @@ nav {
   margin-right: auto;
   margin-left: auto;
   width: 100%;
-  max-width: 64rem;
+  max-width: var(--max-width);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: var(--spacing-md);
   position: relative;
   box-sizing: border-box;
 }
@@ -159,89 +97,9 @@ nav {
 }
 
 #navBar ul li a {
-  color: #fff;
+  color: var(--color-text-inverse);
   font-weight: 900;
   font-size: 18px;
-  text-decoration: none;
-}
-
-/* Hamburger Menu Button */
-.hamburger-menu {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-  cursor: pointer;
-  z-index: 1000;
-  position: relative;
-  padding: 10px; /* Add padding to increase the clickable area */
-  margin: -10px; /* Offset the padding to maintain visual size */
-  margin-right: 5px; /* Ensure it's not too close to the edge */
-}
-
-.hamburger-menu span {
-  display: block;
-  height: 3px;
-  width: 100%;
-  background-color: white;
-  border-radius: 3px;
-  transition: all 0.3s ease;
-}
-
-/* Hamburger Animation */
-.hamburger-menu.active span:nth-child(1) {
-  transform: translateY(9px) rotate(45deg);
-}
-
-.hamburger-menu.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger-menu.active span:nth-child(3) {
-  transform: translateY(-9px) rotate(-45deg);
-}
-
-/* Mobile Navigation Menu */
-.mobile-nav {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #303030;
-  z-index: 999;
-  padding-top: 80px;
-  transform: translateY(-100%);
-  transition: transform 0.3s ease;
-  width: 100%; /* Ensure it takes up the full width */
-  max-width: 100vw; /* Limit to viewport width */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  box-sizing: border-box; /* Include padding in width calculation */
-}
-
-.mobile-nav.open {
-  transform: translateY(0);
-}
-
-.mobile-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.mobile-nav ul li {
-  margin: 15px 0;
-}
-
-.mobile-nav ul li a {
-  color: #fff;
-  font-weight: 900;
-  font-size: 24px;
   text-decoration: none;
 }
 
@@ -249,18 +107,6 @@ nav {
 @media screen and (max-width: 768px) {
   .desktop-nav {
     display: none;
-  }
-
-  .hamburger-menu {
-    display: flex;
-    position: absolute; /* Position it absolutely within the container */
-    top: 60%; /* Center vertically */
-    transform: translateY(-50%); /* Adjust for perfect vertical centering */
-    right: 15px; /* Position from the right edge with some margin */
-  }
-
-  .mobile-nav {
-    display: block;
   }
 
   /* Ensure the logo container has proper spacing */

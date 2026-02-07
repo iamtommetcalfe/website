@@ -79,6 +79,7 @@ const { showEasterEgg, closeEasterEgg } = useEasterEgg();
 
 <style scoped>
 #footerContainer {
+  width: 100%;
   padding: 0.75rem;
 }
 

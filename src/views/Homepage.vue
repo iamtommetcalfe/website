@@ -55,6 +55,7 @@ import { ref, defineAsyncComponent, getCurrentInstance } from 'vue';
 import imageUrlJPEG from '@/assets/images/tom-stirrop-metcalfe-obi.jpeg';
 import imageUrlWEBP from '@/assets/images/tom-stirrop-metcalfe-obi.webp';
 import { useSeo } from '@/composables/useSeo';
+import { HOME_SEO_CONFIG } from '@/config/seo';
 import PrinciplesSection, { type PrincipleItem } from '@/components/PrinciplesSection.vue';
 
 const careItems: PrincipleItem[] = [
@@ -75,49 +76,7 @@ const careItems: PrincipleItem[] = [
   },
 ];
 
-useSeo({
-  title: 'Homepage | Tom Stirrop-Metcalfe | Engineering Leader',
-  description:
-    'I build calm, capable, fast-moving engineering teams. I focus on measurable impact, strong systems, and sustainable delivery.',
-  canonicalUrl: 'https://iamtommetcalfe.com/',
-  structuredData: [
-    {
-      '@context': 'https://schema.org',
-      '@type': 'Person',
-      name: 'Tom Stirrop-Metcalfe',
-      jobTitle: 'Engineering Function Manager',
-      description:
-        'Engineering leader focused on sustainable delivery, healthy teams, and systems that scale quietly.',
-      image: 'https://iamtommetcalfe.com/assets/images/tom-stirrop-metcalfe-obi.jpeg',
-      url: 'https://iamtommetcalfe.com/',
-      sameAs: [
-        'https://github.com/iamtommetcalfe',
-        'https://www.linkedin.com/in/tomstirropmetcalfe/',
-      ],
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Birmingham',
-        addressCountry: 'United Kingdom',
-      },
-      worksFor: { '@type': 'Organization', name: 'Amiqus' },
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'WebPage',
-      name: 'Homepage | Tom Stirrop-Metcalfe | Engineering Leader',
-      description:
-        'I build calm, fast-moving engineering teams. We focus on measurable impact, strong systems, and sustainable delivery.',
-      url: 'https://iamtommetcalfe.com/',
-      author: { '@type': 'Person', name: 'Tom Stirrop-Metcalfe' },
-      inLanguage: 'en-GB',
-      isPartOf: {
-        '@type': 'WebSite',
-        name: 'Tom Stirrop-Metcalfe',
-        url: 'https://iamtommetcalfe.com/',
-      },
-    },
-  ],
-});
+useSeo(HOME_SEO_CONFIG);
 
 const MrRobotPopUp = defineAsyncComponent(() => import('@/components/MrRobotPopUp.vue'));
 

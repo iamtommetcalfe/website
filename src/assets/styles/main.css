@@ -1,55 +1,85 @@
+:root {
+  /* Colors */
+  --color-bg-body: #f2f2f2;
+  --color-bg-content: #fff;
+  --color-bg-footer: rgba(0, 0, 0, 0.8);
+  --color-bg-header: #303030;
+  --color-text-main: #555;
+  --color-text-muted: #6b7280;
+  --color-text-inverse: #fff;
+  --color-primary: #00b3fe;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  /* Layout */
+  --max-width: 64rem;
+}
+
 body {
-  background-color: #f2f2f2;
-  font-family: Tahoma, Geneva, sans-serif;
+  background-color: var(--color-bg-body);
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    avenir next,
+    avenir,
+    helvetica neue,
+    helvetica,
+    ubuntu,
+    roboto,
+    noto,
+    segoe ui,
+    arial,
+    sans-serif;
   font-weight: 300;
-  color: #555;
+  color: var(--color-text-main);
   background-size: cover;
   margin: 0;
 }
+
 #mainContent {
-  background-color: #fff;
+  background-color: var(--color-bg-content);
   margin-top: 15px;
   margin-right: auto;
   margin-left: auto;
   width: 100%;
-  max-width: 64rem;
-  display: table;
+  max-width: var(--max-width);
+  display: flex;
+  flex-direction: column;
 }
+
 #mainContentWrapper {
-  vertical-align: middle;
-  padding: 1rem;
-  width: 2rem;
-  display: table-cell;
+  padding: var(--spacing-md);
+  flex: 1;
 }
 
 footer {
   margin-right: auto;
   margin-left: auto;
-  margin-top: 1rem;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
+  margin-top: var(--spacing-md);
+  background-color: var(--color-bg-footer);
+  color: var(--color-text-inverse);
   width: 100%;
-  max-width: 64rem;
-  display: table;
+  max-width: var(--max-width);
+  display: flex;
+  justify-content: center;
 }
 
-.clearAfter {
-  content: '.';
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
 .pageTitle {
   font-size: 2em;
   margin: 0 0 6px;
   line-height: 1.08;
   cursor: pointer;
 }
+
 h2 {
   font-size: 1em;
 }
 
 a {
-  color: #00b3fe;
+  color: var(--color-primary);
 }

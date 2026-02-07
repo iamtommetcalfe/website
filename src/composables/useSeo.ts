@@ -1,14 +1,6 @@
 import { useHead } from '@unhead/vue';
 import { useRoute } from 'vue-router';
-
-/**
- * Interface for structured data (JSON-LD)
- */
-interface StructuredData {
-  '@context': string;
-  '@type': string;
-  [key: string]: unknown;
-}
+import type { StructuredData } from '@/config/seo';
 
 /**
  * Interface for SEO metadata
