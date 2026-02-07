@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <main class="about">
     <!-- Hero -->
     <section class="hero container">
       <div class="hero__copy">
@@ -143,7 +143,7 @@
         </div>
       </div>
     </section>
-  </div>
+  </main>
 </template>
 
 <script setup lang="ts">
@@ -306,6 +306,39 @@ useSeo({
   background: transparent;
   color: #111827;
   border-color: #e5e7eb;
+}
+
+/* Dark Mode Overrides */
+:global(.dark-mode) .section--alt {
+  background: #111827;
+  border-color: #374151;
+}
+
+:global(.dark-mode) .lede--muted {
+  color: #9ca3af;
+}
+
+:global(.dark-mode) .bullets li,
+:global(.dark-mode) .listCard {
+  background: #1f2937;
+  border-color: #374151;
+  color: #d1d5db;
+}
+
+:global(.dark-mode) .listCard h3,
+:global(.dark-mode) .section__title {
+  color: #f9fafb;
+}
+
+:global(.dark-mode) .btn {
+  background: #f9fafb;
+  color: #111827;
+  border-color: #f9fafb;
+}
+
+:global(.dark-mode) .btn--ghost {
+  color: #f9fafb;
+  border-color: #4b5563;
 }
 
 /* ---- Responsive ---- */

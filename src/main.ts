@@ -1,8 +1,8 @@
 import { ViteSSG } from 'vite-ssg';
 import { createHead } from '@unhead/vue';
+import { createPinia } from 'pinia';
 import App from './App.vue';
 import router from './router';
-import store from './store';
 import './assets/styles/main.css';
 import { useAnalytics } from './composables/useAnalytics';
 
@@ -44,8 +44,8 @@ export const createApp = ViteSSG(
 
     // Use plugins
     // eslint-disable-next-line no-console
-    console.log('[main] Registering Vuex store');
-    app.use(store);
+    console.log('[main] Registering Pinia store');
+    app.use(createPinia());
 
     // eslint-disable-next-line no-console
     console.log('[main] App initialization complete');

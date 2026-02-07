@@ -1,55 +1,67 @@
 <template>
-  <nav>
-    <div id="logoContainer">
-      <router-link
-        id="homepageTitle"
-        to="/"
-        title="Tom Stirrop-Metcalfe | Engineering Leader | Homepage"
-      >
-        Tom Stirrop-Metcalfe <span>.</span>
-      </router-link>
+  <header id="header-container">
+    <nav>
+      <div id="logoContainer">
+        <router-link
+          id="homepageTitle"
+          to="/"
+          title="Tom Stirrop-Metcalfe | Engineering Leader | Homepage"
+        >
+          Tom Stirrop-Metcalfe <span>.</span>
+        </router-link>
 
-      <!-- Desktop Navigation -->
-      <div id="navBar" class="desktop-nav">
-        <ul>
-          <li>
-            <router-link to="/about/" title="About Tom Stirrop-Metcalfe">About</router-link>
-          </li>
-          <li>
-            <router-link to="/projects/" title="Tom Stirrop-Metcalfe's Projects"
-              >Projects</router-link
-            >
-          </li>
-        </ul>
-      </div>
+        <!-- Desktop Navigation -->
+        <div id="navBar" class="desktop-nav">
+          <ul>
+            <li>
+              <router-link to="/about/" title="About Tom Stirrop-Metcalfe" aria-current-value="page"
+                >About</router-link
+              >
+            </li>
+            <li>
+              <router-link
+                to="/projects/"
+                title="Tom Stirrop-Metcalfe's Projects"
+                aria-current-value="page"
+                >Projects</router-link
+              >
+            </li>
+          </ul>
+        </div>
 
-      <!-- Mobile Navigation Button -->
-      <div class="hamburger-menu" :class="{ active: isMobileMenuOpen }" @click="toggleMobileMenu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+        <!-- Mobile Navigation Button -->
+        <div class="hamburger-menu" :class="{ active: isMobileMenuOpen }" @click="toggleMobileMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
-      <!-- Mobile Navigation Menu -->
-      <div class="mobile-nav" :class="{ open: isMobileMenuOpen }">
-        <ul>
-          <li>
-            <router-link to="/about/" title="About Tom Stirrop-Metcalfe" @click="closeMobileMenu"
-              >About</router-link
-            >
-          </li>
-          <li>
-            <router-link
-              to="/projects/"
-              title="Tom Stirrop-Metcalfe's Projects"
-              @click="closeMobileMenu"
-              >Projects</router-link
-            >
-          </li>
-        </ul>
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-nav" :class="{ open: isMobileMenuOpen }">
+          <ul>
+            <li>
+              <router-link
+                to="/about/"
+                title="About Tom Stirrop-Metcalfe"
+                aria-current-value="page"
+                @click="closeMobileMenu"
+                >About</router-link
+              >
+            </li>
+            <li>
+              <router-link
+                to="/projects/"
+                title="Tom Stirrop-Metcalfe's Projects"
+                aria-current-value="page"
+                @click="closeMobileMenu"
+                >Projects</router-link
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
 </template>
 
 <script setup lang="ts">

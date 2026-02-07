@@ -1,5 +1,5 @@
 import { computed, watch, ComputedRef } from 'vue';
-import { useStore } from 'vuex';
+import { useThemeStore } from '@/stores/theme';
 
 /**
  * Valid theme values for the application
@@ -41,10 +41,10 @@ interface ThemeReturn {
  * setTheme('dark');
  */
 export function useTheme(): ThemeReturn {
-  const store = useStore();
+  const themeStore = useThemeStore();
 
-  // Computed property to get the current theme from Vuex store
-  const theme: ComputedRef<ThemeType> = computed(() => store.getters.currentTheme as ThemeType);
+  // Computed property to get the current theme from Pinia store
+  const theme: ComputedRef<ThemeType> = computed(() => themeStore.currentTheme as ThemeType);
 
   // Computed property to check if dark theme is active
   const isDarkTheme: ComputedRef<boolean> = computed(() => theme.value === 'dark');
@@ -53,7 +53,7 @@ export function useTheme(): ThemeReturn {
    * Toggle between light and dark themes
    */
   const toggleTheme = (): void => {
-    store.dispatch('toggleTheme');
+    themeStore.toggleTheme();
   };
 
   /**
@@ -62,7 +62,7 @@ export function useTheme(): ThemeReturn {
    * @param {ThemeType} newTheme - The theme to set ('light' or 'dark')
    */
   const setTheme = (newTheme: ThemeType): void => {
-    store.commit('setTheme', newTheme);
+    themeStore.setTheme(newTheme);
   };
 
   // Apply theme to HTML element when it changes

@@ -58,19 +58,54 @@ const props = defineProps<{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
+
+  .card {
+    background: #ffffff;
+    border: 1px solid #e6e8ee;
+    border-radius: 14px;
+    padding: 16px;
+    transition:
+      background-color 0.3s ease,
+      border-color 0.3s ease;
+
+    p {
+      margin: 0;
+      color: #4b5563;
+      transition: color 0.3s ease;
+    }
+
+    h3 {
+      margin: 0 0 6px 0;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+
+      span {
+        padding-right: 10px;
+      }
+    }
+  }
 }
-.card {
-  background: #ffffff;
-  border: 1px solid #e6e8ee;
-  border-radius: 14px;
-  padding: 16px;
+
+/* Dark mode overrides */
+:global(.dark-mode) .section--alt {
+  background: #111827;
+  border-color: #374151;
 }
-.card h3 {
-  margin: 0 0 6px 0;
-  font-size: 1rem;
+
+:global(.dark-mode) .card {
+  background: #1f2937;
+  border-color: #374151;
 }
-.card p {
-  margin: 0;
-  color: #4b5563;
+
+:global(.dark-mode) .card h3 {
+  color: #f9fafb;
+}
+
+:global(.dark-mode) .card p {
+  color: #d1d5db;
+}
+
+:global(.dark-mode) .section__title {
+  color: #f9fafb;
 }
 </style>

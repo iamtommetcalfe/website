@@ -1,67 +1,69 @@
 <template>
-  <div id="footerContainer">
-    <div id="location">
-      <b>Location</b> - <small>Engineering Function Manager @ Amiqus - Birmingham</small>
-    </div>
-    <div id="social">
-      <a href="https://github.com/iamtommetcalfe" title="Tom Stirrop-Metcalfe - Github Profile">
-        <picture class="tom-metcalfe-image">
-          <source :srcset="githubIconWEBP" type="image/webp" />
-          <source :srcset="githubIconPNG" type="image/png" />
-          <img
-            :src="githubIconPNG"
-            alt="Tom Stirrop-Metcalfe - Github Profile"
-            width="15"
-            height="14"
-            loading="lazy"
-          />
-        </picture>
-      </a>
-      <a
-        href="https://www.linkedin.com/in/iamtomstirropmetcalfe/"
-        title="Tom Stirrop-Metcalfe - LinkedIn Profile"
-      >
-        <picture class="tom-metcalfe-image">
-          <source :srcset="linkedInIconWEBP" type="image/webp" />
-          <source :srcset="linkedInIconPNG" type="image/png" />
-          <img
-            :src="linkedInIconPNG"
-            alt="Tom Stirrop-Metcalfe - LinkedIn Profile"
-            width="15"
-            height="14"
-            loading="lazy"
-          />
-        </picture>
-      </a>
-    </div>
+  <footer>
+    <div id="footerContainer">
+      <div id="location">
+        <b>Location</b> - <small>Engineering Function Manager @ Amiqus - Birmingham</small>
+      </div>
+      <div id="social">
+        <a href="https://github.com/iamtommetcalfe" title="Tom Stirrop-Metcalfe - Github Profile">
+          <picture class="tom-metcalfe-image">
+            <source :srcset="githubIconWEBP" type="image/webp" />
+            <source :srcset="githubIconPNG" type="image/png" />
+            <img
+              :src="githubIconPNG"
+              alt="Tom Stirrop-Metcalfe - Github Profile"
+              width="15"
+              height="14"
+              loading="lazy"
+            />
+          </picture>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/iamtomstirropmetcalfe/"
+          title="Tom Stirrop-Metcalfe - LinkedIn Profile"
+        >
+          <picture class="tom-metcalfe-image">
+            <source :srcset="linkedInIconWEBP" type="image/webp" />
+            <source :srcset="linkedInIconPNG" type="image/png" />
+            <img
+              :src="linkedInIconPNG"
+              alt="Tom Stirrop-Metcalfe - LinkedIn Profile"
+              width="15"
+              height="14"
+              loading="lazy"
+            />
+          </picture>
+        </a>
+      </div>
 
-    <div class="clearAfter"></div>
+      <div class="clearAfter"></div>
 
-    <!-- Easter Egg Modal -->
-    <div v-if="showEasterEgg" class="easter-egg-modal">
-      <div class="easter-egg-content">
-        <button class="close-button" @click="closeEasterEgg">&times;</button>
-        <h2>🎉 You found me! 🎉</h2>
-        <p>Looking for an experienced engineering leader?</p>
-        <div class="hire-me-content">
-          <p>I'm passionate about building great products and leading high-performing teams.</p>
-          <p>Let's connect and discuss how I can help your organization!</p>
-          <div class="contact-buttons">
-            <a
-              href="https://www.linkedin.com/in/iamtomstirropmetcalfe/"
-              class="contact-button linkedin"
-              target="_blank"
-            >
-              Connect on LinkedIn
-            </a>
+      <!-- Easter Egg Modal -->
+      <div v-if="showEasterEgg" class="easter-egg-modal">
+        <div class="easter-egg-content">
+          <button class="close-button" @click="closeEasterEgg">&times;</button>
+          <h2>🎉 You found me! 🎉</h2>
+          <p>Looking for an experienced engineering leader?</p>
+          <div class="hire-me-content">
+            <p>I'm passionate about building great products and leading high-performing teams.</p>
+            <p>Let's connect and discuss how I can help your organization!</p>
+            <div class="contact-buttons">
+              <a
+                href="https://www.linkedin.com/in/iamtomstirropmetcalfe/"
+                class="contact-button linkedin"
+                target="_blank"
+              >
+                Connect on LinkedIn
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="easter-egg-footer">
-          <small>Hint: Type "hireme" anywhere on the site to see this again</small>
+          <div class="easter-egg-footer">
+            <small>Hint: Type "hireme" anywhere on the site to see this again</small>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script setup lang="ts">

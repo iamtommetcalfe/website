@@ -1,16 +1,12 @@
 <template>
   <div>
-    <header id="header-container">
-      <Header />
-    </header>
-    <section id="mainContent">
+    <Header />
+    <div id="mainContent">
       <div id="mainContentWrapper">
         <router-view />
       </div>
-    </section>
-    <footer>
-      <Footer />
-    </footer>
+    </div>
+    <Footer />
     <div>
       <MrRobot />
     </div>
@@ -38,5 +34,23 @@ body {
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
+}
+
+/* Dark mode global styles */
+.dark-mode {
+  background-color: #111827;
+}
+
+.dark-mode body {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+.dark-mode #mainContent {
+  background-color: #111827;
+}
+
+.dark-mode #mainContentWrapper {
+  background-color: transparent;
 }
 </style>

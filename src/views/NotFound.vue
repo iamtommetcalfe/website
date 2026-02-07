@@ -1,11 +1,11 @@
 <template>
-  <div id="notFoundContainer">
+  <main id="notFoundContainer">
     <picture>
       <source :srcset="deadLinkWEBP" type="image/webp" />
       <source :srcset="deadLinkJPEG" type="image/jpg" />
       <img id="notFoundImage" :src="deadLinkJPEG" alt="Oops! You found a dead link." />
     </picture>
-  </div>
+  </main>
 </template>
 
 <script setup lang="ts">

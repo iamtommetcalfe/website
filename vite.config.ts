@@ -1,12 +1,19 @@
 import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
+import Sitemap from 'vite-plugin-sitemap';
 import type { UserConfig } from 'vite-ssg';
 
 export default defineConfig({
   base: '/',
   plugins: [
     vue(),
+    Sitemap({
+      hostname: 'https://iamtommetcalfe.com',
+      dynamicRoutes: ['/about/', '/projects/'],
+      trailingSlash: true,
+      outDir: 'dist',
+    }),
     // Temporarily disabled VitePWA due to build issues
     // VitePWA({
     //   registerType: 'autoUpdate',

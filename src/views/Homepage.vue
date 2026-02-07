@@ -1,10 +1,15 @@
 <template>
-  <div class="home">
+  <main class="home">
     <!-- Hero -->
     <section class="hero container">
       <div class="hero__copy">
         <!-- Keep the Easter egg click -->
-        <h1 class="pageTitle" title="Click to see a surprise" @click="showMrRobotPopup">
+        <h1
+          class="pageTitle"
+          title="Click to see a surprise"
+          aria-label="Hello, I am Tom. Click to see a surprise Mr. Robot Easter egg"
+          @click="showMrRobotPopup"
+        >
           Hello, I am Tom
         </h1>
         <p class="kicker">
@@ -29,7 +34,8 @@
             :src="imageUrlJPEG"
             width="420"
             height="520"
-            loading="lazy"
+            loading="eager"
+            fetchpriority="high"
             alt="Tom Stirrop-Metcalfe with his dog, Obi"
           />
         </picture>
@@ -41,7 +47,7 @@
 
     <!-- Mr. Robot Popup -->
     <MrRobotPopUp :is-visible="isPopupVisible" @close="closePopup" />
-  </div>
+  </main>
 </template>
 
 <script setup lang="ts">
@@ -240,58 +246,25 @@ const closePopup = () => {
   object-fit: cover;
 }
 
-/* ---- Cards (pillars) ---- */
-.cards {
-  list-style: none;
-  margin: 14px 0 0 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
+/* Dark Mode Overrides */
+:global(.dark-mode) .kicker,
+:global(.dark-mode) .lede--muted {
+  color: #9ca3af;
 }
 
-.card {
-  background: #ffffff;
-  border: 1px solid #e6e8ee;
-  border-radius: 14px;
-  padding: 16px;
+:global(.dark-mode) .btn {
+  background: #f9fafb;
+  color: #111827;
+  border-color: #f9fafb;
 }
 
-.card h3 {
-  margin: 0 0 6px 0;
-  font-size: 1rem;
+:global(.dark-mode) .btn--ghost {
+  color: #f9fafb;
+  border-color: #4b5563;
 }
 
-.card p {
-  margin: 0;
-  color: #4b5563;
-}
-
-/* ---- Metrics ---- */
-.metrics {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin: 14px 0 0 0;
-  padding: 0;
-}
-
-.metric {
-  background: #f6f7f9;
-  border: 1px solid #e6e8ee;
-  border-radius: 12px;
-  padding: 14px;
-}
-
-.metric strong {
-  display: block;
-  font-size: 1.1rem;
-  margin-bottom: 4px;
-}
-
-.metric span {
-  color: #4b5563;
+:global(.dark-mode) .portrait {
+  border-color: #374151;
 }
 
 /* ---- Responsive ---- */

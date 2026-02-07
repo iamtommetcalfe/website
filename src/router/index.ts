@@ -8,7 +8,7 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: 'Homepage | Tom Stirrop-Metcalfe | Engineering Leader',
       description:
-        'My name is Tom Stirrop-Metcalfe. I am a passionate and driven engineering leader who wants to enable others to realise their full potential.',
+        'I build calm, capable, fast-moving engineering teams. I focus on measurable impact, strong systems, and sustainable delivery.',
     },
   },
   {
@@ -16,9 +16,9 @@ const routes: Array<RouteRecordRaw> = [
     name: 'about',
     component: () => import('../views/About.vue'),
     meta: {
-      title: 'About | Tom Stirrop-Metcalfe | Engineering Leader',
+      title: 'About | Tom Stirrop-Metcalfe | Engineering Function Manager',
       description:
-        'Learn more about Tom Stirrop-Metcalfe, a passionate and committed engineering leader with over 15 years of experience in software development.',
+        'About Tom Stirrop-Metcalfe. Engineering Function Manager focused on sustainable delivery, healthy teams, and quietly reliable systems.',
     },
   },
   {
