@@ -9,10 +9,7 @@
           fast-moving teams. I care about measurable impact, healthy delivery habits, and systems
           that scale quietly.
         </p>
-        <p class="lede lede--muted">
-          💡 Engineering should make life easier for <i>everyone</i>. <br /><br />
-          Sometimes known as <b>Tom Metcalfe (Stirrop-Metcalfe)</b>.
-        </p>
+        <p class="lede lede--muted">💡 Engineering should make life easier for <i>everyone</i>.</p>
       </div>
     </section>
 
