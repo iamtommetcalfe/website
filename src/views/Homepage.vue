@@ -37,27 +37,7 @@
     </section>
 
     <!-- Pillars -->
-    <section class="section section--alt">
-      <div class="container">
-        <h2 class="section__title">What I care about</h2>
-        <ul class="cards">
-          <li class="card">
-            <h3>🪶 Quietly reliable systems</h3>
-            <p>
-              Well-understood tech, predictable releases, and delivery pipelines that just work.
-            </p>
-          </li>
-          <li class="card">
-            <h3>💚 Healthy teams</h3>
-            <p>Psychological safety, autonomy with alignment, and honest retros.</p>
-          </li>
-          <li class="card">
-            <h3>🎯 Measured progress</h3>
-            <p>Cycle time, change fail rate, and deployment frequency. Less noise, more signal.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
+    <PrinciplesSection title="What I care about" :items="careItems" :alt="true" />
 
     <!-- Mr. Robot Popup -->
     <MrRobotPopUp :is-visible="isPopupVisible" @close="closePopup" />
@@ -69,6 +49,25 @@ import { ref, defineAsyncComponent, getCurrentInstance } from 'vue';
 import imageUrlJPEG from '@/assets/images/tom-stirrop-metcalfe-obi.jpeg';
 import imageUrlWEBP from '@/assets/images/tom-stirrop-metcalfe-obi.webp';
 import { useSeo } from '@/composables/useSeo';
+import PrinciplesSection, { type PrincipleItem } from '@/components/PrinciplesSection.vue';
+
+const careItems: PrincipleItem[] = [
+  {
+    icon: '🪶',
+    title: 'Quietly reliable systems',
+    text: 'Well-understood tech, predictable releases, and delivery pipelines that just work.',
+  },
+  {
+    icon: '💚',
+    title: 'Healthy teams',
+    text: 'Psychological safety, autonomy with alignment, and honest retros.',
+  },
+  {
+    icon: '🎯',
+    title: 'Measured progress',
+    text: 'Cycle time, change fail rate, and deployment frequency. Less noise, more signal.',
+  },
+];
 
 useSeo({
   title: 'Homepage | Tom Stirrop-Metcalfe | Engineering Leader',
