@@ -1,5 +1,5 @@
 import { ViteSSG } from 'vite-ssg';
-import { createHead } from '@unhead/vue';
+import { createUnhead } from '@unhead/vue';
 import { createPinia } from 'pinia';
 import App from './App.vue';
 import router from './router';
@@ -22,7 +22,7 @@ export const createApp = ViteSSG(
     console.log('[main] App setup function called, initializing components');
 
     // Install head manager (Unhead)
-    const head = createHead();
+    const head = createUnhead();
     app.use(head);
 
     // eslint-disable-next-line no-console

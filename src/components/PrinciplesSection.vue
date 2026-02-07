@@ -22,7 +22,7 @@ export type PrincipleItem = {
   text: string;
 };
 
-const props = defineProps<{
+defineProps<{
   title: string;
   items: PrincipleItem[];
   alt?: boolean;
