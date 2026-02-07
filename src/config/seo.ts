@@ -72,11 +72,18 @@ export const DEFAULT_PERSON: SchemaPerson = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Tom Stirrop-Metcalfe',
-  jobTitle: 'Engineering Function Manager',
+  jobTitle: 'Software Engineering Manager',
   description:
     'Engineering leader focused on sustainable delivery, healthy teams, and systems that scale quietly.',
   image: `${SITE_DOMAIN}/assets/images/tom-stirrop-metcalfe-obi.jpeg`,
   url: SITE_DOMAIN,
+  knowsAbout: [
+    'Software Engineering',
+    'Engineering Leadership',
+    'Agile Management',
+    'Scalable Systems',
+    'Team Building',
+  ],
   sameAs: ['https://github.com/iamtommetcalfe', 'https://www.linkedin.com/in/tomstirropmetcalfe/'],
   address: {
     '@type': 'PostalAddress',
@@ -94,7 +101,7 @@ export const DEFAULT_WEBSITE: SchemaWebSite = {
 };
 
 export const HOME_SEO_CONFIG = {
-  title: 'Homepage | Tom Stirrop-Metcalfe | Engineering Leader',
+  title: 'Tom Stirrop-Metcalfe | Software Engineering Manager & Leader',
   description:
     'I build calm, capable, fast-moving engineering teams. I focus on measurable impact, strong systems, and sustainable delivery.',
   canonicalUrl: SITE_DOMAIN,
@@ -103,7 +110,7 @@ export const HOME_SEO_CONFIG = {
     {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
-      name: 'Homepage | Tom Stirrop-Metcalfe | Engineering Leader',
+      name: 'Tom Stirrop-Metcalfe | Software Engineering Manager & Leader',
       description:
         'I build calm, fast-moving engineering teams. We focus on measurable impact, strong systems, and sustainable delivery.',
       url: SITE_DOMAIN,
@@ -115,7 +122,7 @@ export const HOME_SEO_CONFIG = {
 };
 
 export const PROJECTS_SEO_CONFIG = {
-  title: 'Projects | Tom Stirrop-Metcalfe | Engineering Leader',
+  title: 'Engineering Projects | Tom Stirrop-Metcalfe | Software Engineering Manager',
   description:
     "Explore Tom Stirrop-Metcalfe's public GitHub projects, including ENCOM Smart Home, Amiqus ATS Demo, and Vue Pokédex.",
   canonicalUrl: `${SITE_DOMAIN}/projects/`,
@@ -123,7 +130,7 @@ export const PROJECTS_SEO_CONFIG = {
     {
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
-      name: 'Projects - Tom Stirrop-Metcalfe | Software Engineering Manager',
+      name: 'Engineering Projects | Tom Stirrop-Metcalfe | Software Engineering Manager',
       description:
         "Explore Tom Stirrop-Metcalfe's public GitHub projects, including ENCOM Smart Home, Amiqus ATS Demo, and Vue Pokédex.",
       url: `${SITE_DOMAIN}/projects/`,

@@ -3,18 +3,56 @@
     <!-- Hero -->
     <section class="hero container">
       <div class="hero__copy">
-        <h1 class="pageTitle">About</h1>
+        <h1 class="pageTitle">About Tom Stirrop-Metcalfe</h1>
         <p class="lede">
-          I am Tom Stirrop-Metcalfe, an Engineering Function Manager who builds calm, capable,
+          I am Tom Stirrop-Metcalfe, a Software Engineering Manager who builds calm, capable,
           fast-moving teams. I care about measurable impact, healthy delivery habits, and systems
           that scale quietly.
         </p>
-        <p class="lede lede--muted">💡 Engineering should make life easier for <i>everyone</i>.</p>
+        <p class="lede lede--muted">
+          💡 Engineering should make life easier for <i>everyone</i>. <br /><br />
+          Sometimes known as <b>Tom Metcalfe (Stirrop-Metcalfe)</b>.
+        </p>
       </div>
     </section>
 
     <!-- Principles (shared component) -->
     <PrinciplesSection title="What guides my work" :items="guideItems" :alt="true" />
+
+    <!-- Engineering Leadership Philosophy -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title">Engineering Leadership Philosophy</h2>
+        <p class="lede">
+          My approach to <b>Technical Leadership</b> is rooted in <b>Strategic Engineering</b> and
+          fostering a <b>High-performing Engineering Culture</b>. I believe that
+          <b>People Management</b>
+          is about more than just oversight; it's about mentoring, scaling teams, and creating an
+          environment where everyone can thrive.
+        </p>
+        <ul class="bullets">
+          <li>
+            <b>Mentoring & Growth:</b> I focus on coaching individuals to reach their full
+            potential, empowering them with autonomy while providing clear alignment with business
+            goals.
+          </li>
+          <li>
+            <b>Scaling Teams:</b> I have experience in scaling engineering organisations by
+            introducing sustainable processes and <b>Scalable Systems</b> that grow with the
+            business.
+          </li>
+          <li>
+            <b>Engineering Culture:</b> I advocate for <b>Agile Management</b> practices,
+            psychological safety, and a culture of continuous improvement through honest
+            retrospectives and measured progress.
+          </li>
+          <li>
+            <b>System Design:</b> I ensure that technical decisions support long-term stability and
+            sustainable delivery, avoiding "hero culture" in favour of quietly reliable systems.
+          </li>
+        </ul>
+      </div>
+    </section>
 
     <!-- How I work -->
     <section class="section">
@@ -51,7 +89,7 @@
         <h2 class="section__title">Right now</h2>
         <ul class="bullets">
           <li>
-            Function management at
+            Software Engineering Management at
             <a href="https://amiqus.co/" target="_blank" rel="noopener">Amiqus</a>.
           </li>
           <li>Improving engineering ways of working and delivery metrics.</li>
@@ -165,17 +203,17 @@ const guideItems: PrincipleItem[] = [
 ];
 
 useSeo({
-  title: 'About | Tom Stirrop-Metcalfe | Engineering Function Manager',
+  title: 'About Tom Stirrop-Metcalfe | Engineering Leadership Philosophy',
   description:
-    'About Tom Stirrop-Metcalfe. Engineering Function Manager focused on sustainable delivery, healthy teams, and quietly reliable systems.',
+    'About Tom Stirrop-Metcalfe. Software Engineering Manager focused on Engineering Leadership, sustainable delivery, and high-performing teams.',
   canonicalUrl: 'https://iamtommetcalfe.com/about/',
   structuredData: [
     {
       '@context': 'https://schema.org',
       '@type': 'AboutPage',
-      name: 'About | Tom Stirrop-Metcalfe',
+      name: 'About Tom Stirrop-Metcalfe | Engineering Leadership Philosophy',
       description:
-        'Learn about Tom Stirrop-Metcalfe, Engineering Function Manager focused on sustainable delivery and measurable impact.',
+        'Learn about Tom Stirrop-Metcalfe, Software Engineering Manager focused on Engineering Leadership, Strategic Engineering, and high-performing teams.',
       url: 'https://iamtommetcalfe.com/about/',
       author: { '@type': 'Person', name: 'Tom Stirrop-Metcalfe' },
       inLanguage: 'en-GB',
@@ -187,8 +225,15 @@ useSeo({
       mainEntity: {
         '@type': 'Person',
         name: 'Tom Stirrop-Metcalfe',
-        jobTitle: 'Engineering Function Manager',
+        jobTitle: 'Software Engineering Manager',
         url: 'https://iamtommetcalfe.com/',
+        knowsAbout: [
+          'Software Engineering',
+          'Engineering Leadership',
+          'Agile Management',
+          'Scalable Systems',
+          'Team Building',
+        ],
         sameAs: [
           'https://github.com/iamtommetcalfe',
           'https://www.linkedin.com/in/tomstirropmetcalfe/',

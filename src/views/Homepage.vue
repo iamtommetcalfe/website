@@ -7,10 +7,10 @@
         <h1
           class="pageTitle"
           title="Click to see a surprise"
-          aria-label="Hello, I am Tom. Click to see a surprise Mr. Robot Easter egg"
+          aria-label="Tom Stirrop-Metcalfe | Software Engineering Manager & Leader. Click to see a surprise Mr. Robot Easter egg"
           @click="showMrRobotPopup"
         >
-          Hello, I am Tom
+          Tom Stirrop-Metcalfe
         </h1>
         <p class="kicker">
           Engineering Function Manager @
@@ -36,7 +36,7 @@
             height="520"
             loading="eager"
             fetchpriority="high"
-            alt="Tom Stirrop-Metcalfe with his dog, Obi"
+            alt="Tom Stirrop-Metcalfe - Software Engineering Manager & Leader"
           />
         </picture>
       </aside>

@@ -3,8 +3,11 @@
     <!-- Hero Section -->
     <section class="hero container">
       <div class="hero__copy">
-        <h1 class="pageTitle">Projects</h1>
-        <p class="lede">A collection of public projects, experiments, and tools I've built.</p>
+        <h1 class="pageTitle">Engineering Projects</h1>
+        <p class="lede">
+          A collection of public projects, experiments, and tools I've built, reflecting my focus on
+          <b>Scalable Systems</b> and <b>Technical Leadership</b>.
+        </p>
         <p class="lede lede--muted">
           💡 You can find more of my work over on
           <a href="https://github.com/iamtommetcalfe" target="_blank" rel="noopener">GitHub</a>.
@@ -33,8 +36,8 @@
           <div class="project-card">
             <h3>ENCOM Smart Home</h3>
             <p>
-              Encom is a modern smart home dashboard application designed to be served on your home
-              network.
+              <b>Technical Leadership:</b> Defined engineering standards and architecture for this
+              modern smart home dashboard application designed to be served on your home network.
             </p>
             <a
               href="https://github.com/iamtommetcalfe/encom-smart-home"
@@ -49,9 +52,9 @@
           <div class="project-card">
             <h3>Amiqus ATS Demo</h3>
             <p>
-              Explore how the Amiqus API can power applicant screening in an ATS. This demo app,
-              built with Laravel and Vite, walks through identity checks, record handling, and
-              integration flows.
+              <b>Leadership:</b> Led the technical design and implementation of this demonstration
+              platform to showcase complex API integration flows. Explore how the Amiqus API can
+              power applicant screening in an ATS.
             </p>
             <a
               href="https://github.com/iamtommetcalfe/amiqus-ats-demo"
