@@ -21,6 +21,16 @@ export const createApp = ViteSSG(
     // eslint-disable-next-line no-console
     console.log('[main] App setup function called, initializing components');
 
+    // Proactively unregister any previously installed service workers (legacy PWA)
+    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+      // eslint-disable-next-line no-console
+      console.log('[main] Attempting to unregister any existing service workers');
+      navigator.serviceWorker
+        .getRegistrations()
+        .then((regs) => regs.forEach((r) => r.unregister()))
+        .catch(() => void 0);
+    }
+
     // Install head manager (Unhead)
     const head = createUnhead();
     app.use(head);

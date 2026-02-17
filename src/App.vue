@@ -17,6 +17,16 @@
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 import MrRobot from './components/MrRobot.vue';
+import { useHead } from '@unhead/vue';
+
+// Ensure all generated HTML pages include no-cache directives
+useHead({
+  meta: [
+    { 'http-equiv': 'Cache-Control', content: 'no-cache, no-store, must-revalidate' },
+    { 'http-equiv': 'Pragma', content: 'no-cache' },
+    { 'http-equiv': 'Expires', content: '0' },
+  ],
+});
 </script>
 
 <style>

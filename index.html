@@ -32,8 +32,11 @@
       content="My name is Tom Stirrop-Metcalfe. I am a passionate and driven engineering leader who wants to enable others to realise their full potential."
     />
     <meta name="theme-color" content="#384452" />
-    <!-- Cache busting meta tag -->
-    <meta name="build-timestamp" content="<%= VITE_BUILD_TIMESTAMP %>" />
+    <!-- Cache busting meta tag and disable HTML caching -->
+    <meta name="build-timestamp" content="%VITE_BUILD_TIMESTAMP%" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <title>Tom Stirrop-Metcalfe | Software Engineer & Engineering Manager | Birmingham</title>
 
     <!-- Open Graph / Facebook -->

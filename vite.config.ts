@@ -6,6 +6,11 @@ import type { UserConfig } from 'vite-ssg';
 
 export default defineConfig({
   base: '/',
+  define: {
+    'import.meta.env.VITE_BUILD_TIMESTAMP': JSON.stringify(
+      process.env.VITE_BUILD_TIMESTAMP || new Date().toISOString()
+    ),
+  },
   plugins: [
     vue(),
     Sitemap({
