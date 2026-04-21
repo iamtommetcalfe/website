@@ -253,7 +253,7 @@ useSeo({
         ],
         sameAs: [
           'https://github.com/iamtommetcalfe',
-          'https://www.linkedin.com/in/tomstirropmetcalfe/',
+          'https://www.linkedin.com/in/iamtomstirropmetcalfe/',
         ],
       },
     },

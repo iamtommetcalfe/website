@@ -104,7 +104,10 @@ export const DEFAULT_PERSON: SchemaPerson = {
     'Engineering Strategy',
     'Claude AI',
   ],
-  sameAs: ['https://github.com/iamtommetcalfe', 'https://www.linkedin.com/in/tomstirropmetcalfe/'],
+  sameAs: [
+    'https://github.com/iamtommetcalfe',
+    'https://www.linkedin.com/in/iamtomstirropmetcalfe/',
+  ],
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Birmingham',
