@@ -1,7 +1,7 @@
 import { fileURLToPath, URL } from 'node:url';
+import { writeFileSync } from 'node:fs';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import Sitemap from 'vite-plugin-sitemap';
 import type { UserConfig } from 'vite-ssg';
 
 export default defineConfig({
@@ -13,12 +13,28 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-    Sitemap({
-      hostname: 'https://iamtommetcalfe.com',
-      dynamicRoutes: ['/about/', '/projects/'],
-      trailingSlash: true,
-      outDir: 'dist',
-    }),
+    {
+      name: 'sitemap',
+      closeBundle() {
+        const hostname = 'https://iamtommetcalfe.com';
+        const routes = [
+          '/',
+          '/about/',
+          '/projects/',
+          '/writing/',
+          '/writing/ai-adoption-small-teams/',
+        ];
+        const now = new Date().toISOString();
+        const urls = routes
+          .map(
+            (r) =>
+              `  <url><loc>${hostname}${r}</loc><lastmod>${now}</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>`
+          )
+          .join('\n');
+        const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>`;
+        writeFileSync('dist/sitemap.xml', xml);
+      },
+    },
     // Temporarily disabled VitePWA due to build issues
     // VitePWA({
     //   registerType: 'autoUpdate',

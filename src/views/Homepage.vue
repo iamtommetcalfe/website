@@ -3,26 +3,23 @@
     <!-- Hero -->
     <section class="hero container">
       <div class="hero__copy">
-        <!-- Keep the Easter egg click -->
         <h1
           class="pageTitle"
           title="Click to see a surprise"
-          aria-label="Tom Stirrop-Metcalfe | Software Engineering Manager & Leader. Click to see a surprise Mr. Robot Easter egg"
+          aria-label="Tom Stirrop-Metcalfe | Engineering Leader & AI Advocate. Click to see a surprise Mr. Robot Easter egg"
           @click="showMrRobotPopup"
         >
           Tom Stirrop-Metcalfe
         </h1>
-        <p class="kicker">
-          Engineering Function Manager @
-          <a href="https://amiqus.co/" title="Amiqus" target="_blank">Amiqus</a>
-        </p>
+        <p class="kicker">Engineering Leader · 15 years · Early-stage startups · AI advocate</p>
 
         <p class="lede">
-          I build calm, capable, fast-moving engineering teams. I focus on measurable impact, strong
-          systems, and sustainable delivery.
+          I build fast-moving engineering teams at early-stage companies. Fifteen years of wearing
+          every hat — from hands-on code to org design — means I know what "good" looks like at
+          every stage.
         </p>
         <p class="lede lede--muted">
-          <br />💡 Engineering should make life easier, for <i>everyone</i>.
+          Currently championing Claude and AI tooling adoption at Amiqus.
         </p>
       </div>
 
@@ -36,7 +33,7 @@
             height="520"
             loading="eager"
             fetchpriority="high"
-            alt="Tom Stirrop-Metcalfe - Software Engineering Manager & Leader"
+            alt="Tom Stirrop-Metcalfe - Engineering Leader & AI Advocate"
           />
         </picture>
       </aside>
@@ -60,19 +57,19 @@ import PrinciplesSection, { type PrincipleItem } from '@/components/PrinciplesSe
 
 const careItems: PrincipleItem[] = [
   {
-    icon: '🪶',
-    title: 'Quietly reliable systems',
-    text: 'Well-understood tech, predictable releases, and delivery pipelines that just work.',
+    icon: '🚀',
+    title: 'Early-stage instincts',
+    text: 'Fast decisions, scrappy iteration, and knowing when to add process — and when not to.',
   },
   {
-    icon: '💚',
-    title: 'Healthy teams',
-    text: 'Psychological safety, autonomy with alignment, and honest retros.',
+    icon: '🤖',
+    title: 'AI as a force multiplier',
+    text: 'Adopting LLM tooling to help small teams do the work of larger ones.',
   },
   {
-    icon: '🎯',
-    title: 'Measured progress',
-    text: 'Cycle time, change fail rate, and deployment frequency. Less noise, more signal.',
+    icon: '🧭',
+    title: 'Systems over heroes',
+    text: 'Paved roads, clear defaults, and delivery pipelines that just work.',
   },
 ];
 
