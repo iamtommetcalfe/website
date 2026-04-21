@@ -11,6 +11,7 @@ export interface SchemaPerson extends SchemaThing {
   image?: string;
   url?: string;
   sameAs?: string[];
+  knowsAbout?: string[];
   address?: {
     '@type': 'PostalAddress';
     addressLocality?: string;
@@ -59,12 +60,26 @@ export interface SchemaItemList extends SchemaThing {
   itemListElement: SchemaListItem[];
 }
 
+export interface SchemaBlogPosting extends SchemaThing {
+  '@type': 'BlogPosting';
+  headline: string;
+  description?: string;
+  url: string;
+  datePublished: string;
+  dateModified?: string;
+  author: SchemaPerson | { '@type': 'Person'; name: string };
+  keywords?: string[];
+  inLanguage?: string;
+  isPartOf?: SchemaWebSite;
+}
+
 export type StructuredData =
   | SchemaThing
   | SchemaPerson
   | SchemaWebPage
   | SchemaWebSite
-  | SchemaItemList;
+  | SchemaItemList
+  | SchemaBlogPosting;
 
 export const SITE_DOMAIN = 'https://iamtommetcalfe.com';
 
@@ -72,17 +87,22 @@ export const DEFAULT_PERSON: SchemaPerson = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Tom Stirrop-Metcalfe',
-  jobTitle: 'Software Engineering Manager',
+  jobTitle: 'Engineering Leader',
   description:
-    'Engineering leader focused on sustainable delivery, healthy teams, and systems that scale quietly.',
+    "Engineering leader with 15 years' experience building high-performing teams at early-stage startups. Championing AI adoption and sustainable delivery at Amiqus.",
   image: `${SITE_DOMAIN}/assets/images/tom-stirrop-metcalfe-obi.jpeg`,
   url: SITE_DOMAIN,
   knowsAbout: [
     'Software Engineering',
     'Engineering Leadership',
+    'AI Adoption',
+    'LLM Tooling',
+    'Startup Engineering',
     'Agile Management',
     'Scalable Systems',
     'Team Building',
+    'Engineering Strategy',
+    'Claude AI',
   ],
   sameAs: ['https://github.com/iamtommetcalfe', 'https://www.linkedin.com/in/tomstirropmetcalfe/'],
   address: {
@@ -101,19 +121,39 @@ export const DEFAULT_WEBSITE: SchemaWebSite = {
 };
 
 export const HOME_SEO_CONFIG = {
-  title: 'Tom Stirrop-Metcalfe | Software Engineering Manager & Leader',
+  title: 'Tom Stirrop-Metcalfe | Engineering Leader & AI Advocate',
   description:
-    'I build calm, capable, fast-moving engineering teams. I focus on measurable impact, strong systems, and sustainable delivery.',
+    'Engineering leader with 15 years building teams at early-stage startups. Championing AI and LLM adoption at Amiqus.',
   canonicalUrl: SITE_DOMAIN,
   structuredData: [
     DEFAULT_PERSON,
     {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
-      name: 'Tom Stirrop-Metcalfe | Software Engineering Manager & Leader',
+      name: 'Tom Stirrop-Metcalfe | Engineering Leader & AI Advocate',
       description:
-        'I build calm, fast-moving engineering teams. We focus on measurable impact, strong systems, and sustainable delivery.',
+        'Engineering leader with 15 years building teams at early-stage startups. Championing AI and LLM adoption at Amiqus.',
       url: SITE_DOMAIN,
+      author: { '@type': 'Person', name: 'Tom Stirrop-Metcalfe' },
+      inLanguage: 'en-GB',
+      isPartOf: DEFAULT_WEBSITE,
+    } as SchemaWebPage,
+  ],
+};
+
+export const WRITING_SEO_CONFIG = {
+  title: 'Writing | Tom Stirrop-Metcalfe',
+  description:
+    'Articles on engineering leadership, AI adoption, and the multi-hat startup EM experience.',
+  canonicalUrl: `${SITE_DOMAIN}/writing/`,
+  structuredData: [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: 'Writing | Tom Stirrop-Metcalfe',
+      description:
+        'Articles on engineering leadership, AI adoption, and the multi-hat startup EM experience.',
+      url: `${SITE_DOMAIN}/writing/`,
       author: { '@type': 'Person', name: 'Tom Stirrop-Metcalfe' },
       inLanguage: 'en-GB',
       isPartOf: DEFAULT_WEBSITE,
