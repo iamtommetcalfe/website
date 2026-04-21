@@ -5,47 +5,61 @@
       <div class="hero__copy">
         <h1 class="pageTitle">About Tom Stirrop-Metcalfe</h1>
         <p class="lede">
-          I am Tom Stirrop-Metcalfe, a Software Engineering Manager who builds calm, capable,
-          fast-moving teams. I care about measurable impact, healthy delivery habits, and systems
-          that scale quietly.
+          I'm Tom Stirrop-Metcalfe — an engineering leader with 15 years of building teams at
+          early-stage startups. I've worn every hat: hands-on engineer, tech lead, engineering
+          manager, and occasional de facto CTO. I care about AI adoption, sustainable delivery, and
+          teams that actually enjoy their work.
         </p>
         <p class="lede lede--muted">💡 Engineering should make life easier for <i>everyone</i>.</p>
       </div>
     </section>
 
-    <!-- Principles (shared component) -->
-    <PrinciplesSection title="What guides my work" :items="guideItems" :alt="true" />
-
-    <!-- Engineering Leadership Philosophy -->
-    <section class="section">
+    <!-- Career summary -->
+    <section class="section section--alt">
       <div class="container">
-        <h2 class="section__title">Engineering Leadership Philosophy</h2>
+        <h2 class="section__title">The career in brief</h2>
         <p class="lede">
-          My approach to <b>Technical Leadership</b> is rooted in <b>Strategic Engineering</b> and
-          fostering a <b>High-performing Engineering Culture</b>. I believe that
-          <b>People Management</b>
-          is about more than just oversight; it's about mentoring, scaling teams, and creating an
-          environment where everyone can thrive.
+          Fifteen years ago I started writing code. Since then I've led engineering at early-stage
+          startups across the UK, scaling teams from a handful to dozens, introducing process
+          without bureaucracy, and shipping products people actually use. Today I'm Engineering
+          Leader at
+          <a href="https://amiqus.co/" target="_blank" rel="noopener">Amiqus</a>, where I'm focused
+          on AI adoption, delivery metrics, and building a team that can move fast without breaking
+          things.
         </p>
+      </div>
+    </section>
+
+    <!-- Principles (shared component) -->
+    <PrinciplesSection title="What guides my work" :items="guideItems" />
+
+    <!-- What I bring -->
+    <section class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">What I bring</h2>
         <ul class="bullets">
           <li>
-            <b>Mentoring & Growth:</b> I focus on coaching individuals to reach their full
+            <b>Early-stage instincts:</b> I've operated in environments where speed matters more
+            than perfection and process needs to earn its place. I know the difference between a
+            startup that needs more rigour and one that just needs to ship.
+          </li>
+          <li>
+            <b>AI adoption leadership:</b> I'm actively championing Claude and LLM tooling at Amiqus
+            — embedding AI into engineering workflows to help a small team punch above its weight.
+          </li>
+          <li>
+            <b>The multi-hat reality:</b> At small companies the EM role bleeds into CTO, product,
+            and sometimes individual contributor. I'm comfortable across all of it and I think that
+            breadth makes me a better leader.
+          </li>
+          <li>
+            <b>Mentoring &amp; growth:</b> I focus on coaching individuals to reach their full
             potential, empowering them with autonomy while providing clear alignment with business
             goals.
           </li>
           <li>
-            <b>Scaling Teams:</b> I have experience in scaling engineering organisations by
-            introducing sustainable processes and <b>Scalable Systems</b> that grow with the
-            business.
-          </li>
-          <li>
-            <b>Engineering Culture:</b> I advocate for <b>Agile Management</b> practices,
-            psychological safety, and a culture of continuous improvement through honest
-            retrospectives and measured progress.
-          </li>
-          <li>
-            <b>System Design:</b> I ensure that technical decisions support long-term stability and
-            sustainable delivery, avoiding "hero culture" in favour of quietly reliable systems.
+            <b>Engineering culture:</b> I advocate for psychological safety, continuous improvement,
+            and honest retrospectives. Culture is the system that ships software.
           </li>
         </ul>
       </div>
@@ -86,11 +100,15 @@
         <h2 class="section__title">Right now</h2>
         <ul class="bullets">
           <li>
-            Software Engineering Management at
+            Engineering leadership at
             <a href="https://amiqus.co/" target="_blank" rel="noopener">Amiqus</a>.
           </li>
-          <li>Improving engineering ways of working and delivery metrics.</li>
-          <li>Building internal tools and automations.</li>
+          <li>Championing Claude and AI tooling adoption across the engineering team.</li>
+          <li>Building internal automation tooling to improve delivery workflows.</li>
+          <li>
+            Writing about engineering leadership, AI adoption, and the startup EM experience.
+            <router-link to="/writing/">Read my writing →</router-link>
+          </li>
         </ul>
       </div>
     </section>
@@ -183,6 +201,7 @@
 
 <script setup lang="ts">
 import { useSeo } from '@/composables/useSeo';
+import { DEFAULT_WEBSITE } from '@/config/seo';
 import PrinciplesSection, { type PrincipleItem } from '@/components/PrinciplesSection.vue';
 
 const guideItems: PrincipleItem[] = [
@@ -200,36 +219,37 @@ const guideItems: PrincipleItem[] = [
 ];
 
 useSeo({
-  title: 'About Tom Stirrop-Metcalfe | Engineering Leadership Philosophy',
+  title: 'About Tom Stirrop-Metcalfe | 15 Years of Engineering Leadership at Early-Stage Startups',
   description:
-    'About Tom Stirrop-Metcalfe. Software Engineering Manager focused on Engineering Leadership, sustainable delivery, and high-performing teams.',
+    'Tom Stirrop-Metcalfe is an engineering leader with 15 years of early-stage startup experience, championing AI adoption and sustainable delivery at Amiqus.',
   canonicalUrl: 'https://iamtommetcalfe.com/about/',
   structuredData: [
     {
       '@context': 'https://schema.org',
       '@type': 'AboutPage',
-      name: 'About Tom Stirrop-Metcalfe | Engineering Leadership Philosophy',
+      name: 'About Tom Stirrop-Metcalfe | 15 Years of Engineering Leadership at Early-Stage Startups',
       description:
-        'Learn about Tom Stirrop-Metcalfe, Software Engineering Manager focused on Engineering Leadership, Strategic Engineering, and high-performing teams.',
+        'Tom Stirrop-Metcalfe is an engineering leader with 15 years of early-stage startup experience, championing AI adoption and sustainable delivery at Amiqus.',
       url: 'https://iamtommetcalfe.com/about/',
       author: { '@type': 'Person', name: 'Tom Stirrop-Metcalfe' },
       inLanguage: 'en-GB',
-      isPartOf: {
-        '@type': 'WebSite',
-        name: 'Tom Stirrop-Metcalfe',
-        url: 'https://iamtommetcalfe.com/',
-      },
+      isPartOf: DEFAULT_WEBSITE,
       mainEntity: {
         '@type': 'Person',
         name: 'Tom Stirrop-Metcalfe',
-        jobTitle: 'Software Engineering Manager',
+        jobTitle: 'Engineering Leader',
         url: 'https://iamtommetcalfe.com/',
         knowsAbout: [
           'Software Engineering',
           'Engineering Leadership',
+          'AI Adoption',
+          'LLM Tooling',
+          'Startup Engineering',
           'Agile Management',
           'Scalable Systems',
           'Team Building',
+          'Engineering Strategy',
+          'Claude AI',
         ],
         sameAs: [
           'https://github.com/iamtommetcalfe',
