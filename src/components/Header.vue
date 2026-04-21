@@ -26,6 +26,14 @@
                 >Projects</router-link
               >
             </li>
+            <li>
+              <router-link
+                to="/writing/"
+                title="Tom Stirrop-Metcalfe's Writing"
+                aria-current-value="page"
+                >Writing</router-link
+              >
+            </li>
           </ul>
         </div>
 
