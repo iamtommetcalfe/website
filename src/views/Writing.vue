@@ -46,28 +46,12 @@ interface Article {
 
 const articles: Article[] = [
   {
-    slug: '/writing/wearing-every-hat/',
-    title: 'What nobody tells you about being the only EM at a startup',
-    summary:
-      "Being the only engineering manager at an early-stage company is one of the most rewarding—and isolating—jobs in tech. Here's what it actually looks like.",
-    date: '2026-04-21',
-    tag: 'Leadership',
-  },
-  {
     slug: '/writing/ai-adoption-small-teams/',
     title: 'How small engineering teams can adopt AI without losing control',
     summary:
       'AI tooling is everywhere. Most of it is hype. But some of it can meaningfully help small teams punch above their weight — if you approach it right.',
     date: '2026-04-21',
     tag: 'AI Adoption',
-  },
-  {
-    slug: '/writing/early-stage-engineering-culture/',
-    title: 'The engineering culture moves that matter most before Series A',
-    summary:
-      'Early engineering culture is disproportionately hard to change later. These are the highest-leverage investments to make before you scale.',
-    date: '2026-04-21',
-    tag: 'Startup',
   },
 ];
 

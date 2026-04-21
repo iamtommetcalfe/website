@@ -15,14 +15,7 @@ export default defineConfig({
     vue(),
     Sitemap({
       hostname: 'https://iamtommetcalfe.com',
-      dynamicRoutes: [
-        '/about/',
-        '/projects/',
-        '/writing/',
-        '/writing/wearing-every-hat/',
-        '/writing/ai-adoption-small-teams/',
-        '/writing/early-stage-engineering-culture/',
-      ],
+      dynamicRoutes: ['/about/', '/projects/', '/writing/', '/writing/ai-adoption-small-teams/'],
       trailingSlash: true,
       outDir: 'dist',
     }),
