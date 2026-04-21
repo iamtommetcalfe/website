@@ -201,7 +201,7 @@
 
 <script setup lang="ts">
 import { useSeo } from '@/composables/useSeo';
-import { DEFAULT_WEBSITE } from '@/config/seo';
+import { DEFAULT_WEBSITE, SITE_DOMAIN } from '@/config/seo';
 import PrinciplesSection, { type PrincipleItem } from '@/components/PrinciplesSection.vue';
 
 const guideItems: PrincipleItem[] = [
@@ -222,7 +222,7 @@ useSeo({
   title: 'About Tom Stirrop-Metcalfe | 15 Years of Engineering Leadership at Early-Stage Startups',
   description:
     'Tom Stirrop-Metcalfe is an engineering leader with 15 years of early-stage startup experience, championing AI adoption and sustainable delivery at Amiqus.',
-  canonicalUrl: 'https://iamtommetcalfe.com/about/',
+  canonicalUrl: `${SITE_DOMAIN}/about/`,
   structuredData: [
     {
       '@context': 'https://schema.org',

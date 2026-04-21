@@ -162,7 +162,7 @@ export const WRITING_SEO_CONFIG = {
 };
 
 export const PROJECTS_SEO_CONFIG = {
-  title: 'Engineering Projects | Tom Stirrop-Metcalfe | Software Engineering Manager',
+  title: 'Engineering Projects | Tom Stirrop-Metcalfe | Engineering Leader',
   description:
     "Explore Tom Stirrop-Metcalfe's public GitHub projects, including ENCOM Smart Home, Amiqus ATS Demo, and Vue Pokédex.",
   canonicalUrl: `${SITE_DOMAIN}/projects/`,
