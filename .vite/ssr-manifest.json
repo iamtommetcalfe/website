@@ -120,13 +120,13 @@
     "/assets/manifest.hgQmXtGG.json"
   ],
   "src/assets/images/dead-link.jpeg": [
-    "/assets/NotFound.8fpHd0zF.js",
+    "/assets/NotFound.7pMHo3KE.js",
     "/assets/NotFound.CfKf8Z53.css",
     "/assets/dead-link.4eWh7hfd.webp",
     "/assets/dead-link.5G_SYuHU.jpeg"
   ],
   "src/assets/images/dead-link.webp": [
-    "/assets/NotFound.8fpHd0zF.js",
+    "/assets/NotFound.7pMHo3KE.js",
     "/assets/NotFound.CfKf8Z53.css",
     "/assets/dead-link.4eWh7hfd.webp",
     "/assets/dead-link.5G_SYuHU.jpeg"
@@ -142,21 +142,21 @@
     "/assets/manifest.hgQmXtGG.json"
   ],
   "src/assets/images/hello-friend.gif": [
-    "/assets/MrRobotPopUp.bCQpCt_V.js",
+    "/assets/MrRobotPopUp.DzpNz9sg.js",
     "/assets/MrRobotPopUp.qs08TF0z.css",
     "/assets/hello-friend.BRXyc4kj.gif",
     "/assets/hello-friend.Cfq0nHK9.mp4",
     "/assets/hello-friend.2SJuWZHj.webm"
   ],
   "src/assets/images/hello-friend.mp4": [
-    "/assets/MrRobotPopUp.bCQpCt_V.js",
+    "/assets/MrRobotPopUp.DzpNz9sg.js",
     "/assets/MrRobotPopUp.qs08TF0z.css",
     "/assets/hello-friend.BRXyc4kj.gif",
     "/assets/hello-friend.Cfq0nHK9.mp4",
     "/assets/hello-friend.2SJuWZHj.webm"
   ],
   "src/assets/images/hello-friend.webm": [
-    "/assets/MrRobotPopUp.bCQpCt_V.js",
+    "/assets/MrRobotPopUp.DzpNz9sg.js",
     "/assets/MrRobotPopUp.qs08TF0z.css",
     "/assets/hello-friend.BRXyc4kj.gif",
     "/assets/hello-friend.Cfq0nHK9.mp4",
@@ -173,13 +173,13 @@
     "/assets/manifest.hgQmXtGG.json"
   ],
   "src/assets/images/tom-stirrop-metcalfe-obi.jpeg": [
-    "/assets/Homepage.BHT_wFt-.js",
+    "/assets/Homepage.Biwlhkp3.js",
     "/assets/Homepage.C11F2XmL.css",
     "/assets/tom-stirrop-metcalfe-obi.DLd9mPo-.jpeg",
     "/assets/tom-stirrop-metcalfe-obi.BNvARc2J.webp"
   ],
   "src/assets/images/tom-stirrop-metcalfe-obi.webp": [
-    "/assets/Homepage.BHT_wFt-.js",
+    "/assets/Homepage.Biwlhkp3.js",
     "/assets/Homepage.C11F2XmL.css",
     "/assets/tom-stirrop-metcalfe-obi.DLd9mPo-.jpeg",
     "/assets/tom-stirrop-metcalfe-obi.BNvARc2J.webp"
@@ -240,36 +240,36 @@
     "/assets/manifest.hgQmXtGG.json"
   ],
   "src/components/MrRobotPopUp.vue": [
-    "/assets/MrRobotPopUp.bCQpCt_V.js",
+    "/assets/MrRobotPopUp.DzpNz9sg.js",
     "/assets/MrRobotPopUp.qs08TF0z.css",
     "/assets/hello-friend.BRXyc4kj.gif",
     "/assets/hello-friend.Cfq0nHK9.mp4",
     "/assets/hello-friend.2SJuWZHj.webm"
   ],
   "src/components/MrRobotPopUp.vue?vue&type=script&lang.ts": [
-    "/assets/MrRobotPopUp.bCQpCt_V.js",
+    "/assets/MrRobotPopUp.DzpNz9sg.js",
     "/assets/MrRobotPopUp.qs08TF0z.css",
     "/assets/hello-friend.BRXyc4kj.gif",
     "/assets/hello-friend.Cfq0nHK9.mp4",
     "/assets/hello-friend.2SJuWZHj.webm"
   ],
   "src/components/MrRobotPopUp.vue?vue&type=style&index=0&scoped=ff79a786&lang.css": [
-    "/assets/MrRobotPopUp.bCQpCt_V.js",
+    "/assets/MrRobotPopUp.DzpNz9sg.js",
     "/assets/MrRobotPopUp.qs08TF0z.css",
     "/assets/hello-friend.BRXyc4kj.gif",
     "/assets/hello-friend.Cfq0nHK9.mp4",
     "/assets/hello-friend.2SJuWZHj.webm"
   ],
   "src/components/PrinciplesSection.vue": [
-    "/assets/PrinciplesSection.CUhW72UI.js",
+    "/assets/PrinciplesSection.CD59AWl0.js",
     "/assets/PrinciplesSection.DMarg0eE.css"
   ],
   "src/components/PrinciplesSection.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/PrinciplesSection.CUhW72UI.js",
+    "/assets/PrinciplesSection.CD59AWl0.js",
     "/assets/PrinciplesSection.DMarg0eE.css"
   ],
   "src/components/PrinciplesSection.vue?vue&type=style&index=0&scoped=7ed56ec9&lang.css": [
-    "/assets/PrinciplesSection.CUhW72UI.js",
+    "/assets/PrinciplesSection.CD59AWl0.js",
     "/assets/PrinciplesSection.DMarg0eE.css"
   ],
   "src/composables/useAnalytics.ts": [
@@ -288,7 +288,7 @@
     "/assets/manifest.hgQmXtGG.json"
   ],
   "src/composables/useSeo.ts": [
-    "/assets/useSeo.DB2zPLEG.js"
+    "/assets/useSeo.CTh8ZvNt.js"
   ],
   "src/config/seo.ts": [
     "/assets/seo.DhyhWNf-.js"
@@ -309,87 +309,87 @@
     "/assets/manifest.hgQmXtGG.json"
   ],
   "src/views/About.vue": [
-    "/assets/About.B6fSyQE0.js",
+    "/assets/About.Bo29J7zG.js",
     "/assets/About.DxKvRRiJ.css"
   ],
   "src/views/About.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/About.B6fSyQE0.js",
+    "/assets/About.Bo29J7zG.js",
     "/assets/About.DxKvRRiJ.css"
   ],
   "src/views/About.vue?vue&type=style&index=0&scoped=6a952ba4&lang.css": [
-    "/assets/About.B6fSyQE0.js",
+    "/assets/About.Bo29J7zG.js",
     "/assets/About.DxKvRRiJ.css"
   ],
   "src/views/Homepage.vue": [
-    "/assets/Homepage.BHT_wFt-.js",
+    "/assets/Homepage.Biwlhkp3.js",
     "/assets/Homepage.C11F2XmL.css",
     "/assets/tom-stirrop-metcalfe-obi.DLd9mPo-.jpeg",
     "/assets/tom-stirrop-metcalfe-obi.BNvARc2J.webp"
   ],
   "src/views/Homepage.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/Homepage.BHT_wFt-.js",
+    "/assets/Homepage.Biwlhkp3.js",
     "/assets/Homepage.C11F2XmL.css",
     "/assets/tom-stirrop-metcalfe-obi.DLd9mPo-.jpeg",
     "/assets/tom-stirrop-metcalfe-obi.BNvARc2J.webp"
   ],
   "src/views/Homepage.vue?vue&type=style&index=0&scoped=30acdc90&lang.css": [
-    "/assets/Homepage.BHT_wFt-.js",
+    "/assets/Homepage.Biwlhkp3.js",
     "/assets/Homepage.C11F2XmL.css",
     "/assets/tom-stirrop-metcalfe-obi.DLd9mPo-.jpeg",
     "/assets/tom-stirrop-metcalfe-obi.BNvARc2J.webp"
   ],
   "src/views/NotFound.vue": [
-    "/assets/NotFound.8fpHd0zF.js",
+    "/assets/NotFound.7pMHo3KE.js",
     "/assets/NotFound.CfKf8Z53.css",
     "/assets/dead-link.4eWh7hfd.webp",
     "/assets/dead-link.5G_SYuHU.jpeg"
   ],
   "src/views/NotFound.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/NotFound.8fpHd0zF.js",
+    "/assets/NotFound.7pMHo3KE.js",
     "/assets/NotFound.CfKf8Z53.css",
     "/assets/dead-link.4eWh7hfd.webp",
     "/assets/dead-link.5G_SYuHU.jpeg"
   ],
   "src/views/NotFound.vue?vue&type=style&index=0&scoped=bd82b17a&lang.css": [
-    "/assets/NotFound.8fpHd0zF.js",
+    "/assets/NotFound.7pMHo3KE.js",
     "/assets/NotFound.CfKf8Z53.css",
     "/assets/dead-link.4eWh7hfd.webp",
     "/assets/dead-link.5G_SYuHU.jpeg"
   ],
   "src/views/Projects.vue": [
-    "/assets/Projects.DkQyVJQj.js",
+    "/assets/Projects.D3dd0MBJ.js",
     "/assets/Projects.ByspPlwV.css"
   ],
   "src/views/Projects.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/Projects.DkQyVJQj.js",
+    "/assets/Projects.D3dd0MBJ.js",
     "/assets/Projects.ByspPlwV.css"
   ],
   "src/views/Projects.vue?vue&type=style&index=0&scoped=b4d446fa&lang.css": [
-    "/assets/Projects.DkQyVJQj.js",
+    "/assets/Projects.D3dd0MBJ.js",
     "/assets/Projects.ByspPlwV.css"
   ],
   "src/views/Writing.vue": [
-    "/assets/Writing.Cqx7EyUu.js",
+    "/assets/Writing.Bs-9Ux-Y.js",
     "/assets/Writing.CVjATfCn.css"
   ],
   "src/views/Writing.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/Writing.Cqx7EyUu.js",
+    "/assets/Writing.Bs-9Ux-Y.js",
     "/assets/Writing.CVjATfCn.css"
   ],
   "src/views/Writing.vue?vue&type=style&index=0&scoped=df4ccbb4&lang.css": [
-    "/assets/Writing.Cqx7EyUu.js",
+    "/assets/Writing.Bs-9Ux-Y.js",
     "/assets/Writing.CVjATfCn.css"
   ],
   "src/views/writing/AiAdoptionSmallTeams.vue": [
-    "/assets/AiAdoptionSmallTeams.Be4-nCXC.js",
+    "/assets/AiAdoptionSmallTeams.nE6lUf-J.js",
     "/assets/AiAdoptionSmallTeams.Dy25cCZi.css"
   ],
   "src/views/writing/AiAdoptionSmallTeams.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/AiAdoptionSmallTeams.Be4-nCXC.js",
+    "/assets/AiAdoptionSmallTeams.nE6lUf-J.js",
     "/assets/AiAdoptionSmallTeams.Dy25cCZi.css"
   ],
   "src/views/writing/AiAdoptionSmallTeams.vue?vue&type=style&index=0&scoped=7983f944&lang.css": [
-    "/assets/AiAdoptionSmallTeams.Be4-nCXC.js",
+    "/assets/AiAdoptionSmallTeams.nE6lUf-J.js",
     "/assets/AiAdoptionSmallTeams.Dy25cCZi.css"
   ]
 }
