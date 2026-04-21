@@ -108,7 +108,7 @@ export const DEFAULT_PERSON: SchemaPerson = {
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Birmingham',
-    addressCountry: 'United Kingdom',
+    addressCountry: 'GB',
   },
   worksFor: { '@type': 'Organization', name: 'Amiqus' },
 };
