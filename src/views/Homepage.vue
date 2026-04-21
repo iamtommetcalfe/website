@@ -33,7 +33,7 @@
             height="520"
             loading="eager"
             fetchpriority="high"
-            alt="Tom Stirrop-Metcalfe - Software Engineering Manager & Leader"
+            alt="Tom Stirrop-Metcalfe - Engineering Leader & AI Advocate"
           />
         </picture>
       </aside>
