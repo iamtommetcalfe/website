@@ -54,6 +54,16 @@ const routes: Array<RouteRecordRaw> = [
     },
   },
   {
+    path: '/writing/claude-code-trial-amiqus/',
+    name: 'claude-code-trial-amiqus',
+    component: () => import('../views/writing/ClaudeCodeTrialAmiqus.vue'),
+    meta: {
+      title: 'Eight weeks with Claude Code: what we actually found | Tom Stirrop-Metcalfe',
+      description:
+        "A two-month trial. A regulated industry. A team that handles sensitive data every day. Here's what responsible AI adoption actually looked like — and what it cost.",
+    },
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'not-found',
     component: () => import('../views/NotFound.vue'),
