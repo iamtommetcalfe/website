@@ -16,15 +16,15 @@
   "dependencies": {
     "pinia": "^3.0.4",
     "vue": "^3.5.28",
-    "vue-router": "^4.5.1"
+    "vue-router": "^5.0.3"
   },
   "devDependencies": {
-    "@types/node": "^25.2.1",
-    "@typescript-eslint/eslint-plugin": "^8.54.0",
+    "@types/node": "^25.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.54.1",
     "@typescript-eslint/parser": "^8.54.0",
     "@unhead/vue": "^3.1.0",
     "@vitejs/plugin-vue": "^6.0.4",
-    "beasties": "^0.2.0",
+    "beasties": "^0.3.5",
     "eslint": "^9.34.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-vue": "^10.7.0",
@@ -35,7 +35,7 @@
     "vite": "7.3.3",
     "vite-plugin-pwa": "^1.2.0",
     "vite-plugin-sitemap": "^0.8.2",
-    "vite-ssg": "^28.1.0",
+    "vite-ssg": "^28.3.0",
     "vue-eslint-parser": "^10.2.0",
     "vue-tsc": "^3.2.4"
   },
