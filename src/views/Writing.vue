@@ -46,6 +46,14 @@ interface Article {
 
 const articles: Article[] = [
   {
+    slug: '/writing/claude-code-trial-amiqus/',
+    title: 'Eight weeks with Claude Code: what we actually found',
+    summary:
+      "A two-month trial. A regulated industry. A team that handles sensitive data every day. Here's what responsible AI adoption actually looked like — and what it cost.",
+    date: '2026-05-15',
+    tag: 'AI Adoption',
+  },
+  {
     slug: '/writing/ai-adoption-small-teams/',
     title: 'How small engineering teams can adopt AI without losing control',
     summary:
