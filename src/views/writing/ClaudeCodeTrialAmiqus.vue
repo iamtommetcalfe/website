@@ -114,8 +114,9 @@
         The cautious rollout we ran at
         <a href="https://amiqus.co/" target="_blank" rel="noopener noreferrer">Amiqus</a> wasn't
         just about compliance and data boundaries. It was about giving the humans doing the learning
-        some space to breathe. A two-month timeline for an eight-person engineering function might
-        look slow from the outside. From the inside, it was about right.
+        some space to breathe. An eight-month rollout across an engineering function of around
+        twenty — starting with five engineers in the pilot — might look slow from the outside. From
+        the inside, it was about right.
       </p>
       <p>We owe it to the people doing this work to be honest about what we're asking of them.</p>
 
