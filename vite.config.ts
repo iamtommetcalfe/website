@@ -23,6 +23,7 @@ export default defineConfig({
           '/projects/',
           '/writing/',
           '/writing/ai-adoption-small-teams/',
+          '/writing/claude-code-trial-amiqus/',
         ];
         const now = new Date().toISOString();
         const urls = routes
