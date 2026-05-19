@@ -39,7 +39,7 @@
     "vite-plugin-sitemap": "^0.8.2",
     "vite-ssg": "^28.3.0",
     "vue-eslint-parser": "^10.2.0",
-    "vue-tsc": "^3.2.4"
+    "vue-tsc": "^3.3.0"
   },
   "lint-staged": {
     "*.{vue,js,jsx,cjs,mjs,ts,tsx,cts,mts}": [
