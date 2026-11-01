@@ -14,23 +14,15 @@
         <div id="navBar" class="desktop-nav">
           <ul>
             <li>
-              <router-link to="/about/" title="About Tom Stirrop-Metcalfe" aria-current-value="page"
-                >About</router-link
-              >
+              <router-link to="/about/" title="About Tom Stirrop-Metcalfe">About</router-link>
             </li>
             <li>
-              <router-link
-                to="/projects/"
-                title="Tom Stirrop-Metcalfe's Projects"
-                aria-current-value="page"
+              <router-link to="/projects/" title="Tom Stirrop-Metcalfe's Projects"
                 >Projects</router-link
               >
             </li>
             <li>
-              <router-link
-                to="/writing/"
-                title="Tom Stirrop-Metcalfe's Writing"
-                aria-current-value="page"
+              <router-link to="/writing/" title="Tom Stirrop-Metcalfe's Writing"
                 >Writing</router-link
               >
             </li>

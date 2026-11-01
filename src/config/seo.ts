@@ -127,7 +127,7 @@ export const HOME_SEO_CONFIG = {
   title: 'Tom Stirrop-Metcalfe | Engineering Leader & AI Advocate',
   description:
     'Engineering leader with 15 years building teams at early-stage startups. Championing AI and LLM adoption at Amiqus.',
-  canonicalUrl: SITE_DOMAIN,
+  canonicalUrl: `${SITE_DOMAIN}/`,
   structuredData: [
     DEFAULT_PERSON,
     {

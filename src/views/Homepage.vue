@@ -3,14 +3,7 @@
     <!-- Hero -->
     <section class="hero container">
       <div class="hero__copy">
-        <h1
-          class="pageTitle"
-          title="Click to see a surprise"
-          aria-label="Tom Stirrop-Metcalfe | Engineering Leader & AI Advocate. Click to see a surprise Mr. Robot Easter egg"
-          @click="showMrRobotPopup"
-        >
-          Tom Stirrop-Metcalfe
-        </h1>
+        <h1 class="pageTitle" @click="showMrRobotPopup">Tom Stirrop-Metcalfe</h1>
         <p class="kicker">Engineering Leader · 15 years · Early-stage startups · AI advocate</p>
 
         <p class="lede">

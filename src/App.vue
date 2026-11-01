@@ -1,5 +1,6 @@
 <template>
   <div>
+    <a href="#mainContent" class="skip-link">Skip to content</a>
     <Header />
     <div id="mainContent">
       <div id="mainContentWrapper">
@@ -30,6 +31,22 @@ useHead({
 </script>
 
 <style>
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: #111827;
+  color: #fff;
+  padding: 8px 16px;
+  font-weight: 600;
+  z-index: 9999;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
 /* Global styles */
 html {
   background-color: #ffffff;

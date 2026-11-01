@@ -28,6 +28,8 @@ export function useSeo(metadata: SeoMetadata = {}): void {
 
     const canonical = metadata.canonicalUrl || `${domain}${route.path}`;
 
+    const ogImage = `${domain}/images/og-image.jpg`;
+
     const metas = [
       { name: 'description', content: description },
 
@@ -36,12 +38,17 @@ export function useSeo(metadata: SeoMetadata = {}): void {
       { property: 'og:title', content: title },
       { property: 'og:description', content: description },
       { property: 'og:url', content: canonical },
+      { property: 'og:image', content: ogImage },
+      { property: 'og:image:width', content: '1200' },
+      { property: 'og:image:height', content: '630' },
+      { property: 'og:site_name', content: 'Tom Stirrop-Metcalfe' },
 
       // Twitter
-      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: title },
       { name: 'twitter:description', content: description },
       { name: 'twitter:url', content: canonical },
+      { name: 'twitter:image', content: ogImage },
     ];
 
     const scripts = [] as { type: string; children: string }[];
