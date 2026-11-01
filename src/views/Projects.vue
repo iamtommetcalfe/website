@@ -34,22 +34,6 @@
             </a>
           </div>
           <div class="project-card">
-            <h3>ENCOM Smart Home</h3>
-            <p>
-              <b>Technical Leadership:</b> Defined engineering standards and architecture for this
-              modern smart home dashboard application designed to be served on your home network.
-            </p>
-            <a
-              href="https://github.com/iamtommetcalfe/encom-smart-home"
-              target="_blank"
-              class="btn btn--small btn--ghost"
-              title="ENCOM Smart Home GitHub Repository"
-            >
-              View on GitHub
-            </a>
-          </div>
-
-          <div class="project-card">
             <h3>Amiqus ATS Demo</h3>
             <p>
               <b>Leadership:</b> Led the technical design and implementation of this demonstration

@@ -167,7 +167,7 @@ export const WRITING_SEO_CONFIG = {
 export const PROJECTS_SEO_CONFIG = {
   title: 'Engineering Projects | Tom Stirrop-Metcalfe | Engineering Leader',
   description:
-    "Explore Tom Stirrop-Metcalfe's public GitHub projects, including ENCOM Smart Home, Amiqus ATS Demo, and Vue Pokédex.",
+    "Explore Tom Stirrop-Metcalfe's public GitHub projects, including Amiqus ATS Demo and Vue Pokédex.",
   canonicalUrl: `${SITE_DOMAIN}/projects/`,
   structuredData: [
     {
@@ -175,7 +175,7 @@ export const PROJECTS_SEO_CONFIG = {
       '@type': 'CollectionPage',
       name: 'Engineering Projects | Tom Stirrop-Metcalfe | Engineering Leader',
       description:
-        "Explore Tom Stirrop-Metcalfe's public GitHub projects, including ENCOM Smart Home, Amiqus ATS Demo, and Vue Pokédex.",
+        "Explore Tom Stirrop-Metcalfe's public GitHub projects, including Amiqus ATS Demo and Vue Pokédex.",
       url: `${SITE_DOMAIN}/projects/`,
       author: {
         '@type': 'Person',
@@ -191,22 +191,6 @@ export const PROJECTS_SEO_CONFIG = {
             position: 1,
             item: {
               '@type': 'SoftwareSourceCode',
-              name: 'ENCOM Smart Home',
-              description:
-                'Encom is a modern smart home dashboard application designed to be served on your home network.',
-              codeRepository: 'https://github.com/iamtommetcalfe/encom-smart-home',
-              programmingLanguage: 'Vue.js',
-              author: {
-                '@type': 'Person',
-                name: 'Tom Stirrop-Metcalfe',
-              },
-            } as SchemaSoftwareSourceCode,
-          },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            item: {
-              '@type': 'SoftwareSourceCode',
               name: 'Amiqus ATS Demo',
               description:
                 'Explore how the Amiqus API can power applicant screening in an ATS. This demo app, built with Laravel and Vite, walks through identity checks, record handling, and integration flows.',
@@ -220,7 +204,7 @@ export const PROJECTS_SEO_CONFIG = {
           },
           {
             '@type': 'ListItem',
-            position: 3,
+            position: 2,
             item: {
               '@type': 'SoftwareSourceCode',
               name: 'Vue Pokédex',
